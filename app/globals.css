@@ -124,3 +124,122 @@
     scroll-behavior: smooth;
   }
 }
+
+/* Custom Animations */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(30px, -30px);
+  }
+  66% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-40px, 40px);
+  }
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-25px, 25px);
+  }
+  66% {
+    transform: translate(25px, -25px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(234, 179, 8, 0.6);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 15s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float-fast 12s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-gradient {
+  animation: gradient-shift 5s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Glassmorphism utility classes */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Ripple effect */
+@keyframes ripple {
+  to {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 600ms ease-out;
+}

@@ -14,11 +14,21 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { CertificatesGallery } from "@/components/certificates-gallery";
 import { InvestmentCalculator } from "@/components/investment-calculator";
 import { MobileNav } from "@/components/mobile-nav";
+import { AgeVerification } from "@/components/age-verification";
+import { RiskDisclaimerModal } from "@/components/risk-disclaimer-modal";
+import { AnimatedBackground } from "@/components/animated-background";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0a0e27] via-[#1a1f3a] to-[#0a0e27]">
+    <div className="min-h-screen bg-gradient-to-b from-[#0a0e27] via-[#1a1f3a] to-[#0a0e27] relative">
+      {/* Animated Background */}
+      <AnimatedBackground />
+
+      {/* Compliance Modals */}
+      <AgeVerification />
+      <RiskDisclaimerModal />
+
       <BackToTop />
       <CookieConsent />
       <MobileNav />
