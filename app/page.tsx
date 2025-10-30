@@ -17,6 +17,8 @@ import { MobileNav } from "@/components/mobile-nav";
 import { AgeVerification } from "@/components/age-verification";
 import { RiskDisclaimerModal } from "@/components/risk-disclaimer-modal";
 import { AnimatedBackground } from "@/components/animated-background";
+import { TeamSection } from "@/components/team-section";
+import { TradingSystemDetails } from "@/components/trading-system-details";
 import Image from "next/image";
 
 export default function Home() {
@@ -171,6 +173,12 @@ export default function Home() {
       {/* How It Works */}
       <HowItWorks />
 
+      {/* Team Section */}
+      <TeamSection />
+
+      {/* Trading System Details */}
+      <TradingSystemDetails />
+
       {/* About Section */}
       <section id="about" className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
@@ -180,7 +188,7 @@ export default function Home() {
               BG Wealth Sharing Investment Group
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Founded by Stephen Beard in 2018, partnered with DSJ Exchange
+              Founded by Professor Stephen Beard, operating in 40+ countries with 300+ investment teams
             </p>
           </div>
 
@@ -189,9 +197,10 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="text-yellow-500">Our Mission</CardTitle>
                 <CardDescription className="text-gray-300 text-base">
-                  BG Investment Group combines cryptocurrency technology with the sharing economy model to create
-                  a blockchain-based sharing service exchange. We help individuals invest idle funds and obtain
-                  higher returns through professional AI trading strategies.
+                  BG Wealth Sharing operates as a collaborative wealth-building platform partnering with DSJEX.
+                  Backed by 200 professional market analysts monitoring markets continuously, we achieve 99.6%
+                  accuracy in trading predictions. We help individuals invest idle funds and obtain higher returns
+                  through professional AI trading strategies and big data analytics.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -200,9 +209,10 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="text-yellow-500">DSJ Exchange Partnership</CardTitle>
                 <CardDescription className="text-gray-300 text-base">
-                  Founded in April 2022, DSJ Exchange holds licenses from 30+ countries including US (SEC),
-                  Australia (ASIC), Singapore (MAS), and Dubai (DFSA). Trading volume exceeded $100M daily
-                  with the fastest on-demand financing in the industry.
+                  Founded in April 2022 by Karen Sandler, DSJ Exchange holds licenses from 30+ countries including
+                  US (SEC), Australia (ASIC), Singapore (MAS), Dubai (DFSA), and Bahamas Central Bank. Trading volume
+                  exceeded $100M daily with the fastest on-demand financing in the industry. Registered in Australia
+                  and Singapore with physical offices in both locations.
                 </CardDescription>
               </CardHeader>
             </Card>
