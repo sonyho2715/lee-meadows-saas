@@ -47,15 +47,16 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative container mx-auto px-4 py-20 md:py-32 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 opacity-10">
+        {/* Background Image - Modern Dubai Skyline */}
+        <div className="absolute inset-0 z-0 opacity-20">
           <Image
-            src="/images/hero/hero-global-investment.jpg"
-            alt="Global cryptocurrency investment"
+            src="/images/hero/hero-dubai-skyline.jpg"
+            alt="Modern futuristic cityscape"
             fill
             className="object-cover"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e27]/80 via-[#0a0e27]/60 to-[#0a0e27]" />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8">
           <Badge variant="secondary" className="mb-4 bg-yellow-500/20 text-yellow-500 border-yellow-500/30">

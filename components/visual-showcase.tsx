@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { ImageModal } from "@/components/image-modal";
 
 export function VisualShowcase() {
   const showcaseItems = [
@@ -56,14 +57,16 @@ export function VisualShowcase() {
               className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] hover:border-yellow-500/40 transition-all overflow-hidden group"
             >
               <CardContent className="p-6">
-                <div className="aspect-video bg-gradient-to-br from-yellow-500/10 to-amber-600/10 rounded-lg mb-4 overflow-hidden border border-yellow-500/20 group-hover:border-yellow-500/40 transition-colors relative">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+                <ImageModal src={item.image} alt={item.alt}>
+                  <div className="aspect-video bg-gradient-to-br from-yellow-500/10 to-amber-600/10 rounded-lg mb-4 overflow-hidden border border-yellow-500/20 group-hover:border-yellow-500/40 transition-colors relative">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </ImageModal>
                 <div className="space-y-2">
                   <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-500 text-xs">
                     {item.category}
@@ -78,38 +81,46 @@ export function VisualShowcase() {
 
         {/* Additional Documentation Gallery */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
-            <Image
-              src="/images/investment/referral-rewards-mechanism.png"
-              alt="Referral reward signal mechanism details"
-              fill
-              className="object-cover group-hover:scale-105 transition-transform"
-            />
-          </div>
-          <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
-            <Image
-              src="/images/investment/team-bonus-structure.png"
-              alt="Team bonus structure LV1 through LV7"
-              fill
-              className="object-cover group-hover:scale-105 transition-transform"
-            />
-          </div>
-          <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
-            <Image
-              src="/images/certificates/asic-registration.jpg"
-              alt="ASIC Australian registration certificate"
-              fill
-              className="object-cover group-hover:scale-105 transition-transform"
-            />
-          </div>
-          <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
-            <Image
-              src="/images/certificates/five-advantages.jpg"
-              alt="Five advantages of BG Wealth Sharing investment"
-              fill
-              className="object-cover group-hover:scale-105 transition-transform"
-            />
-          </div>
+          <ImageModal src="/images/investment/referral-rewards-mechanism.png" alt="Referral reward signal mechanism details">
+            <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
+              <Image
+                src="/images/investment/referral-rewards-mechanism.png"
+                alt="Referral reward signal mechanism details"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform"
+              />
+            </div>
+          </ImageModal>
+          <ImageModal src="/images/investment/team-bonus-structure.png" alt="Team bonus structure LV1 through LV7">
+            <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
+              <Image
+                src="/images/investment/team-bonus-structure.png"
+                alt="Team bonus structure LV1 through LV7"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform"
+              />
+            </div>
+          </ImageModal>
+          <ImageModal src="/images/certificates/asic-registration.jpg" alt="ASIC Australian registration certificate">
+            <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
+              <Image
+                src="/images/certificates/asic-registration.jpg"
+                alt="ASIC Australian registration certificate"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform"
+              />
+            </div>
+          </ImageModal>
+          <ImageModal src="/images/certificates/five-advantages.jpg" alt="Five advantages of BG Wealth Sharing investment">
+            <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
+              <Image
+                src="/images/certificates/five-advantages.jpg"
+                alt="Five advantages of BG Wealth Sharing investment"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform"
+              />
+            </div>
+          </ImageModal>
         </div>
       </div>
     </section>

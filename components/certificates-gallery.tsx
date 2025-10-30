@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import { Shield, Award, FileCheck } from "lucide-react";
+import { ImageModal } from "@/components/image-modal";
 
 export function CertificatesGallery() {
   const certificates = [
@@ -59,24 +60,26 @@ export function CertificatesGallery() {
                 key={index}
                 className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] hover:border-yellow-500/40 transition-all overflow-hidden group"
               >
-                <div className="aspect-[3/4] relative overflow-hidden">
-                  <Image
-                    src={cert.image}
-                    alt={`${cert.title} - ${cert.organization}`}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 space-y-2">
-                    <div className="flex items-center gap-2">
-                      <div className={`w-8 h-8 rounded-full bg-black/50 flex items-center justify-center ${cert.color}`}>
-                        <Icon className="h-4 w-4" />
+                <ImageModal src={cert.image} alt={`${cert.title} - ${cert.organization}`}>
+                  <div className="aspect-[3/4] relative overflow-hidden">
+                    <Image
+                      src={cert.image}
+                      alt={`${cert.title} - ${cert.organization}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 space-y-2">
+                      <div className="flex items-center gap-2">
+                        <div className={`w-8 h-8 rounded-full bg-black/50 flex items-center justify-center ${cert.color}`}>
+                          <Icon className="h-4 w-4" />
+                        </div>
+                        <h3 className="text-white font-bold text-sm">{cert.title}</h3>
                       </div>
-                      <h3 className="text-white font-bold text-sm">{cert.title}</h3>
+                      <p className="text-xs text-gray-300">{cert.organization}</p>
                     </div>
-                    <p className="text-xs text-gray-300">{cert.organization}</p>
                   </div>
-                </div>
+                </ImageModal>
               </Card>
             );
           })}
@@ -84,35 +87,41 @@ export function CertificatesGallery() {
 
         {/* Additional Legal Documents */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] overflow-hidden">
-            <div className="aspect-video relative">
-              <Image
-                src="/images/certificates/five-advantages.jpg"
-                alt="Five advantages of BG Wealth Sharing"
-                fill
-                className="object-cover"
-              />
-            </div>
+          <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] overflow-hidden group">
+            <ImageModal src="/images/certificates/five-advantages.jpg" alt="Five advantages of BG Wealth Sharing">
+              <div className="aspect-video relative">
+                <Image
+                  src="/images/certificates/five-advantages.jpg"
+                  alt="Five advantages of BG Wealth Sharing"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform"
+                />
+              </div>
+            </ImageModal>
           </Card>
-          <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] overflow-hidden">
-            <div className="aspect-video relative">
-              <Image
-                src="/images/certificates/investment-commitment-letter.png"
-                alt="Investment Partnership Commitment Letter"
-                fill
-                className="object-cover"
-              />
-            </div>
+          <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] overflow-hidden group">
+            <ImageModal src="/images/certificates/investment-commitment-letter.png" alt="Investment Partnership Commitment Letter">
+              <div className="aspect-video relative">
+                <Image
+                  src="/images/certificates/investment-commitment-letter.png"
+                  alt="Investment Partnership Commitment Letter"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform"
+                />
+              </div>
+            </ImageModal>
           </Card>
-          <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] overflow-hidden">
-            <div className="aspect-video relative">
-              <Image
-                src="/images/certificates/colorado-certificate.jpg"
-                alt="Colorado State Certificate"
-                fill
-                className="object-cover"
-              />
-            </div>
+          <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] overflow-hidden group">
+            <ImageModal src="/images/certificates/colorado-certificate.jpg" alt="Colorado State Certificate">
+              <div className="aspect-video relative">
+                <Image
+                  src="/images/certificates/colorado-certificate.jpg"
+                  alt="Colorado State Certificate"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform"
+                />
+              </div>
+            </ImageModal>
           </Card>
         </div>
       </div>
