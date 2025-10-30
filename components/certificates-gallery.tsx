@@ -21,13 +21,6 @@ export function CertificatesGallery() {
       color: "text-green-400"
     },
     {
-      title: "DSJ Authorization",
-      organization: "DSJ Exchange Partnership",
-      image: "/images/certificates/dsjex-authorization.png",
-      icon: FileCheck,
-      color: "text-yellow-400"
-    },
-    {
       title: "Stock Certificate",
       organization: "BG Wealth Sharing LTD - Stephen Beard",
       image: "/images/certificates/stock-certificate.jpg",
@@ -52,7 +45,7 @@ export function CertificatesGallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certificates.map((cert, index) => {
             const Icon = cert.icon;
             return (
