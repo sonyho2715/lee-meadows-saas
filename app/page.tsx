@@ -11,6 +11,8 @@ import { BackToTop } from "@/components/back-to-top";
 import { VisualShowcase } from "@/components/visual-showcase";
 import { RiskWarning } from "@/components/risk-warning";
 import { CookieConsent } from "@/components/cookie-consent";
+import { CertificatesGallery } from "@/components/certificates-gallery";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -44,8 +46,18 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 md:py-32">
-        <div className="max-w-6xl mx-auto text-center space-y-8">
+      <section className="relative container mx-auto px-4 py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 opacity-10">
+          <Image
+            src="/images/hero/hero-global-investment.jpg"
+            alt="Global cryptocurrency investment"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8">
           <Badge variant="secondary" className="mb-4 bg-yellow-500/20 text-yellow-500 border-yellow-500/30">
             <Zap className="h-3 w-3 mr-1" />
             Partnered with BG Wealth Sharing Investment Group
@@ -133,6 +145,9 @@ export default function Home() {
 
       {/* Trust Badges */}
       <TrustBadges />
+
+      {/* Certificates Gallery */}
+      <CertificatesGallery />
 
       {/* How It Works */}
       <HowItWorks />

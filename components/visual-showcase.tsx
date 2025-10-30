@@ -7,22 +7,30 @@ export function VisualShowcase() {
     {
       title: "BG Wealth Planning Chart",
       description: "Five-stage wealth management system with detailed profit projections",
-      category: "Investment Strategy"
+      category: "Investment Strategy",
+      image: "/images/investment/wealth-planning-chart.png",
+      alt: "BG Team Wealth Planning Chart showing 5 investment stages from $500 to $5000 USDT"
     },
     {
       title: "Trading Signals Schedule",
       description: "Daily signal times (EST) and usage guidelines for all members",
-      category: "Trading Operations"
+      category: "Trading Operations",
+      image: "/images/investment/trading-signals-guidelines.png",
+      alt: "BG Wealth Sharing Daily Trading Signals Usage Guidelines with fixed and additional signal times"
     },
     {
       title: "Referral Rewards System",
       description: "Complete breakdown of referral bonuses and dynamic signal rewards",
-      category: "Rewards Program"
+      category: "Rewards Program",
+      image: "/images/investment/referral-rewards-2025.png",
+      alt: "BG Wealth Sharing 2025 Referral Rewards table showing deposit amounts and rewards"
     },
     {
       title: "Regulatory Licenses",
       description: "SEC, ASIC, and international certifications displayed",
-      category: "Compliance"
+      category: "Compliance",
+      image: "/images/certificates/sec-license-bg.jpg",
+      alt: "U.S. Securities and Exchange Commission license for BG Wealth Sharing LTD"
     }
   ];
 
@@ -48,11 +56,13 @@ export function VisualShowcase() {
               className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] hover:border-yellow-500/40 transition-all overflow-hidden group"
             >
               <CardContent className="p-6">
-                <div className="aspect-video bg-gradient-to-br from-yellow-500/10 to-amber-600/10 rounded-lg mb-4 flex items-center justify-center border border-yellow-500/20 group-hover:border-yellow-500/40 transition-colors">
-                  <div className="text-center space-y-2">
-                    <div className="text-6xl">📊</div>
-                    <p className="text-xs text-gray-400">Visual Material Available</p>
-                  </div>
+                <div className="aspect-video bg-gradient-to-br from-yellow-500/10 to-amber-600/10 rounded-lg mb-4 overflow-hidden border border-yellow-500/20 group-hover:border-yellow-500/40 transition-colors relative">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="space-y-2">
                   <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-500 text-xs">
@@ -66,52 +76,40 @@ export function VisualShowcase() {
           ))}
         </div>
 
-        <div className="mt-12 p-6 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
-          <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-            <span className="text-2xl">📸</span>
-            Image Assets Available
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
-            <ul className="space-y-2">
-              <li className="flex items-start gap-2">
-                <span className="text-yellow-500">•</span>
-                BG Wealth Planning Chart (5 stages breakdown)
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-yellow-500">•</span>
-                Daily Trading Signals Schedule
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-yellow-500">•</span>
-                Referral Rewards Table
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-yellow-500">•</span>
-                Team Level Bonuses Structure
-              </li>
-            </ul>
-            <ul className="space-y-2">
-              <li className="flex items-start gap-2">
-                <span className="text-yellow-500">•</span>
-                SEC License Certificate
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-yellow-500">•</span>
-                ASIC Registration Certificate
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-yellow-500">•</span>
-                DSJ Exchange Authorization Letter
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-yellow-500">•</span>
-                BG Wealth Sharing Stock Certificate
-              </li>
-            </ul>
+        {/* Additional Documentation Gallery */}
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
+            <Image
+              src="/images/investment/referral-rewards-mechanism.png"
+              alt="Referral reward signal mechanism details"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform"
+            />
           </div>
-          <p className="mt-4 text-xs text-gray-400">
-            💡 To add images: Place image files in <code className="px-2 py-1 bg-black/30 rounded">/public/images/</code> and update the Image components
-          </p>
+          <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
+            <Image
+              src="/images/investment/team-bonus-structure.png"
+              alt="Team bonus structure LV1 through LV7"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform"
+            />
+          </div>
+          <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
+            <Image
+              src="/images/certificates/asic-registration.jpg"
+              alt="ASIC Australian registration certificate"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform"
+            />
+          </div>
+          <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
+            <Image
+              src="/images/certificates/five-advantages.jpg"
+              alt="Five advantages of BG Wealth Sharing investment"
+              fill
+              className="object-cover group-hover:scale-105 transition-transform"
+            />
+          </div>
         </div>
       </div>
     </section>
