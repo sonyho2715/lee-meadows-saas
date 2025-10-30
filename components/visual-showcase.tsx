@@ -64,6 +64,8 @@ export function VisualShowcase() {
                       alt={item.alt}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
                 </ImageModal>
@@ -88,6 +90,8 @@ export function VisualShowcase() {
                 alt="Referral reward signal mechanism details"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform"
+                loading="lazy"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
             </div>
           </ImageModal>
@@ -98,6 +102,8 @@ export function VisualShowcase() {
                 alt="Team bonus structure LV1 through LV7"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform"
+                loading="lazy"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
             </div>
           </ImageModal>
@@ -108,6 +114,8 @@ export function VisualShowcase() {
                 alt="ASIC Australian registration certificate"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform"
+                loading="lazy"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
             </div>
           </ImageModal>
@@ -118,6 +126,8 @@ export function VisualShowcase() {
                 alt="Five advantages of BG Wealth Sharing investment"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform"
+                loading="lazy"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
             </div>
           </ImageModal>

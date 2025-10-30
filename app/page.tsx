@@ -12,6 +12,8 @@ import { VisualShowcase } from "@/components/visual-showcase";
 import { RiskWarning } from "@/components/risk-warning";
 import { CookieConsent } from "@/components/cookie-consent";
 import { CertificatesGallery } from "@/components/certificates-gallery";
+import { InvestmentCalculator } from "@/components/investment-calculator";
+import { MobileNav } from "@/components/mobile-nav";
 import Image from "next/image";
 
 export default function Home() {
@@ -19,6 +21,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-[#0a0e27] via-[#1a1f3a] to-[#0a0e27]">
       <BackToTop />
       <CookieConsent />
+      <MobileNav />
       {/* Navigation */}
       <nav className="border-b border-primary/20 bg-[#0a0e27]/95 backdrop-blur supports-[backdrop-filter]:bg-[#0a0e27]/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -31,14 +34,14 @@ export default function Home() {
               <span className="text-xs text-yellow-500">BG Investment Partner</span>
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
             <a href="#about" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">About</a>
+            <a href="#calculator" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Calculator</a>
             <a href="#features" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Features</a>
-            <a href="#plans" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Investment Plans</a>
-            <a href="#rewards" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Rewards</a>
+            <a href="#plans" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Plans</a>
             <a href="#contact" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Contact</a>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <Button variant="ghost" size="sm" className="text-gray-300 hover:text-yellow-500">Sign In</Button>
             <Button size="sm" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">Get Started</Button>
           </div>
@@ -83,18 +86,18 @@ export default function Home() {
               View Investment Plans
             </Button>
           </div>
-          <div className="flex items-center justify-center gap-8 pt-8 text-sm text-gray-400">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 pt-8 text-sm text-gray-400">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-yellow-500" />
-              Minimum $300 USDT
+              <span className="whitespace-nowrap">Minimum $300 USDT</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-yellow-500" />
-              99.6% Win Rate
+              <span className="whitespace-nowrap">99.6% Win Rate</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-yellow-500" />
-              SEC Licensed
+              <span className="whitespace-nowrap">SEC Licensed</span>
             </div>
           </div>
         </div>
@@ -149,6 +152,11 @@ export default function Home() {
 
       {/* Certificates Gallery */}
       <CertificatesGallery />
+
+      {/* Investment Calculator */}
+      <div id="calculator">
+        <InvestmentCalculator />
+      </div>
 
       {/* How It Works */}
       <HowItWorks />
