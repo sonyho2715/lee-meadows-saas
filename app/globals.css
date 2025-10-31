@@ -121,7 +121,12 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto; /* Changed from smooth to prevent jittery scrolling */
+  }
+
+  /* GPU acceleration for smooth performance */
+  body, section, div {
+    will-change: auto;
   }
 }
 

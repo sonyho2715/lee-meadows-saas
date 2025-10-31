@@ -3,10 +3,10 @@
 export function AnimatedBackground() {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-      {/* Animated gradient orbs */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-yellow-500/20 rounded-full blur-[120px] animate-float-slow" />
-      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-amber-600/15 rounded-full blur-[100px] animate-float-medium" />
-      <div className="absolute bottom-0 left-1/3 w-[600px] h-[600px] bg-yellow-600/10 rounded-full blur-[140px] animate-float-fast" />
+      {/* Static gradient orbs - removed animation for performance */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-yellow-500/20 rounded-full blur-[120px]" />
+      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-amber-600/15 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 left-1/3 w-[600px] h-[600px] bg-yellow-600/10 rounded-full blur-[140px]" />
 
       {/* Grid pattern overlay */}
       <div

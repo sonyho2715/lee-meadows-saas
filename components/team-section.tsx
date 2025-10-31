@@ -6,23 +6,23 @@ export function TeamSection() {
   const teamMembers = [
     {
       name: "Lee Meadows",
-      role: "AI Trading Strategist & Founder",
-      focus: "Algorithmic Trading & Signal Generation",
+      role: "7-Figure Entrepreneur & AI Trading Pioneer",
+      focus: "Empowering Others Through AI Trading Signals",
       education: [
-        "Advanced AI & Machine Learning Specialist",
-        "Quantitative Finance Expert"
+        "Proven 7-Figure Success in Multiple Ventures",
+        "Early Adopter of AI Trading Technology"
       ],
       experience: [
-        "10+ years in cryptocurrency algorithmic trading",
-        "Developed proprietary AI trading signal system",
-        "Specialist in high-frequency trading strategies",
-        "Expert in predictive analytics and big data"
+        "Achieved 7-figure success in previous businesses",
+        "Discovered revolutionary AI trading signal strategy",
+        "Partnered with leading AI trading algorithm developers",
+        "Dedicated to helping others achieve financial freedom"
       ],
       achievements: [
-        "Created AI system with 99.6% signal accuracy",
-        "Managed $100M+ in daily trading volume",
-        "Built global network of 10,000+ active traders",
-        "Pioneered automated trading signal distribution"
+        "Built multiple successful 7-figure businesses",
+        "Leverages AI system with 99.6% signal accuracy",
+        "Helping 10,000+ traders profit daily",
+        "Simplifying wealth creation - just minutes per day"
       ],
       icon: Award,
       gradient: "from-yellow-500 to-amber-600"
@@ -49,7 +49,7 @@ export function TeamSection() {
             Meet <span className="text-yellow-500">Lee Meadows</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            AI Trading pioneer with over a decade of experience in cryptocurrency algorithmic trading and signal generation
+            7-Figure entrepreneur sharing revolutionary AI trading strategy. Take a short break each day to make more money.
           </p>
         </div>
 
@@ -132,14 +132,15 @@ export function TeamSection() {
           })}
         </div>
 
-        {/* AI Trading System */}
+        {/* Success Story */}
         <GlassCard className="mt-8 p-8 text-center max-w-4xl mx-auto">
-          <h3 className="text-xl font-bold text-white mb-4">Powered by Advanced AI Trading Algorithms</h3>
+          <h3 className="text-xl font-bold text-white mb-4">From Success to Significance</h3>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            Lee Meadows' proprietary AI system monitors cryptocurrency markets 24/7 across all major exchanges.
-            Utilizing machine learning and predictive analytics, the system generates trading signals with a proven
-            track record of 99.6% accuracy. The algorithm processes millions of data points per second, identifying
-            profitable trading opportunities and delivering instant signals to members worldwide.
+            After achieving 7-figure success in multiple business ventures, Lee Meadows discovered a game-changing
+            AI trading signal strategy. Now, she's dedicated to helping others achieve the same financial freedom.
+            The AI system monitors markets 24/7, delivering 99.6% accurate signals. All you need is a few minutes
+            each day to follow the signals and watch your wealth grow. Lee proves that with the right strategy,
+            anyone can transform their financial future.
           </p>
         </GlassCard>
       </div>

@@ -62,16 +62,13 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative container mx-auto px-4 py-20 md:py-32 overflow-hidden">
-        {/* Background Image - Modern Dubai Skyline */}
-        <div className="absolute inset-0 z-0 opacity-20">
-          <Image
-            src="/images/hero/hero-dubai-skyline.jpg"
-            alt="Modern futuristic cityscape"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e27]/80 via-[#0a0e27]/60 to-[#0a0e27]" />
+        {/* Modern Space Gradient Background - No Images */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-[#0a0e27] to-blue-900/30" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-yellow-500/10 via-transparent to-cyan-500/10" />
+          <div className="absolute top-20 left-20 w-64 h-64 bg-purple-500/20 rounded-full blur-[100px]" />
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-[150px]" />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8">
           <Badge variant="secondary" className="mb-4 bg-yellow-500/20 text-yellow-500 border-yellow-500/30">
@@ -86,8 +83,8 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Join Lee Meadows' exclusive AI trading signal platform. Leverage advanced machine learning algorithms,
-            real-time market analysis, and automated trading signals to build sustainable wealth.
+            Join Lee Meadows, a proven 7-figure entrepreneur, and discover the AI trading strategy that
+            works while you live your life. Just minutes a day to follow signals and watch your wealth grow.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
             <Button size="lg" className="text-lg px-8 py-6 group bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">
@@ -207,12 +204,12 @@ export default function Home() {
 
             <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
               <CardHeader>
-                <CardTitle className="text-yellow-500">DSJ Exchange Partnership</CardTitle>
+                <CardTitle className="text-yellow-500">AI-Powered Technology</CardTitle>
                 <CardDescription className="text-gray-300 text-base">
-                  Founded in April 2022 by Karen Sandler, DSJ Exchange holds licenses from 30+ countries including
-                  US (SEC), Australia (ASIC), Singapore (MAS), Dubai (DFSA), and Bahamas Central Bank. Trading volume
-                  exceeded $100M daily with the fastest on-demand financing in the industry. Registered in Australia
-                  and Singapore with physical offices in both locations.
+                  Lee Meadows partners with industry-leading AI algorithm developers to deliver cutting-edge trading
+                  signals. The technology operates on SEC-licensed exchanges with full regulatory compliance across
+                  major markets including US, Australia, Singapore, and Dubai. Advanced machine learning processes
+                  millions of data points per second to identify profitable opportunities.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -254,8 +251,8 @@ export default function Home() {
                 </div>
                 <CardTitle className="text-white">Legal & Compliant</CardTitle>
                 <CardDescription className="text-gray-300">
-                  DSJ Exchange holds licenses from 30+ countries including US (SEC), Australian (ASIC),
-                  Singapore (MAS), Dubai (DFSA), and Bahamas Central Bank.
+                  Operates on SEC-licensed exchanges with full regulatory compliance across 30+ countries
+                  including US, Australia (ASIC), Singapore (MAS), Dubai (DFSA), and Bahamas.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -278,10 +275,10 @@ export default function Home() {
                 <div className="h-12 w-12 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-yellow-500" />
                 </div>
-                <CardTitle className="text-white">10-Year Partnership</CardTitle>
+                <CardTitle className="text-white">Proven Track Record</CardTitle>
                 <CardDescription className="text-gray-300">
-                  Long-term cooperation agreement with DSJ Exchange, focusing on creating mutually
-                  beneficial situations for all participants.
+                  Lee Meadows' AI trading strategy has consistently delivered results, with a proven
+                  99.6% signal accuracy rate and $100M+ in daily trading volume.
                 </CardDescription>
               </CardHeader>
             </Card>
