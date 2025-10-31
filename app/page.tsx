@@ -19,6 +19,8 @@ import { RiskDisclaimerModal } from "@/components/risk-disclaimer-modal";
 import { AnimatedBackground } from "@/components/animated-background";
 import { TeamSection } from "@/components/team-section";
 import { TradingSystemDetails } from "@/components/trading-system-details";
+import { ComparisonTable } from "@/components/comparison-table";
+import { AnimatedStats } from "@/components/animated-stats";
 import Image from "next/image";
 
 export default function Home() {
@@ -175,6 +177,12 @@ export default function Home() {
 
       {/* Trading System Details */}
       <TradingSystemDetails />
+
+      {/* Animated Stats Section */}
+      <AnimatedStats />
+
+      {/* Comparison Table */}
+      <ComparisonTable />
 
       {/* About Section */}
       <section id="about" className="container mx-auto px-4 py-20">
