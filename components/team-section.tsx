@@ -80,9 +80,9 @@ export function TeamSection() {
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
                     <p className="text-yellow-500 font-medium">{member.role}</p>
-                    {member.nationality && (
+                    {member.focus && (
                       <p className="text-gray-400 text-sm mt-1">
-                        {member.nationality} • Born {member.born}
+                        {member.focus}
                       </p>
                     )}
                   </div>
@@ -116,12 +116,6 @@ export function TeamSection() {
                   </div>
                 )}
 
-                {member.focus && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Focus Area</h4>
-                    <p className="text-gray-400 text-sm">{member.focus}</p>
-                  </div>
-                )}
 
                 {member.achievements && (
                   <div>
