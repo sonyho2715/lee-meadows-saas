@@ -39,7 +39,7 @@ export function HowItWorks() {
             Start Investing in 4 Simple Steps
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Get started with BG Wealth Sharing in minutes and begin your journey to financial freedom
+            Get started with Lee Meadows AI Trading in minutes and begin your journey to financial freedom
           </p>
         </div>
 

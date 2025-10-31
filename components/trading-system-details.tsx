@@ -91,7 +91,7 @@ export function TradingSystemDetails() {
             Advanced AI-Powered <span className="text-yellow-500">Trading Infrastructure</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Automated algorithms on DSJ Exchange with 99.6% prediction accuracy
+            Automated AI algorithms on licensed exchanges with 99.6% prediction accuracy
           </p>
         </div>
 

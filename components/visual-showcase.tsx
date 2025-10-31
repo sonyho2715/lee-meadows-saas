@@ -6,32 +6,32 @@ import { ImageModal } from "@/components/image-modal";
 export function VisualShowcase() {
   const showcaseItems = [
     {
-      title: "BG Wealth Planning Chart",
+      title: "Wealth Planning Chart",
       description: "Five-stage wealth management system with detailed profit projections",
       category: "Investment Strategy",
       image: "/images/investment/wealth-planning-chart.png",
-      alt: "BG Team Wealth Planning Chart showing 5 investment stages from $500 to $5000 USDT"
+      alt: "Lee Meadows Wealth Planning Chart showing 5 investment stages from $500 to $5000 USDT"
     },
     {
       title: "Trading Signals Schedule",
       description: "Daily signal times (EST) and usage guidelines for all members",
       category: "Trading Operations",
       image: "/images/investment/trading-signals-guidelines.png",
-      alt: "BG Wealth Sharing Daily Trading Signals Usage Guidelines with fixed and additional signal times"
+      alt: "Lee Meadows Daily Trading Signals Usage Guidelines with fixed and additional signal times"
     },
     {
       title: "Referral Rewards System",
       description: "Complete breakdown of referral bonuses and dynamic signal rewards",
       category: "Rewards Program",
       image: "/images/investment/referral-rewards-2025.png",
-      alt: "BG Wealth Sharing 2025 Referral Rewards table showing deposit amounts and rewards"
+      alt: "Lee Meadows 2025 Referral Rewards table showing deposit amounts and rewards"
     },
     {
       title: "Regulatory Licenses",
       description: "SEC, ASIC, and international certifications displayed",
       category: "Compliance",
       image: "/images/certificates/sec-license-bg.jpg",
-      alt: "U.S. Securities and Exchange Commission license for BG Wealth Sharing LTD"
+      alt: "U.S. Securities and Exchange Commission license for Lee Meadows Trading LTD"
     }
   ];
 
@@ -119,11 +119,11 @@ export function VisualShowcase() {
               />
             </div>
           </ImageModal>
-          <ImageModal src="/images/certificates/five-advantages.jpg" alt="Five advantages of BG Wealth Sharing investment">
+          <ImageModal src="/images/certificates/five-advantages.jpg" alt="Five advantages of Lee Meadows AI Trading investment">
             <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
               <Image
                 src="/images/certificates/five-advantages.jpg"
-                alt="Five advantages of BG Wealth Sharing investment"
+                alt="Five advantages of Lee Meadows AI Trading investment"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform"
                 loading="lazy"

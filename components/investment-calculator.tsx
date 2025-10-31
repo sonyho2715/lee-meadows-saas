@@ -65,7 +65,7 @@ export function InvestmentCalculator() {
             Calculate Your <span className="text-yellow-500">Returns</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            See how your investment can grow with BG Wealth Sharing. Choose a preset stage or calculate custom amounts.
+            See how your investment can grow with Lee Meadows AI Trading. Choose a preset stage or calculate custom amounts.
           </p>
         </div>
 
@@ -235,7 +235,7 @@ export function InvestmentCalculator() {
                 Ready to Start Investing?
               </h4>
               <p className="text-black/70 text-sm mb-4">
-                Join BG Wealth Sharing and start earning daily returns
+                Join Lee Meadows AI Trading and start earning daily returns
               </p>
               <button className="w-full bg-black text-yellow-500 py-3 px-6 rounded-lg font-bold hover:bg-black/80 transition-colors">
                 Get Started Now

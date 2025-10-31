@@ -8,24 +8,24 @@ import { Badge } from "@/components/ui/badge";
 
 const faqs = [
   {
-    question: "How do I start investing with BG Wealth Sharing?",
-    answer: "Getting started is simple: (1) Contact Lee Meadows to create your DSJ Exchange account, (2) Make your minimum deposit of $300 USDT, (3) Start receiving daily trading signals, and (4) Follow the signals to grow your investment."
+    question: "How do I start investing with Lee Meadows AI Trading?",
+    answer: "Getting started is simple: (1) Contact Lee Meadows to create your trading account, (2) Make your minimum deposit of $300 USDT, (3) Start receiving daily AI-powered trading signals, and (4) Follow the signals to grow your investment."
   },
   {
     question: "What is the minimum investment amount?",
-    answer: "The minimum investment is $300 USDT. This entry-level investment allows you to access the BG Wealth Sharing platform and start receiving trading signals. You can scale up to higher stages ($500, $1000, $3000, $5000) for increased profits."
+    answer: "The minimum investment is $300 USDT. This entry-level investment allows you to access the Lee Meadows AI Trading platform and start receiving trading signals. You can scale up to higher stages ($500, $1000, $3000, $5000) for increased profits."
   },
   {
     question: "How does the 99.6% win rate work?",
-    answer: "Our AI trading system analyzes market data in real-time and provides signals with a historical accuracy of 99.6%. The system uses advanced algorithms, big data prediction, and investment experience to minimize risk and maximize returns. Stephen Beard's team manages the second-package field to control investment risk."
+    answer: "Our AI trading system analyzes market data in real-time and provides signals with a historical accuracy of 99.6%. The system uses advanced machine learning algorithms, big data prediction, and market intelligence to minimize risk and maximize returns."
   },
   {
     question: "How can I withdraw my funds?",
-    answer: "After completing 1x trading volume transfer to your futures account, you can withdraw cash freely within 15-30 minutes to your cryptocurrency wallet. BG Wealth Sharing guarantees the principal can be withdrawn at any time regardless of transaction volume."
+    answer: "After completing 1x trading volume transfer to your futures account, you can withdraw cash freely within 15-30 minutes to your cryptocurrency wallet. Lee Meadows AI Trading guarantees the principal can be withdrawn at any time regardless of transaction volume."
   },
   {
-    question: "What licenses does DSJ Exchange hold?",
-    answer: "DSJ Exchange is fully licensed and regulated in over 30 countries including: US (SEC), Australia (ASIC), Singapore (MAS), Dubai (DFSA), and Bahamas Central Bank. This ensures your funds are protected under international financial regulations."
+    question: "What regulatory compliance does the platform have?",
+    answer: "Our platform is fully licensed and regulated in over 30 countries including: US (SEC), Australia (ASIC), Singapore (MAS), Dubai (DFSA), and Bahamas Central Bank. This ensures your funds are protected under international financial regulations."
   },
   {
     question: "How do referral rewards work?",
@@ -33,19 +33,19 @@ const faqs = [
   },
   {
     question: "What are trading signals and how do I receive them?",
-    answer: "Trading signals are expert recommendations on when to buy/sell cryptocurrencies. BG provides 2 fixed signals daily (1:00 PM and 7:00 PM EST) for all members, plus additional signals (2:00 PM, 2:30 PM, 8:00 PM, 8:30 PM, 9:00 PM EST) for eligible members. Signals are sent via the DSJ Exchange platform and Bonchat."
+    answer: "Trading signals are AI-powered recommendations on when to buy/sell cryptocurrencies. You'll receive 2 fixed signals daily (1:00 PM and 7:00 PM EST) for all members, plus additional signals (2:00 PM, 2:30 PM, 8:00 PM, 8:30 PM, 9:00 PM EST) for eligible members. Signals are sent via the platform and Bonchat."
   },
   {
     question: "Is my investment protected?",
-    answer: "Yes! BG Fund Company was established in 2024 with $30 million start-up capital specifically to ensure the safety of all members' funds. Additionally, the 10-year partnership agreement with DSJ Exchange provides long-term stability and protection."
+    answer: "Yes! Lee Meadows AI Trading operates with institutional-grade security and regulatory compliance to ensure the safety of all members' funds. Our platform provides long-term stability and protection through established partnerships with licensed exchanges."
   },
   {
     question: "What cryptocurrencies can I trade?",
-    answer: "You can trade major cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), Cardano (ADA), and many others through DSJ Exchange. The platform supports spot trading, futures, perpetual contracts, and options trading."
+    answer: "You can trade major cryptocurrencies including Bitcoin (BTC), Ethereum (ETH), Cardano (ADA), and many others through our partner exchanges. The platform supports spot trading, futures, perpetual contracts, and options trading."
   },
   {
     question: "Do I need trading experience?",
-    answer: "No trading experience required! The BG team provides all trading signals with specific timing, direction, and amounts. Simply follow the signals provided. A smartphone is enough to operate, and it doesn't affect your work or daily life."
+    answer: "No trading experience required! Lee Meadows' AI system provides all trading signals with specific timing, direction, and amounts. Simply follow the signals provided. A smartphone is enough to operate, and it only takes a few minutes per day - it won't affect your work or daily life."
   }
 ];
 
@@ -59,7 +59,7 @@ export function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Everything you need to know about investing with BG Wealth Sharing
+            Everything you need to know about investing with Lee Meadows AI Trading
           </p>
         </div>
 

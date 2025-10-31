@@ -4,8 +4,8 @@ import { FileText, Shield, AlertCircle } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Terms of Service | Lee Meadows - BG Wealth Sharing",
-  description: "Terms and conditions for using BG Wealth Sharing cryptocurrency investment services through Lee Meadows.",
+  title: "Terms of Service | Lee Meadows AI Trading",
+  description: "Terms and conditions for using Lee Meadows AI Trading cryptocurrency investment services.",
 };
 
 export default function TermsPage() {
@@ -48,7 +48,7 @@ export default function TermsPage() {
               Please read these Terms of Service carefully before using our services.
             </p>
             <p>
-              By accessing or using the BG Wealth Sharing investment services through Lee Meadows, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.
+              By accessing or using the Lee Meadows AI Trading investment services through Lee Meadows, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.
             </p>
           </CardContent>
         </Card>
@@ -65,7 +65,7 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent className="text-gray-300 space-y-4">
               <p>
-                These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "you", or "your") and BG Wealth Sharing Investment Group, DSJ Exchange, and Lee Meadows (collectively, "we", "us", or "our") concerning your access to and use of our investment services, trading platform, and website.
+                These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "you", or "your") and Lee Meadows AI Trading Investment Group, licensed cryptocurrency exchanges, and Lee Meadows (collectively, "we", "us", or "our") concerning your access to and use of our investment services, trading platform, and website.
               </p>
               <p>
                 By creating an account, making a deposit, or using any of our services, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as our Privacy Policy and Disclaimer.
@@ -138,7 +138,7 @@ export default function TermsPage() {
             <CardContent className="text-gray-300 space-y-4">
               <h3 className="font-semibold text-white">Service Description</h3>
               <p>
-                We provide cryptocurrency investment services through our partnership with DSJ Exchange, including:
+                We provide cryptocurrency investment services through our partnership with licensed cryptocurrency exchanges, including:
               </p>
               <ul className="list-disc list-inside space-y-2 pl-4">
                 <li>AI-powered trading signals</li>
@@ -311,7 +311,7 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent className="text-gray-300 space-y-4">
               <p>
-                All content, features, and functionality on our website and platform, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, and software, are the exclusive property of BG Wealth Sharing, DSJ Exchange, or their licensors and are protected by copyright, trademark, and other intellectual property laws.
+                All content, features, and functionality on our website and platform, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, and software, are the exclusive property of Lee Meadows AI Trading, licensed cryptocurrency exchanges, or their licensors and are protected by copyright, trademark, and other intellectual property laws.
               </p>
               <p>
                 You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any material from our services without prior written consent.
@@ -405,7 +405,7 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent className="text-gray-300 space-y-4">
               <p>
-                You agree to defend, indemnify, and hold harmless BG Wealth Sharing, DSJ Exchange, Lee Meadows, and their affiliates, officers, directors, employees, contractors, agents, licensors, and suppliers from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:
+                You agree to defend, indemnify, and hold harmless Lee Meadows AI Trading, licensed cryptocurrency exchanges, Lee Meadows, and their affiliates, officers, directors, employees, contractors, agents, licensors, and suppliers from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:
               </p>
               <ul className="list-disc list-inside space-y-2 pl-4">
                 <li>Your violation of these Terms of Service</li>
@@ -521,7 +521,7 @@ export default function TermsPage() {
                 If you have any questions about these Terms of Service, please contact us:
               </p>
               <div className="space-y-2 mt-4">
-                <p className="font-semibold text-white">BG Wealth Sharing Investment Group</p>
+                <p className="font-semibold text-white">Lee Meadows AI Trading Investment Group</p>
                 <p>Email: <span className="text-yellow-500">support@bgwealthsharing.com</span></p>
                 <p>Representative: Lee Meadows</p>
               </div>

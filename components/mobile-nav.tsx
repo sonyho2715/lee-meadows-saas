@@ -68,7 +68,7 @@ export function MobileNav() {
               Lee Meadows
             </h3>
             <p className="text-xs text-gray-400 mt-1">
-              BG Wealth Sharing
+              AI Trading Signals
             </p>
           </div>
 
