@@ -8,7 +8,7 @@ export function HowItWorks() {
       icon: UserPlus,
       number: "01",
       title: "Create Account",
-      description: "Contact Lee Meadows to set up your DSJ Exchange account. Quick verification process with international compliance standards."
+      description: "Contact Lee Meadows to set up your trading account. Quick verification process with international compliance standards."
     },
     {
       icon: Wallet,

@@ -4,8 +4,8 @@ import { AlertTriangle, Shield, Info } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Legal Disclaimer | Lee Meadows - BG Wealth Sharing",
-  description: "Important legal disclaimers and risk warnings for BG Wealth Sharing cryptocurrency investment services.",
+  title: "Legal Disclaimer | Lee Meadows - Lee Meadows AI Trading",
+  description: "Important legal disclaimers and risk warnings for Lee Meadows AI Trading cryptocurrency investment services.",
 };
 
 export default function DisclaimerPage() {
@@ -115,7 +115,7 @@ export default function DisclaimerPage() {
             </CardHeader>
             <CardContent className="text-gray-300 space-y-4">
               <p>
-                BG Wealth Sharing Investment Group and DSJ Exchange operate under various regulatory frameworks. However, regulatory oversight does not eliminate all risks associated with cryptocurrency trading and investment.
+                Lee Meadows AI Trading Investment Group and licensed cryptocurrency exchanges operate under various regulatory frameworks. However, regulatory oversight does not eliminate all risks associated with cryptocurrency trading and investment.
               </p>
 
               <h3 className="font-semibold text-white">Licensing Information</h3>
@@ -169,7 +169,7 @@ export default function DisclaimerPage() {
             </CardHeader>
             <CardContent className="text-gray-300 space-y-4">
               <p>
-                This website may contain links to third-party websites or services that are not owned or controlled by BG Wealth Sharing or Lee Meadows. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
+                This website may contain links to third-party websites or services that are not owned or controlled by Lee Meadows AI Trading or Lee Meadows. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.
               </p>
               <p>
                 You acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such third-party websites or services.
@@ -205,7 +205,7 @@ export default function DisclaimerPage() {
             </CardHeader>
             <CardContent className="text-gray-300 space-y-4">
               <p>
-                To the maximum extent permitted by applicable law, in no event shall BG Wealth Sharing, DSJ Exchange, Lee Meadows, or their affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:
+                To the maximum extent permitted by applicable law, in no event shall Lee Meadows AI Trading, licensed cryptocurrency exchanges, Lee Meadows, or their affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:
               </p>
               <ul className="list-disc list-inside space-y-2 pl-4">
                 <li>Your access to or use of or inability to access or use the services</li>
