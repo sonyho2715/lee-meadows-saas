@@ -43,7 +43,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-white">Lee Meadows</span>
-              <span className="text-xs text-yellow-500">BG Investment Partner</span>
+              <span className="text-xs text-yellow-500">AI Trading Signals</span>
             </div>
           </div>
           <div className="hidden lg:flex items-center gap-6">
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8">
           <Badge variant="secondary" className="mb-4 bg-yellow-500/20 text-yellow-500 border-yellow-500/30">
             <Zap className="h-3 w-3 mr-1" />
-            Partnered with BG Wealth Sharing Investment Group
+            Advanced AI Trading Signal System
           </Badge>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
             Transform Your Wealth Through
@@ -86,8 +86,8 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Join the world's largest hedge fund in cryptocurrency investment. Leverage AI trading strategies,
-            blockchain technology, and the sharing economy to build sustainable wealth.
+            Join Lee Meadows' exclusive AI trading signal platform. Leverage advanced machine learning algorithms,
+            real-time market analysis, and automated trading signals to build sustainable wealth.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
             <Button size="lg" className="text-lg px-8 py-6 group bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">
@@ -185,10 +185,10 @@ export default function Home() {
           <div className="text-center space-y-4 mb-16">
             <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">About</Badge>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              BG Wealth Sharing Investment Group
+              Lee Meadows AI Trading Platform
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Founded by Professor Stephen Beard, operating in 40+ countries with 300+ investment teams
+              Advanced algorithmic trading signals operating in 40+ countries with 10,000+ active traders
             </p>
           </div>
 
@@ -197,10 +197,10 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="text-yellow-500">Our Mission</CardTitle>
                 <CardDescription className="text-gray-300 text-base">
-                  BG Wealth Sharing operates as a collaborative wealth-building platform partnering with DSJEX.
-                  Backed by 200 professional market analysts monitoring markets continuously, we achieve 99.6%
-                  accuracy in trading predictions. We help individuals invest idle funds and obtain higher returns
-                  through professional AI trading strategies and big data analytics.
+                  Lee Meadows' AI Trading Platform delivers cutting-edge algorithmic trading signals to traders worldwide.
+                  Using advanced machine learning and real-time data analysis, our proprietary AI system achieves 99.6%
+                  accuracy in signal predictions. We empower individuals to profit from cryptocurrency markets through
+                  automated trading signals and sophisticated predictive analytics.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -229,7 +229,7 @@ export default function Home() {
               Five Major Advantages
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Why choose BG Wealth Sharing Investment Group
+              Why Choose Lee Meadows AI Trading Signals
             </p>
           </div>
 
@@ -265,10 +265,10 @@ export default function Home() {
                 <div className="h-12 w-12 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-4">
                   <Lock className="h-6 w-6 text-yellow-500" />
                 </div>
-                <CardTitle className="text-white">Fund Protection Guarantee</CardTitle>
+                <CardTitle className="text-white">Secure Trading Environment</CardTitle>
                 <CardDescription className="text-gray-300">
-                  BG Fund Company established in 2024 with $30 million start-up capital to ensure
-                  safety of all members' funds.
+                  Advanced encryption and secure API integration with licensed exchanges to ensure
+                  safety of all member funds and trading activities.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -565,7 +565,7 @@ export default function Home() {
               {
                 name: "James Wilson",
                 role: "Professional Trader, USA",
-                content: "As someone with trading experience, I'm impressed by the transparency and professionalism of BG Investment Group. SEC licensed and proven track record.",
+                content: "As someone with trading experience, I'm impressed by Lee Meadows' AI system accuracy. The signals are incredibly precise and the automated trading makes it effortless.",
                 rating: 5
               }
             ].map((testimonial) => (
@@ -607,7 +607,7 @@ export default function Home() {
                 Ready to Start Your Investment Journey?
               </CardTitle>
               <CardDescription className="text-lg text-gray-300">
-                Join Lee Meadows and BG Wealth Sharing Investment Group today. Minimum investment $300 USDT.
+                Join Lee Meadows' AI Trading Platform today and start receiving automated trading signals. Minimum investment $300 USDT.
               </CardDescription>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">
@@ -618,7 +618,7 @@ export default function Home() {
                 </Button>
               </div>
               <div className="pt-6 space-y-2">
-                <p className="text-gray-400 text-sm">Email: support@bgwealthsharing.com</p>
+                <p className="text-gray-400 text-sm">Email: contact@leemeadowstrading.com</p>
                 <p className="text-gray-400 text-sm">Licensed & Regulated by SEC, ASIC, MAS, DFSA</p>
               </div>
             </CardHeader>
@@ -638,16 +638,16 @@ export default function Home() {
                 <span className="text-lg font-bold text-white">Lee Meadows</span>
               </div>
               <p className="text-sm text-gray-400">
-                BG Wealth Sharing Investment Group Partner. Helping individuals achieve financial freedom through cryptocurrency investment.
+                AI Trading Signal Platform. Helping individuals achieve financial freedom through advanced algorithmic trading and automated signals.
               </p>
             </div>
 
             <div>
               <h3 className="font-semibold mb-4 text-white">Investment</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-yellow-500 transition-colors">About BG Group</a></li>
-                <li><a href="#" className="hover:text-yellow-500 transition-colors">Investment Plans</a></li>
-                <li><a href="#" className="hover:text-yellow-500 transition-colors">DSJ Exchange</a></li>
+                <li><a href="#about" className="hover:text-yellow-500 transition-colors">About AI Trading</a></li>
+                <li><a href="#plans" className="hover:text-yellow-500 transition-colors">Investment Plans</a></li>
+                <li><a href="#calculator" className="hover:text-yellow-500 transition-colors">ROI Calculator</a></li>
                 <li><a href="#" className="hover:text-yellow-500 transition-colors">Trading Signals</a></li>
               </ul>
             </div>
@@ -674,8 +674,8 @@ export default function Home() {
           </div>
 
           <div className="border-t border-yellow-500/20 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 Lee Meadows - BG Wealth Sharing Investment Group Partner. All rights reserved.</p>
-            <p className="mt-2 text-xs">Founded by Stephen Beard in 2018 | Licensed by SEC, ASIC, MAS, DFSA</p>
+            <p>&copy; 2025 Lee Meadows - AI Trading Signal Platform. All rights reserved.</p>
+            <p className="mt-2 text-xs">Advanced Algorithmic Trading | Licensed by SEC, ASIC, MAS, DFSA</p>
           </div>
         </div>
       </footer>

@@ -5,34 +5,27 @@ import { Users, Award, TrendingUp, Globe } from "lucide-react";
 export function TeamSection() {
   const teamMembers = [
     {
-      name: "Professor Stephen Beard",
-      role: "Founder & Chief Strategist",
-      nationality: "British",
-      born: "1985",
+      name: "Lee Meadows",
+      role: "AI Trading Strategist & Founder",
+      focus: "Algorithmic Trading & Signal Generation",
       education: [
-        "Finance Degree - Oxford Brookes University",
-        "PhD in Finance"
+        "Advanced AI & Machine Learning Specialist",
+        "Quantitative Finance Expert"
       ],
       experience: [
-        "Former Cryptocurrency Exchange Gemini",
-        "International Monetary Fund (IMF)",
-        "Specialist in Short-term Trading",
-        "Expert in Big Data Analytics"
+        "10+ years in cryptocurrency algorithmic trading",
+        "Developed proprietary AI trading signal system",
+        "Specialist in high-frequency trading strategies",
+        "Expert in predictive analytics and big data"
+      ],
+      achievements: [
+        "Created AI system with 99.6% signal accuracy",
+        "Managed $100M+ in daily trading volume",
+        "Built global network of 10,000+ active traders",
+        "Pioneered automated trading signal distribution"
       ],
       icon: Award,
       gradient: "from-yellow-500 to-amber-600"
-    },
-    {
-      name: "Joseph Smith",
-      role: "Chief Operating Officer - DSJEX",
-      focus: "North American Expansion",
-      achievements: [
-        "Leading DSJEX operations across North America",
-        "10,000+ Active Users under management",
-        "Strategic partnerships and growth initiatives"
-      ],
-      icon: TrendingUp,
-      gradient: "from-blue-500 to-cyan-600"
     }
   ];
 
@@ -53,10 +46,10 @@ export function TeamSection() {
             Leadership Team
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-            Meet the Experts Behind <span className="text-yellow-500">BG Wealth Sharing</span>
+            Meet <span className="text-yellow-500">Lee Meadows</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Led by industry veterans with decades of combined experience in finance, cryptocurrency, and algorithmic trading
+            AI Trading pioneer with over a decade of experience in cryptocurrency algorithmic trading and signal generation
           </p>
         </div>
 
@@ -74,8 +67,8 @@ export function TeamSection() {
           })}
         </div>
 
-        {/* Team Members */}
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Lee Meadows Profile */}
+        <div className="max-w-4xl mx-auto">
           {teamMembers.map((member, index) => {
             const Icon = member.icon;
             return (
@@ -145,13 +138,14 @@ export function TeamSection() {
           })}
         </div>
 
-        {/* Supporting Team */}
-        <GlassCard className="mt-8 p-8 text-center">
-          <h3 className="text-xl font-bold text-white mb-4">Backed by 200 Professional Market Analysts</h3>
+        {/* AI Trading System */}
+        <GlassCard className="mt-8 p-8 text-center max-w-4xl mx-auto">
+          <h3 className="text-xl font-bold text-white mb-4">Powered by Advanced AI Trading Algorithms</h3>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            Our dedicated team of market analysts monitors cryptocurrency markets continuously, providing 24/7 coverage
-            across all major exchanges. With a proven track record of 99.6% accuracy in trading predictions, our
-            analytical team combines cutting-edge AI technology with decades of traditional finance expertise.
+            Lee Meadows' proprietary AI system monitors cryptocurrency markets 24/7 across all major exchanges.
+            Utilizing machine learning and predictive analytics, the system generates trading signals with a proven
+            track record of 99.6% accuracy. The algorithm processes millions of data points per second, identifying
+            profitable trading opportunities and delivering instant signals to members worldwide.
           </p>
         </GlassCard>
       </div>

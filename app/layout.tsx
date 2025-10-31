@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lee Meadows | BG Wealth Sharing Investment Group Partner | Cryptocurrency Trading",
-  description: "Join Lee Meadows and BG Wealth Sharing Investment Group for cryptocurrency investment. AI trading strategies with 99.6% win rate. Minimum $300 USDT. SEC licensed and regulated.",
+  title: "Lee Meadows | AI Trading Signals | Cryptocurrency Algorithmic Trading",
+  description: "Join Lee Meadows' AI Trading Platform for automated cryptocurrency trading signals. Advanced machine learning algorithms with 99.6% accuracy. Minimum $300 USDT. SEC licensed and regulated.",
   viewport: {
     width: "device-width",
     initialScale: 1,
