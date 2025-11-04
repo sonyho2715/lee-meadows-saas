@@ -21,6 +21,9 @@ import { TeamSection } from "@/components/team-section";
 import { TradingSystemDetails } from "@/components/trading-system-details";
 import { ComparisonTable } from "@/components/comparison-table";
 import { AnimatedStats } from "@/components/animated-stats";
+import { LiveDashboard } from "@/components/live-dashboard";
+import { ProfitTimeline } from "@/components/profit-timeline";
+import { KnowledgeHub } from "@/components/knowledge-hub";
 import Image from "next/image";
 
 export default function Home() {
@@ -183,6 +186,12 @@ export default function Home() {
 
       {/* Comparison Table */}
       <ComparisonTable />
+
+      {/* Live Dashboard */}
+      <LiveDashboard />
+
+      {/* Profit Timeline Visualizer */}
+      <ProfitTimeline />
 
       {/* About Section */}
       <section id="about" className="container mx-auto px-4 py-20">
@@ -602,6 +611,9 @@ export default function Home() {
 
       {/* Visual Showcase */}
       <VisualShowcase />
+
+      {/* Knowledge Hub */}
+      <KnowledgeHub />
 
       {/* CTA Section */}
       <section id="contact" className="container mx-auto px-4 py-20">
