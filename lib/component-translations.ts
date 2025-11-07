@@ -915,77 +915,77 @@ export const componentTranslations = {
 
     // Comparison Table
     comparison: {
-      badge: "AI so với Truyền Thống",
+      badge: "AI vs Truyền Thống",
       title: "Tại Sao",
-      titleHighlight: "Giao Dịch AI",
-      titleEnd: "Vượt Trội Hơn Các Phương Pháp Truyền Thống",
-      subtitle: "Xem các lợi thế rõ ràng của hệ thống giao dịch được hỗ trợ bởi AI của TradePulse AI so với giao dịch thủ công truyền thống",
-      recommended: "KHUYẾN NGHỊ",
+      titleHighlight: "AI Trading",
+      titleEnd: "Vượt Trội Hơn Cách Cũ",
+      subtitle: "Nhìn ngay sự khác biệt của hệ thống AI-powered trading của TradePulse AI so với giao dịch thủ công kiểu cũ",
+      recommended: "RECOMMENDED",
       traditional: {
-        title: "Giao Dịch Truyền Thống",
-        subtitle: "Thủ Công, Tốn Thời Gian"
+        title: "Traditional Trading",
+        subtitle: "Thủ công, mất thời gian"
       },
       aiTrading: {
-        title: "Giao Dịch AI TradePulse AI",
-        subtitle: "Tự Động, Được Hỗ Trợ Bởi AI"
+        title: "TradePulse AI AI Trading",
+        subtitle: "Tự động hóa, AI-Powered"
       },
       features: [
         {
-          feature: "Độ Chính Xác Tỷ Lệ Thắng",
+          feature: "Win Rate Accuracy",
           traditional: "60-70%",
           aiTrading: "99.6%"
         },
         {
-          feature: "Thời Gian Đầu Tư Cần Thiết",
+          feature: "Time Investment Required",
           traditional: "4-8 giờ mỗi ngày",
           aiTrading: "Chỉ vài phút mỗi ngày"
         },
         {
-          feature: "Kiến Thức Kỹ Thuật Cần Thiết",
-          traditional: "Yêu cầu kinh nghiệm sâu rộng",
+          feature: "Technical Knowledge Needed",
+          traditional: "Cần kinh nghiệm dày dặn",
           aiTrading: "Không cần kinh nghiệm"
         },
         {
-          feature: "Quyết Định Cảm Tính",
-          traditional: "Rủi ro cao của giao dịch cảm tính",
-          aiTrading: "100% dựa trên dữ liệu, không cảm xúc"
+          feature: "Emotional Decision Making",
+          traditional: "Dễ thua vì giao dịch bốc đồng",
+          aiTrading: "100% data-driven, zero cảm xúc"
         },
         {
-          feature: "Tốc Độ Phân Tích Thị Trường",
-          traditional: "Phân tích thủ công, chậm",
-          aiTrading: "Xử lý AI thời gian thực"
+          feature: "Market Analysis Speed",
+          traditional: "Phân tích thủ công, chậm chạp",
+          aiTrading: "AI xử lý real-time"
         },
         {
-          feature: "Thời Điểm Tín Hiệu",
-          traditional: "Thường bỏ lỡ cơ hội",
-          aiTrading: "Tín hiệu vào/ra chính xác"
+          feature: "Signal Timing",
+          traditional: "Hay lỡ mất cơ hội",
+          aiTrading: "Tín hiệu vào/ra chuẩn chỉnh"
         },
         {
-          feature: "Quản Lý Rủi Ro",
-          traditional: "Không nhất quán, lỗi con người",
-          aiTrading: "Kiểm soát rủi ro tự động"
+          feature: "Risk Management",
+          traditional: "Không ổn định, dễ sai sót",
+          aiTrading: "Tự động kiểm soát rủi ro"
         },
         {
-          feature: "Tiềm Năng Lợi Nhuận Hàng Ngày",
-          traditional: "Không thể dự đoán, biến động",
-          aiTrading: "Lợi nhuận hàng ngày ổn định"
+          feature: "Daily Profit Potential",
+          traditional: "Không dự đoán được, thất thường",
+          aiTrading: "Lợi nhuận đều đặn mỗi ngày"
         },
         {
-          feature: "Mức Độ Căng Thẳng",
-          traditional: "Căng thẳng cao, giám sát liên tục",
-          aiTrading: "Căng thẳng thấp, tự động"
+          feature: "Stress Level",
+          traditional: "Căng não, phải theo dõi liên tục",
+          aiTrading: "Chill, để AI lo"
         },
         {
-          feature: "Đường Cong Học Tập",
-          traditional: "Hàng tháng đến hàng năm",
-          aiTrading: "Bắt đầu có lợi nhuận từ ngày 1"
+          feature: "Learning Curve",
+          traditional: "Mất hàng tháng đến cả năm",
+          aiTrading: "Kiếm lời ngay từ ngày đầu"
         }
       ],
       cta: {
-        title: "Sẵn Sàng Chuyển Sang Giao Dịch AI?",
-        description: "Tham gia hàng nghìn nhà giao dịch đã nâng cấp lên hệ thống được hỗ trợ bởi AI của TradePulse AI và đang kiếm lợi nhuận hàng ngày ổn định.",
-        startTrading: "Bắt Đầu Giao Dịch AI Ngay Hôm Nay",
-        calculateReturns: "Tính Toán Lợi Nhuận Của Bạn"
+        title: "Sẵn Sàng Chuyển Sang AI Trading?",
+        description: "Tham gia cùng hàng nghìn trader đã lên đời lên hệ thống AI-powered của TradePulse AI và đang kiếm lời ổn định mỗi ngày.",
+        startTrading: "Bắt Đầu AI Trading Ngay",
+        calculateReturns: "Tính Lợi Nhuận"
       }
     },
 
