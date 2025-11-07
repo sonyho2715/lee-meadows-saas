@@ -65,10 +65,10 @@ export function MobileNav() {
           {/* Header */}
           <div className="p-6 border-b border-white/10">
             <h3 className="text-xl font-bold text-yellow-500">
-              Lee Meadows
+              TradePulse AI
             </h3>
             <p className="text-xs text-gray-400 mt-1">
-              AI Trading Signals
+              AI-Powered Trading Intelligence
             </p>
           </div>
 

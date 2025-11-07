@@ -114,7 +114,7 @@ export function KnowledgeHub() {
 
   const videos = [
     {
-      title: "Lee Meadows: My Journey to AI Trading",
+      title: "TradePulse AI: The Future of Algorithmic Trading",
       duration: "12:45",
       views: "15.2K",
       thumbnail: "bg-gradient-to-br from-yellow-500/20 to-amber-600/20"

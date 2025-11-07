@@ -1,10 +1,10 @@
-# Lee Meadows - BG Wealth Sharing Investment Platform
+# TradePulse AI - AI-Powered Trading Intelligence Platform
 
-A professional cryptocurrency investment landing page for Lee Meadows, partner of BG Wealth Sharing Investment Group.
+A professional AI trading platform delivering precision cryptocurrency trading signals with 99.6% accuracy.
 
 ## Overview
 
-This website represents Lee Meadows' partnership with BG Wealth Sharing Investment Group, founded by Stephen Beard in 2018. The platform leverages AI trading strategies through DSJ Exchange for cryptocurrency investment.
+TradePulse AI is an advanced algorithmic trading platform that leverages state-of-the-art machine learning technology to deliver highly accurate cryptocurrency trading signals. The platform processes millions of data points per second to identify optimal trading opportunities.
 
 ## Key Features
 
@@ -33,13 +33,13 @@ This website represents Lee Meadows' partnership with BG Wealth Sharing Investme
 
 See [LEGAL_COMPLIANCE.md](LEGAL_COMPLIANCE.md) for complete legal documentation.
 
-## About BG Wealth Sharing
+## About TradePulse AI
 
-- **Founded**: 2018 by Stephen Beard
-- **Partnership**: DSJ Exchange (founded April 2022)
+- **Technology**: Advanced AI & Machine Learning Algorithms
+- **Accuracy**: 99.6% signal accuracy rate
 - **Licenses**: SEC (US), ASIC (Australia), MAS (Singapore), DFSA (Dubai)
-- **Fund Protection**: $30M start-up capital guarantee
-- **Track Record**: 1M+ users helped, 99.6% win rate
+- **Fund Protection**: $30M capital guarantee
+- **Track Record**: 10,000+ active traders, processing millions of data points per second
 
 ## Getting Started
 
@@ -182,10 +182,10 @@ lee-meadows-saas/
 
 ## Contact
 
-Email: support@bgwealthsharing.com
-Partner: Lee Meadows
+Email: support@tradepulse-ai.com
+Platform: TradePulse AI
 
 ---
 
-© 2025 Lee Meadows - BG Wealth Sharing Investment Group Partner
+© 2025 TradePulse AI - AI-Powered Trading Intelligence Platform
 **Built with Next.js 15, TypeScript, Tailwind CSS & shadcn/ui**

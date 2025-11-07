@@ -22,7 +22,7 @@ export function CertificatesGallery() {
     },
     {
       title: "Stock Certificate",
-      organization: "Lee Meadows Trading LTD",
+      organization: "TradePulse AI Trading LTD",
       image: "/images/certificates/stock-certificate.jpg",
       icon: FileCheck,
       color: "text-purple-400"
@@ -81,11 +81,11 @@ export function CertificatesGallery() {
         {/* Additional Legal Documents */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] overflow-hidden group">
-            <ImageModal src="/images/certificates/five-advantages.jpg" alt="Five advantages of Lee Meadows AI Trading">
+            <ImageModal src="/images/certificates/five-advantages.jpg" alt="Five advantages of TradePulse AI AI Trading">
               <div className="aspect-video relative">
                 <Image
                   src="/images/certificates/five-advantages.jpg"
-                  alt="Five advantages of Lee Meadows AI Trading"
+                  alt="Five advantages of TradePulse AI AI Trading"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform"
                 />

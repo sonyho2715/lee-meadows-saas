@@ -10,28 +10,28 @@ export function VisualShowcase() {
       description: "Five-stage wealth management system with detailed profit projections",
       category: "Investment Strategy",
       image: "/images/investment/wealth-planning-chart.png",
-      alt: "Lee Meadows Wealth Planning Chart showing 5 investment stages from $500 to $5000 USDT"
+      alt: "TradePulse AI Wealth Planning Chart showing 5 investment stages from $500 to $5000 USDT"
     },
     {
       title: "Trading Signals Schedule",
       description: "Daily signal times (EST) and usage guidelines for all members",
       category: "Trading Operations",
       image: "/images/investment/trading-signals-guidelines.png",
-      alt: "Lee Meadows Daily Trading Signals Usage Guidelines with fixed and additional signal times"
+      alt: "TradePulse AI Daily Trading Signals Usage Guidelines with fixed and additional signal times"
     },
     {
       title: "Referral Rewards System",
       description: "Complete breakdown of referral bonuses and dynamic signal rewards",
       category: "Rewards Program",
       image: "/images/investment/referral-rewards-2025.png",
-      alt: "Lee Meadows 2025 Referral Rewards table showing deposit amounts and rewards"
+      alt: "TradePulse AI 2025 Referral Rewards table showing deposit amounts and rewards"
     },
     {
       title: "Regulatory Licenses",
       description: "SEC, ASIC, and international certifications displayed",
       category: "Compliance",
       image: "/images/certificates/sec-license-bg.jpg",
-      alt: "U.S. Securities and Exchange Commission license for Lee Meadows Trading LTD"
+      alt: "U.S. Securities and Exchange Commission license for TradePulse AI Trading LTD"
     }
   ];
 
@@ -119,11 +119,11 @@ export function VisualShowcase() {
               />
             </div>
           </ImageModal>
-          <ImageModal src="/images/certificates/five-advantages.jpg" alt="Five advantages of Lee Meadows AI Trading investment">
+          <ImageModal src="/images/certificates/five-advantages.jpg" alt="Five advantages of TradePulse AI AI Trading investment">
             <div className="relative aspect-square rounded-lg overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-colors group">
               <Image
                 src="/images/certificates/five-advantages.jpg"
-                alt="Five advantages of Lee Meadows AI Trading investment"
+                alt="Five advantages of TradePulse AI AI Trading investment"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform"
                 loading="lazy"

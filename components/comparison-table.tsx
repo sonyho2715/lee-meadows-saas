@@ -91,7 +91,7 @@ export function ComparisonTable() {
             Why <span className="text-yellow-500">AI Trading</span> Beats Traditional Methods
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            See the clear advantages of Lee Meadows AI-powered trading system compared to traditional manual trading
+            See the clear advantages of TradePulse AI AI-powered trading system compared to traditional manual trading
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export function ComparisonTable() {
                 </div>
                 <div className="flex items-center justify-center gap-2 text-yellow-500 font-bold text-xl mb-2">
                   <TrendingUp className="h-5 w-5" />
-                  Lee Meadows AI Trading
+                  TradePulse AI AI Trading
                 </div>
                 <p className="text-gray-300 text-sm">Automated, AI-Powered</p>
               </Card>
@@ -165,7 +165,7 @@ export function ComparisonTable() {
               Ready to Make the Switch to AI Trading?
             </h3>
             <p className="text-gray-300 mb-6">
-              Join thousands of traders who have already upgraded to Lee Meadows AI-powered system and are earning consistent daily profits.
+              Join thousands of traders who have already upgraded to TradePulse AI AI-powered system and are earning consistent daily profits.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

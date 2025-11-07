@@ -5,23 +5,23 @@ import { Users, Award, TrendingUp, Globe } from "lucide-react";
 export function TeamSection() {
   const teamMembers = [
     {
-      name: "Lee Meadows",
-      role: "7-Figure Entrepreneur & AI Trading Pioneer",
-      focus: "Empowering Others Through AI Trading Signals",
+      name: "TradePulse AI",
+      role: "AI-Powered Trading Intelligence Platform",
+      focus: "Empowering Traders Through Advanced AI Algorithms",
       education: [
-        "Proven 7-Figure Success in Multiple Ventures",
-        "Early Adopter of AI Trading Technology"
+        "Built on Advanced Machine Learning Technology",
+        "Developed by Leading AI & Trading Experts"
       ],
       experience: [
-        "Achieved 7-figure success in previous businesses",
-        "Discovered revolutionary AI trading signal strategy",
-        "Partnered with leading AI trading algorithm developers",
-        "Dedicated to helping others achieve financial freedom"
+        "Powered by state-of-the-art AI trading algorithms",
+        "Revolutionary AI signal generation technology",
+        "Partnership with top quantitative trading firms",
+        "Dedicated to democratizing advanced trading intelligence"
       ],
       achievements: [
-        "Built multiple successful 7-figure businesses",
-        "Leverages AI system with 99.6% signal accuracy",
-        "Helping 10,000+ traders profit daily",
+        "99.6% AI signal accuracy rate",
+        "Serving 10,000+ active traders globally",
+        "Processing millions of data points per second",
         "Simplifying wealth creation - just minutes per day"
       ],
       icon: Award,
@@ -46,10 +46,10 @@ export function TeamSection() {
             Leadership Team
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-            Meet <span className="text-yellow-500">Lee Meadows</span>
+            Powered by <span className="text-yellow-500">TradePulse AI</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            7-Figure entrepreneur sharing revolutionary AI trading strategy. Take a short break each day to make more money.
+            Revolutionary AI trading platform delivering precision signals. Take a short break each day to make more money.
           </p>
         </div>
 
@@ -134,13 +134,13 @@ export function TeamSection() {
 
         {/* Success Story */}
         <GlassCard className="mt-8 p-8 text-center max-w-4xl mx-auto">
-          <h3 className="text-xl font-bold text-white mb-4">From Success to Significance</h3>
+          <h3 className="text-xl font-bold text-white mb-4">The TradePulse AI Advantage</h3>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            After achieving 7-figure success in multiple business ventures, Lee Meadows discovered a game-changing
-            AI trading signal strategy. Now, she's dedicated to helping others achieve the same financial freedom.
-            The AI system monitors markets 24/7, delivering 99.6% accurate signals. All you need is a few minutes
-            each day to follow the signals and watch your wealth grow. Lee proves that with the right strategy,
-            anyone can transform their financial future.
+            TradePulse AI represents the cutting edge of algorithmic trading technology. Our advanced AI system
+            monitors global cryptocurrency markets 24/7, processing millions of data points per second to deliver
+            99.6% accurate trading signals. All you need is a few minutes each day to follow the signals and watch
+            your wealth grow. TradePulse AI proves that with the right AI-powered strategy, anyone can transform
+            their financial future through intelligent, automated trading.
           </p>
         </GlassCard>
       </div>

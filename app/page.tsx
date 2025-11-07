@@ -44,11 +44,11 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-yellow-500 to-amber-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">
-              LM
+              TP
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-white">Lee Meadows</span>
-              <span className="text-xs text-yellow-500">AI Trading Signals</span>
+              <span className="text-xl font-bold text-white">TradePulse AI</span>
+              <span className="text-xs text-yellow-500">AI-Powered Trading Intelligence</span>
             </div>
           </div>
           <div className="hidden lg:flex items-center gap-6">
@@ -88,8 +88,8 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Join Lee Meadows, a proven 7-figure entrepreneur, and discover the AI trading strategy that
-            works while you live your life. Just minutes a day to follow signals and watch your wealth grow.
+            Discover the AI trading strategy that works while you live your life.
+            Just minutes a day to follow precision signals and watch your wealth grow.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
             <Button size="lg" className="text-lg px-8 py-6 group bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">
@@ -199,7 +199,7 @@ export default function Home() {
           <div className="text-center space-y-4 mb-16">
             <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">About</Badge>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              Lee Meadows AI Trading Platform
+              TradePulse AI Trading Platform
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Advanced algorithmic trading signals operating in 40+ countries with 10,000+ active traders
@@ -211,7 +211,7 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="text-yellow-500">Our Mission</CardTitle>
                 <CardDescription className="text-gray-300 text-base">
-                  Lee Meadows' AI Trading Platform delivers cutting-edge algorithmic trading signals to traders worldwide.
+                  TradePulse AI delivers cutting-edge algorithmic trading signals to traders worldwide.
                   Using advanced machine learning and real-time data analysis, our proprietary AI system achieves 99.6%
                   accuracy in signal predictions. We empower individuals to profit from cryptocurrency markets through
                   automated trading signals and sophisticated predictive analytics.
@@ -223,7 +223,7 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="text-yellow-500">AI-Powered Technology</CardTitle>
                 <CardDescription className="text-gray-300 text-base">
-                  Lee Meadows partners with industry-leading AI algorithm developers to deliver cutting-edge trading
+                  TradePulse AI partners with industry-leading algorithm developers to deliver cutting-edge trading
                   signals. The technology operates on SEC-licensed exchanges with full regulatory compliance across
                   major markets including US, Australia, Singapore, and Dubai. Advanced machine learning processes
                   millions of data points per second to identify profitable opportunities.
@@ -243,7 +243,7 @@ export default function Home() {
               Five Major Advantages
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Why Choose Lee Meadows AI Trading Signals
+              Why Choose TradePulse AI Trading Signals
             </p>
           </div>
 
@@ -294,7 +294,7 @@ export default function Home() {
                 </div>
                 <CardTitle className="text-white">Proven Track Record</CardTitle>
                 <CardDescription className="text-gray-300">
-                  Lee Meadows' AI trading strategy has consistently delivered results, with a proven
+                  TradePulse AI's trading algorithms have consistently delivered results, with a proven
                   99.6% signal accuracy rate and $100M+ in daily trading volume.
                 </CardDescription>
               </CardHeader>
@@ -579,7 +579,7 @@ export default function Home() {
               {
                 name: "James Wilson",
                 role: "Professional Trader, USA",
-                content: "As someone with trading experience, I'm impressed by Lee Meadows' AI system accuracy. The signals are incredibly precise and the automated trading makes it effortless.",
+                content: "As someone with trading experience, I'm impressed by TradePulse AI's system accuracy. The signals are incredibly precise and the automated trading makes it effortless.",
                 rating: 5
               }
             ].map((testimonial) => (
@@ -624,18 +624,18 @@ export default function Home() {
                 Ready to Start Your Investment Journey?
               </CardTitle>
               <CardDescription className="text-lg text-gray-300">
-                Join Lee Meadows' AI Trading Platform today and start receiving automated trading signals. Minimum investment $300 USDT.
+                Join TradePulse AI today and start receiving automated trading signals. Minimum investment $300 USDT.
               </CardDescription>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">
-                  Contact Lee Meadows
+                  Get Started Now
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10">
                   View Complete Guide
                 </Button>
               </div>
               <div className="pt-6 space-y-2">
-                <p className="text-gray-400 text-sm">Email: contact@leemeadowstrading.com</p>
+                <p className="text-gray-400 text-sm">Email: support@tradepulse-ai.com</p>
                 <p className="text-gray-400 text-sm">Licensed & Regulated by SEC, ASIC, MAS, DFSA</p>
               </div>
             </CardHeader>
@@ -650,12 +650,12 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-yellow-500 to-amber-600 flex items-center justify-center text-white font-bold">
-                  LM
+                  TP
                 </div>
-                <span className="text-lg font-bold text-white">Lee Meadows</span>
+                <span className="text-lg font-bold text-white">TradePulse AI</span>
               </div>
               <p className="text-sm text-gray-400">
-                AI Trading Signal Platform. Helping individuals achieve financial freedom through advanced algorithmic trading and automated signals.
+                AI-Powered Trading Intelligence. Helping individuals achieve financial freedom through advanced algorithmic trading and automated signals.
               </p>
             </div>
 
@@ -691,7 +691,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-yellow-500/20 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 Lee Meadows - AI Trading Signal Platform. All rights reserved.</p>
+            <p>&copy; 2025 TradePulse AI - AI-Powered Trading Intelligence Platform. All rights reserved.</p>
             <p className="mt-2 text-xs">Advanced Algorithmic Trading | Licensed by SEC, ASIC, MAS, DFSA</p>
           </div>
         </div>

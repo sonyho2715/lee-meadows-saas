@@ -104,7 +104,7 @@ export function AnimatedStats() {
             Proven Results That <span className="text-yellow-500">Speak for Themselves</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Real-time statistics from Lee Meadows AI Trading platform showing consistent performance and growing community
+            Real-time statistics from TradePulse AI AI Trading platform showing consistent performance and growing community
           </p>
         </div>
 

@@ -4,8 +4,8 @@ import { Shield, Lock, Eye, Database, UserCheck } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Privacy Policy | Lee Meadows - Lee Meadows AI Trading",
-  description: "Privacy policy explaining how Lee Meadows AI Trading collects, uses, and protects your personal information.",
+  title: "Privacy Policy | TradePulse AI - TradePulse AI AI Trading",
+  description: "Privacy policy explaining how TradePulse AI AI Trading collects, uses, and protects your personal information.",
 };
 
 export default function PrivacyPage() {
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
           </CardHeader>
           <CardContent className="text-gray-200 space-y-3">
             <p>
-              Lee Meadows AI Trading Investment Group, licensed cryptocurrency exchanges, and Lee Meadows ("we", "us", or "our") are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our investment services and website.
+              TradePulse AI AI Trading Investment Group, licensed cryptocurrency exchanges, and TradePulse AI ("we", "us", or "our") are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our investment services and website.
             </p>
             <p className="font-semibold">
               By using our services, you consent to the data practices described in this policy.
@@ -489,11 +489,11 @@ export default function PrivacyPage() {
                 If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="space-y-3 mt-4 p-4 bg-[#0a0e27]/50 rounded-lg">
-                <p className="font-semibold text-white">Lee Meadows AI Trading Investment Group</p>
+                <p className="font-semibold text-white">TradePulse AI AI Trading Investment Group</p>
                 <p><strong>General Inquiries:</strong> <span className="text-yellow-500">support@bgwealthsharing.com</span></p>
                 <p><strong>Privacy Matters:</strong> <span className="text-yellow-500">privacy@bgwealthsharing.com</span></p>
                 <p><strong>Data Protection Officer:</strong> <span className="text-yellow-500">dpo@bgwealthsharing.com</span></p>
-                <p><strong>Representative:</strong> Lee Meadows</p>
+                <p><strong>Representative:</strong> TradePulse AI</p>
               </div>
 
               <p className="text-sm italic mt-4">

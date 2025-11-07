@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lee Meadows | AI Trading Signals | Cryptocurrency Algorithmic Trading",
-  description: "Join Lee Meadows' AI Trading Platform for automated cryptocurrency trading signals. Advanced machine learning algorithms with 99.6% accuracy. Minimum $300 USDT. SEC licensed and regulated.",
+  title: "TradePulse AI | AI Trading Signals | Cryptocurrency Algorithmic Trading",
+  description: "Join TradePulse AI for automated cryptocurrency trading signals. Advanced machine learning algorithms with 99.6% accuracy. Minimum $300 USDT. SEC licensed and regulated.",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Lee Meadows",
+    title: "TradePulse AI",
   },
   formatDetection: {
     telephone: false,

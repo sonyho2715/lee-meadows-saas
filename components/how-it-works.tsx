@@ -8,7 +8,7 @@ export function HowItWorks() {
       icon: UserPlus,
       number: "01",
       title: "Create Account",
-      description: "Contact Lee Meadows to set up your trading account. Quick verification process with international compliance standards."
+      description: "Contact TradePulse AI to set up your trading account. Quick verification process with international compliance standards."
     },
     {
       icon: Wallet,
@@ -39,7 +39,7 @@ export function HowItWorks() {
             Start Investing in 4 Simple Steps
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Get started with Lee Meadows AI Trading in minutes and begin your journey to financial freedom
+            Get started with TradePulse AI AI Trading in minutes and begin your journey to financial freedom
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export function HowItWorks() {
               href="#contact"
               className="inline-flex items-center justify-center h-12 px-8 rounded-md bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-white font-medium transition-all"
             >
-              Contact Lee Meadows Now
+              Contact TradePulse AI Now
             </a>
             <a
               href="#plans"
