@@ -24,6 +24,7 @@ import { AnimatedStats } from "@/components/animated-stats";
 import { LiveDashboard } from "@/components/live-dashboard";
 import { ProfitTimeline } from "@/components/profit-timeline";
 import { KnowledgeHub } from "@/components/knowledge-hub";
+import { LanguageToggle } from "@/components/language-toggle";
 import Image from "next/image";
 
 export default function Home() {
@@ -59,6 +60,7 @@ export default function Home() {
             <a href="#contact" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Contact</a>
           </div>
           <div className="hidden lg:flex items-center gap-3">
+            <LanguageToggle />
             <Button variant="ghost" size="sm" className="text-gray-300 hover:text-yellow-500">Sign In</Button>
             <Button size="sm" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">Get Started</Button>
           </div>
@@ -119,9 +121,6 @@ export default function Home() {
 
       {/* Crypto Ticker */}
       <CryptoTicker />
-
-      {/* Risk Warning */}
-      <RiskWarning />
 
       {/* Stats Section */}
       <section className="container mx-auto px-4 py-16">
@@ -642,6 +641,9 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
+      {/* Risk Warning */}
+      <RiskWarning />
 
       {/* Footer */}
       <footer className="border-t border-yellow-500/20 bg-[#0a0e27]/80">
