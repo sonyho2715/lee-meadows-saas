@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Activity, Users, DollarSign, CheckCircle, Clock, Zap, Target } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
+import { componentTranslations } from "@/lib/component-translations";
 
 export function LiveDashboard() {
+  const { language } = useLanguage();
+  const t = componentTranslations[language].liveDashboard;
+
   const [winRate, setWinRate] = useState(99.4);
   const [activeTraders, setActiveTraders] = useState(10247);
   const [todayProfit, setTodayProfit] = useState(284567);
@@ -38,13 +43,13 @@ export function LiveDashboard() {
         <div className="text-center space-y-4 mb-12">
           <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500 animate-pulse">
             <Activity className="h-3 w-3 mr-1" />
-            LIVE NOW
+            {t.badge}
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-            Real-Time <span className="text-yellow-500">Trading Performance</span>
+            {t.title} <span className="text-yellow-500">{t.titleHighlight}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Watch our AI trading system in action - updated every second with real member results
+            {t.subtitle}
           </p>
         </div>
 
@@ -56,7 +61,7 @@ export function LiveDashboard() {
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
                 <Target className="h-4 w-4 text-yellow-500" />
-                Today&apos;s Win Rate
+                {t.stats.winRate}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -65,7 +70,7 @@ export function LiveDashboard() {
               </div>
               <div className="flex items-center gap-1 text-xs text-green-500">
                 <TrendingUp className="h-3 w-3" />
-                <span>+0.2% from avg</span>
+                <span>{t.stats.fromAvg}</span>
               </div>
             </CardContent>
           </Card>
@@ -76,7 +81,7 @@ export function LiveDashboard() {
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
                 <Users className="h-4 w-4 text-blue-500" />
-                Active Traders
+                {t.stats.activeTraders}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -85,7 +90,7 @@ export function LiveDashboard() {
               </div>
               <div className="flex items-center gap-1 text-xs text-green-500">
                 <TrendingUp className="h-3 w-3" />
-                <span>+127 today</span>
+                <span>{t.stats.today}</span>
               </div>
             </CardContent>
           </Card>
@@ -96,7 +101,7 @@ export function LiveDashboard() {
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
                 <DollarSign className="h-4 w-4 text-green-500" />
-                Today&apos;s Profit
+                {t.stats.todayProfit}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -105,7 +110,7 @@ export function LiveDashboard() {
               </div>
               <div className="flex items-center gap-1 text-xs text-green-500">
                 <TrendingUp className="h-3 w-3" />
-                <span>All members</span>
+                <span>{t.stats.allMembers}</span>
               </div>
             </CardContent>
           </Card>
@@ -116,7 +121,7 @@ export function LiveDashboard() {
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
                 <Zap className="h-4 w-4 text-purple-500" />
-                Active Signals
+                {t.stats.activeSignals}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -125,7 +130,7 @@ export function LiveDashboard() {
               </div>
               <div className="flex items-center gap-1 text-xs text-gray-400">
                 <Clock className="h-3 w-3" />
-                <span>Live now</span>
+                <span>{t.stats.liveNow}</span>
               </div>
             </CardContent>
           </Card>
@@ -136,9 +141,9 @@ export function LiveDashboard() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-white">
               <Activity className="h-5 w-5 text-yellow-500 animate-pulse" />
-              Recent Winning Trades
+              {t.recentTrades.title}
               <Badge variant="secondary" className="ml-auto bg-green-500/20 text-green-500 border-green-500/30">
-                LIVE
+                {t.recentTrades.live}
               </Badge>
             </CardTitle>
           </CardHeader>
@@ -155,12 +160,12 @@ export function LiveDashboard() {
                     </div>
                     <div>
                       <div className="font-bold text-white">{trade.pair}</div>
-                      <div className="text-sm text-gray-400">{trade.type} Position</div>
+                      <div className="text-sm text-gray-400">{trade.type} {t.recentTrades.position}</div>
                     </div>
                   </div>
                   <div className="text-right">
                     <div className="font-bold text-green-500 text-lg">{trade.profit}</div>
-                    <div className="text-xs text-gray-400">{trade.time}</div>
+                    <div className="text-xs text-gray-400">{trade.time.replace('ago', t.recentTrades.ago)}</div>
                   </div>
                 </div>
               ))}
@@ -169,7 +174,7 @@ export function LiveDashboard() {
             {/* Auto-scrolling indicator */}
             <div className="mt-6 text-center">
               <p className="text-xs text-gray-500">
-                Trades are updated in real-time. Past performance does not guarantee future results.
+                {t.recentTrades.disclaimer}
               </p>
             </div>
           </CardContent>
@@ -179,23 +184,23 @@ export function LiveDashboard() {
         <div className="mt-12 text-center">
           <Card className="border-yellow-500/30 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-yellow-900/20 p-8 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-3">
-              Join These Winning Traders Today
+              {t.cta.title}
             </h3>
             <p className="text-gray-300 mb-6">
-              Start receiving the same AI signals that generated these profits. Minimum $300 USDT to get started.
+              {t.cta.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center h-12 px-8 rounded-md bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-white font-medium transition-all"
               >
-                Start Trading Now
+                {t.cta.startTrading}
               </a>
               <a
                 href="#calculator"
                 className="inline-flex items-center justify-center h-12 px-8 rounded-md border border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10 font-medium transition-all"
               >
-                Calculate Your Profits
+                {t.cta.calculateProfits}
               </a>
             </div>
           </Card>

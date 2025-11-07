@@ -3,8 +3,12 @@
 import { useState, useEffect } from "react";
 import { Shield, AlertTriangle, CheckCircle2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/language-context";
+import { componentTranslations } from "@/lib/component-translations";
 
 export function AgeVerification() {
+  const { language } = useLanguage();
+  const t = componentTranslations[language].ageVerification;
   const [isOpen, setIsOpen] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
 
@@ -45,7 +49,7 @@ export function AgeVerification() {
             <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center">
               <Shield className="h-6 w-6 text-yellow-500" />
             </div>
-            <h2 className="text-2xl font-bold text-white">Age Verification Required</h2>
+            <h2 className="text-2xl font-bold text-white">{t.title}</h2>
           </div>
         </div>
 
@@ -54,33 +58,20 @@ export function AgeVerification() {
           <div className="flex items-start gap-3 p-4 bg-amber-500/10 border border-amber-500/20 rounded-lg">
             <AlertTriangle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5" />
             <div className="text-sm text-gray-300">
-              <p className="font-semibold text-amber-500 mb-1">Important Notice</p>
-              <p>
-                This website offers cryptocurrency investment services. You must be at least 18 years old
-                to access this platform and participate in investment activities.
-              </p>
+              <p className="font-semibold text-amber-500 mb-1">{t.importantNotice}</p>
+              <p>{t.noticeText}</p>
             </div>
           </div>
 
           <div className="space-y-3 text-sm text-gray-400">
-            <p>By clicking "I Confirm", you certify that:</p>
+            <p>{t.certifyText}</p>
             <ul className="space-y-2">
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-yellow-500 shrink-0 mt-0.5" />
-                <span>You are 18 years of age or older</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-yellow-500 shrink-0 mt-0.5" />
-                <span>You understand the risks associated with cryptocurrency investment</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-yellow-500 shrink-0 mt-0.5" />
-                <span>You are legally permitted to invest in your jurisdiction</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="h-4 w-4 text-yellow-500 shrink-0 mt-0.5" />
-                <span>You have read and accept our Terms of Service and Privacy Policy</span>
-              </li>
+              {t.requirements.map((req, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-yellow-500 shrink-0 mt-0.5" />
+                  <span>{req}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -90,19 +81,19 @@ export function AgeVerification() {
               onClick={handleConfirm}
               className="flex-1 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-bold py-6"
             >
-              I Confirm (18+)
+              {t.confirm}
             </Button>
             <Button
               onClick={handleDecline}
               variant="outline"
               className="flex-1 border-red-500/30 text-red-500 hover:bg-red-500/10 py-6"
             >
-              I Decline
+              {t.decline}
             </Button>
           </div>
 
           <p className="text-xs text-center text-gray-500 pt-2">
-            Your confirmation will be stored locally. We do not collect or store age verification data.
+            {t.disclaimer}
           </p>
         </div>
       </div>

@@ -89,6 +89,84 @@ export const translations = {
       copyright: "TradePulse AI - AI-Powered Trading Intelligence Platform. All rights reserved.",
       tagline: "Advanced Algorithmic Trading | Licensed by SEC, ASIC, MAS, DFSA",
     },
+    // Stats Section
+    stats: {
+      peopleHelped: "People Helped",
+      tradingWinRate: "Trading Win Rate",
+      countryLicenses: "Country Licenses",
+      tradingSignals: "Trading Signals",
+    },
+    // Investment Plans
+    investmentPlans: {
+      badge: "Investment Plans",
+      title: "Wealth Management Plans",
+      subtitle: "Five-stage wealth planning for maximum returns",
+      stage: "Stage",
+      accountBalance: "Account Balance",
+      monthlyProfit: "Monthly Profit",
+      mostPopular: "Most Popular",
+      allIn: "All In",
+      startStage: "Start Stage",
+      disclaimer: "Monthly fund return rate is at least 60%, forming a zero-cost, zero-risk investment environment. You can double your principal within 40 days.",
+      benefits: {
+        stage1: {
+          profit: "8 USDT profit in total",
+          signals: "Daily trading signals",
+        },
+        stage3: {
+          profit: "72 USDT profit in total",
+          strategies: "Advanced trading strategies",
+          bonus: "Team bonus eligible",
+        },
+        stage5: {
+          returns: "Maximum returns - All in",
+          potential: "1950 USDT total profit potential",
+          vip: "VIP signals & support",
+          manager: "Manager bonus eligibility",
+        },
+      },
+    },
+    // Referral Program
+    referral: {
+      badge: "Rewards",
+      title: "Referral Rewards Program",
+      subtitle: "Earn additional income by sharing the project",
+      bonusesTitle: "Referral Bonuses",
+      signalsTitle: "Dynamic Trading Signals",
+      deposit: "deposit",
+      referrer: "referrer",
+      newUser: "new user",
+      benefits: {
+        earn10Percent: "Referrers earn 10% of new user's deposit as reward",
+        bonus5Percent: "New users receive 5% bonus on first deposit",
+        extraSignals: "Additional 6 dynamic trading signals for referrals over $500",
+        teamAgent: "After 5 successful referrals: promoted to Team Agent with permanent benefits",
+        staticSignals: "Receive 3 static trading signals every day",
+      },
+    },
+    // Testimonials
+    testimonials: {
+      badge: "Success Stories",
+      title: "Trusted by Investors Worldwide",
+      subtitle: "Join over 1 million people who have transformed their financial future",
+      people: [
+        {
+          name: "David Zhang",
+          role: "Early Investor, Singapore",
+          content: "Started with $1000 USDT and within 3 months, I've seen consistent returns. The AI trading signals are incredibly accurate. Best investment decision I've made.",
+        },
+        {
+          name: "Maria Santos",
+          role: "Team Agent, Philippines",
+          content: "The referral program changed my life. I built a team of 20 members and now earn passive income from both trading and team bonuses. Highly recommended!",
+        },
+        {
+          name: "James Wilson",
+          role: "Professional Trader, USA",
+          content: "As someone with trading experience, I'm impressed by TradePulse AI's system accuracy. The signals are incredibly precise and the automated trading makes it effortless.",
+        },
+      ],
+    },
   },
   vi: {
     // Navigation
@@ -179,6 +257,84 @@ export const translations = {
       riskDisclosure: "Tiết Lộ Rủi Ro",
       copyright: "TradePulse AI - Nền Tảng Trí Tuệ Giao Dịch Được Hỗ Trợ Bởi AI. Bảo lưu mọi quyền.",
       tagline: "Giao Dịch Thuật Toán Tiên Tiến | Được Cấp Phép bởi SEC, ASIC, MAS, DFSA",
+    },
+    // Stats Section
+    stats: {
+      peopleHelped: "Người Được Hỗ Trợ",
+      tradingWinRate: "Tỷ Lệ Thắng Giao Dịch",
+      countryLicenses: "Giấy Phép Quốc Gia",
+      tradingSignals: "Tín Hiệu Giao Dịch",
+    },
+    // Investment Plans
+    investmentPlans: {
+      badge: "Gói Đầu Tư",
+      title: "Gói Quản Lý Tài Sản",
+      subtitle: "Kế hoạch tài sản năm giai đoạn để đạt lợi nhuận tối đa",
+      stage: "Giai Đoạn",
+      accountBalance: "Số Dư Tài Khoản",
+      monthlyProfit: "Lợi Nhuận Hàng Tháng",
+      mostPopular: "Phổ Biến Nhất",
+      allIn: "Toàn Bộ",
+      startStage: "Bắt Đầu Giai Đoạn",
+      disclaimer: "Tỷ lệ hoàn vốn hàng tháng tối thiểu 60%, tạo nên môi trường đầu tư không chi phí, không rủi ro. Bạn có thể nhân đôi số vốn ban đầu trong vòng 40 ngày.",
+      benefits: {
+        stage1: {
+          profit: "Tổng lợi nhuận 8 USDT",
+          signals: "Tín hiệu giao dịch hàng ngày",
+        },
+        stage3: {
+          profit: "Tổng lợi nhuận 72 USDT",
+          strategies: "Chiến lược giao dịch nâng cao",
+          bonus: "Đủ điều kiện nhận tiền thưởng nhóm",
+        },
+        stage5: {
+          returns: "Lợi nhuận tối đa - Toàn bộ",
+          potential: "Tiềm năng lợi nhuận tổng cộng 1950 USDT",
+          vip: "Tín hiệu & hỗ trợ VIP",
+          manager: "Đủ điều kiện nhận tiền thưởng quản lý",
+        },
+      },
+    },
+    // Referral Program
+    referral: {
+      badge: "Phần Thưởng",
+      title: "Chương Trình Thưởng Giới Thiệu",
+      subtitle: "Kiếm thêm thu nhập bằng cách chia sẻ dự án",
+      bonusesTitle: "Tiền Thưởng Giới Thiệu",
+      signalsTitle: "Tín Hiệu Giao Dịch Động",
+      deposit: "tiền gửi",
+      referrer: "người giới thiệu",
+      newUser: "người dùng mới",
+      benefits: {
+        earn10Percent: "Người giới thiệu nhận 10% số tiền gửi của người dùng mới làm phần thưởng",
+        bonus5Percent: "Người dùng mới nhận thưởng 5% cho lần gửi tiền đầu tiên",
+        extraSignals: "Thêm 6 tín hiệu giao dịch động cho giới thiệu trên $500",
+        teamAgent: "Sau 5 giới thiệu thành công: được thăng cấp lên Đại Lý Nhóm với quyền lợi vĩnh viễn",
+        staticSignals: "Nhận 3 tín hiệu giao dịch tĩnh mỗi ngày",
+      },
+    },
+    // Testimonials
+    testimonials: {
+      badge: "Câu Chuyện Thành Công",
+      title: "Được Tin Tưởng Bởi Nhà Đầu Tư Toàn Cầu",
+      subtitle: "Tham gia hơn 1 triệu người đã thay đổi tương lai tài chính của họ",
+      people: [
+        {
+          name: "David Zhang",
+          role: "Nhà Đầu Tư Sớm, Singapore",
+          content: "Bắt đầu với $1000 USDT và trong vòng 3 tháng, tôi đã thấy lợi nhuận ổn định. Tín hiệu giao dịch AI cực kỳ chính xác. Đây là quyết định đầu tư tốt nhất mà tôi đã thực hiện.",
+        },
+        {
+          name: "Maria Santos",
+          role: "Đại Lý Nhóm, Philippines",
+          content: "Chương trình giới thiệu đã thay đổi cuộc đời tôi. Tôi đã xây dựng một nhóm 20 thành viên và hiện đang kiếm thu nhập thụ động từ cả giao dịch và tiền thưởng nhóm. Rất khuyến nghị!",
+        },
+        {
+          name: "James Wilson",
+          role: "Nhà Giao Dịch Chuyên Nghiệp, Hoa Kỳ",
+          content: "Là người có kinh nghiệm giao dịch, tôi rất ấn tượng với độ chính xác của hệ thống TradePulse AI. Các tín hiệu cực kỳ chính xác và giao dịch tự động làm cho mọi thứ trở nên dễ dàng.",
+        },
+      ],
     },
   },
 };

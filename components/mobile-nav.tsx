@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Home, Calculator, Shield, FileText, Mail } from "lucide-react";
 import Link from "next/link";
-import { useTranslation } from "@/hooks/use-translation";
+import { useLanguage } from "@/contexts/language-context";
+import { componentTranslations } from "@/lib/component-translations";
 
 export function MobileNav() {
+  const { language } = useLanguage();
+  const t = componentTranslations[language].mobileNav;
   const [isOpen, setIsOpen] = useState(false);
-  const { language } = useTranslation();
 
   // Prevent scroll when menu is open
   useEffect(() => {
@@ -22,12 +24,12 @@ export function MobileNav() {
   }, [isOpen]);
 
   const navItems = [
-    { href: "#home", label: language === "vi" ? "Trang Chủ" : "Home", icon: Home },
-    { href: "#calculator", label: language === "vi" ? "Máy Tính" : "Calculator", icon: Calculator },
-    { href: "#certificates", label: language === "vi" ? "Chứng Chỉ" : "Certificates", icon: Shield },
-    { href: "/terms", label: language === "vi" ? "Điều Khoản" : "Terms", icon: FileText },
-    { href: "/privacy", label: language === "vi" ? "Bảo Mật" : "Privacy", icon: FileText },
-    { href: "#contact", label: language === "vi" ? "Liên Hệ" : "Contact", icon: Mail },
+    { href: "#home", label: t.navItems.home, icon: Home },
+    { href: "#calculator", label: t.navItems.calculator, icon: Calculator },
+    { href: "#certificates", label: t.navItems.certificates, icon: Shield },
+    { href: "/terms", label: t.navItems.terms, icon: FileText },
+    { href: "/privacy", label: t.navItems.privacy, icon: FileText },
+    { href: "#contact", label: t.navItems.contact, icon: Mail },
   ];
 
   const handleLinkClick = () => {
@@ -67,10 +69,10 @@ export function MobileNav() {
           {/* Header */}
           <div className="p-6 border-b border-white/10">
             <h3 className="text-xl font-bold text-yellow-500">
-              TradePulse AI
+              {t.menuTitle}
             </h3>
             <p className="text-xs text-gray-400 mt-1">
-              {language === "vi" ? "Trí Tuệ Giao Dịch AI" : "AI-Powered Trading Intelligence"}
+              {t.menuSubtitle}
             </p>
           </div>
 
@@ -98,10 +100,10 @@ export function MobileNav() {
           {/* Footer CTA */}
           <div className="p-4 border-t border-white/10">
             <button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 text-black font-bold py-3 px-6 rounded-lg hover:shadow-lg hover:shadow-yellow-500/20 transition-all">
-              {language === "vi" ? "Bắt Đầu" : "Get Started"}
+              {t.getStarted}
             </button>
             <p className="text-xs text-center text-gray-500 mt-3">
-              {language === "vi" ? "Tham gia 10.000+ nhà đầu tư" : "Join 10,000+ investors"}
+              {t.joinInvestors}
             </p>
           </div>
         </div>

@@ -5,18 +5,17 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, TrendingUp, DollarSign, Percent } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
+import { componentTranslations } from "@/lib/component-translations";
 
 export function ProfitTimeline() {
+  const { language } = useLanguage();
+  const t = componentTranslations[language].profitTimeline;
+
   const [selectedAmount, setSelectedAmount] = useState(1000);
   const [selectedDuration, setSelectedDuration] = useState(180);
 
   const amounts = [500, 1000, 3000, 5000];
-  const durations = [
-    { days: 30, label: "1 Month" },
-    { days: 90, label: "3 Months" },
-    { days: 180, label: "6 Months" },
-    { days: 365, label: "1 Year" }
-  ];
 
   const calculateProfit = (amount: number, days: number) => {
     const dailyRate = 0.025; // 2.5% daily
@@ -33,10 +32,10 @@ export function ProfitTimeline() {
 
   // Generate milestone data
   const milestones = [
-    { day: Math.floor(selectedDuration * 0.25), label: "25% Timeline" },
-    { day: Math.floor(selectedDuration * 0.5), label: "50% Timeline" },
-    { day: Math.floor(selectedDuration * 0.75), label: "75% Timeline" },
-    { day: selectedDuration, label: "Target Reached" }
+    { day: Math.floor(selectedDuration * 0.25), label: t.milestones.timeline25 },
+    { day: Math.floor(selectedDuration * 0.5), label: t.milestones.timeline50 },
+    { day: Math.floor(selectedDuration * 0.75), label: t.milestones.timeline75 },
+    { day: selectedDuration, label: t.milestones.targetReached }
   ].map(m => ({
     ...m,
     ...calculateProfit(selectedAmount, m.day)
@@ -49,13 +48,13 @@ export function ProfitTimeline() {
         <div className="text-center space-y-4 mb-16">
           <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">
             <Calendar className="h-3 w-3 mr-1" />
-            Interactive Profit Visualizer
+            {t.badge}
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-            Visualize Your <span className="text-yellow-500">Wealth Journey</span>
+            {t.title} <span className="text-yellow-500">{t.titleHighlight}</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            See exactly how your investment grows over time with AI trading signals
+            {t.subtitle}
           </p>
         </div>
 
@@ -67,7 +66,7 @@ export function ProfitTimeline() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
                   <DollarSign className="h-5 w-5 text-yellow-500" />
-                  Select Investment Amount
+                  {t.selectAmount}
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   {amounts.map((amount) => (
@@ -86,7 +85,7 @@ export function ProfitTimeline() {
                   ))}
                 </div>
                 <div className="mt-4">
-                  <label className="text-sm text-gray-400 mb-2 block">Custom Amount (USDT)</label>
+                  <label className="text-sm text-gray-400 mb-2 block">{t.customAmountLabel}</label>
                   <input
                     type="number"
                     min="300"
@@ -104,23 +103,26 @@ export function ProfitTimeline() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
                   <Calendar className="h-5 w-5 text-yellow-500" />
-                  Select Time Period
+                  {t.selectPeriod}
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
-                  {durations.map((duration) => (
-                    <Button
-                      key={duration.days}
-                      variant={selectedDuration === duration.days ? "default" : "outline"}
-                      className={`h-16 text-base font-bold ${
-                        selectedDuration === duration.days
-                          ? "bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700"
-                          : "border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10"
-                      }`}
-                      onClick={() => setSelectedDuration(duration.days)}
-                    >
-                      {duration.label}
-                    </Button>
-                  ))}
+                  {t.durations.map((duration, index) => {
+                    const days = [30, 90, 180, 365][index];
+                    return (
+                      <Button
+                        key={days}
+                        variant={selectedDuration === days ? "default" : "outline"}
+                        className={`h-16 text-base font-bold ${
+                          selectedDuration === days
+                            ? "bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700"
+                            : "border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10"
+                        }`}
+                        onClick={() => setSelectedDuration(days)}
+                      >
+                        {duration.label}
+                      </Button>
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>
@@ -134,7 +136,7 @@ export function ProfitTimeline() {
               <CardContent className="p-8 relative">
                 <div className="text-center space-y-6">
                   <div>
-                    <p className="text-gray-400 text-sm mb-2">Your Investment</p>
+                    <p className="text-gray-400 text-sm mb-2">{t.results.yourInvestment}</p>
                     <p className="text-3xl font-bold text-white">${selectedAmount.toLocaleString()}</p>
                   </div>
 
@@ -143,7 +145,7 @@ export function ProfitTimeline() {
                   </div>
 
                   <div>
-                    <p className="text-gray-400 text-sm mb-2">Grows To</p>
+                    <p className="text-gray-400 text-sm mb-2">{t.results.growsTo}</p>
                     <p className="text-5xl font-bold text-yellow-500 mb-2">
                       ${result.total.toLocaleString('en-US', { maximumFractionDigits: 0 })}
                     </p>
@@ -160,7 +162,7 @@ export function ProfitTimeline() {
                   </div>
 
                   <div className="pt-4 border-t border-yellow-500/20">
-                    <p className="text-gray-400 text-xs">in {selectedDuration} days</p>
+                    <p className="text-gray-400 text-xs">{t.results.in} {selectedDuration} {t.results.days}</p>
                   </div>
                 </div>
               </CardContent>
@@ -169,7 +171,7 @@ export function ProfitTimeline() {
             {/* Milestones */}
             <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
               <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-white mb-4">Growth Milestones</h3>
+                <h3 className="text-lg font-bold text-white mb-4">{t.milestones.title}</h3>
                 <div className="space-y-3">
                   {milestones.map((milestone, index) => (
                     <div
@@ -178,7 +180,7 @@ export function ProfitTimeline() {
                     >
                       <div>
                         <p className="text-sm font-medium text-white">{milestone.label}</p>
-                        <p className="text-xs text-gray-400">Day {milestone.day}</p>
+                        <p className="text-xs text-gray-400">{t.milestones.day} {milestone.day}</p>
                       </div>
                       <div className="text-right">
                         <p className="text-lg font-bold text-yellow-500">
@@ -199,8 +201,7 @@ export function ProfitTimeline() {
         {/* Disclaimer */}
         <div className="mt-8 text-center">
           <p className="text-xs text-gray-500 max-w-3xl mx-auto">
-            Projections based on 2.5% average daily return with compound interest. Past performance does not guarantee future results.
-            Cryptocurrency trading involves substantial risk of loss.
+            {t.disclaimer}
           </p>
         </div>
       </div>

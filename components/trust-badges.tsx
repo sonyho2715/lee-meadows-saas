@@ -1,40 +1,26 @@
+"use client";
+
 import { Shield, Award, CheckCircle2, Globe } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/language-context";
+import { componentTranslations } from "@/lib/component-translations";
 
 export function TrustBadges() {
-  const badges = [
-    {
-      icon: Shield,
-      title: "SEC Licensed",
-      description: "US Securities & Exchange Commission"
-    },
-    {
-      icon: Award,
-      title: "ASIC Registered",
-      description: "Australian Securities & Investments Commission"
-    },
-    {
-      icon: CheckCircle2,
-      title: "MAS Approved",
-      description: "Monetary Authority of Singapore"
-    },
-    {
-      icon: Globe,
-      title: "30+ Countries",
-      description: "Internationally Licensed & Regulated"
-    }
-  ];
+  const { language } = useLanguage();
+  const t = componentTranslations[language].trustBadges;
+
+  const badgeIcons = [Shield, Award, CheckCircle2, Globe];
 
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold text-white mb-2">Trusted & Regulated Worldwide</h3>
-          <p className="text-gray-400">Licensed by major financial authorities</p>
+          <h3 className="text-2xl font-bold text-white mb-2">{t.title}</h3>
+          <p className="text-gray-400">{t.subtitle}</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {badges.map((badge, index) => {
-            const Icon = badge.icon;
+          {t.badges.map((badge, index) => {
+            const Icon = badgeIcons[index];
             return (
               <Card
                 key={index}

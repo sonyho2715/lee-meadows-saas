@@ -3,8 +3,12 @@
 import { useState, useEffect } from "react";
 import { AlertTriangle, X, TrendingDown, DollarSign, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/language-context";
+import { componentTranslations } from "@/lib/component-translations";
 
 export function RiskDisclaimerModal() {
+  const { language } = useLanguage();
+  const t = componentTranslations[language].riskDisclaimer;
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -28,6 +32,8 @@ export function RiskDisclaimerModal() {
 
   if (!isOpen) return null;
 
+  const riskIcons = [TrendingDown, DollarSign, Shield];
+
   return (
     <div className="fixed inset-0 z-[190] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-300">
       {/* Modal */}
@@ -48,8 +54,8 @@ export function RiskDisclaimerModal() {
               <AlertTriangle className="h-6 w-6 text-red-500" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-white">Investment Risk Disclosure</h2>
-              <p className="text-sm text-gray-400">Please read carefully before proceeding</p>
+              <h2 className="text-2xl font-bold text-white">{t.title}</h2>
+              <p className="text-sm text-gray-400">{t.subtitle}</p>
             </div>
           </div>
         </div>
@@ -60,86 +66,54 @@ export function RiskDisclaimerModal() {
           <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-4">
             <p className="text-red-400 font-semibold mb-2 flex items-center gap-2">
               <AlertTriangle className="h-5 w-5" />
-              High-Risk Investment Warning
+              {t.warning.title}
             </p>
             <p className="text-gray-300 text-sm">
-              Cryptocurrency trading and investment carries a <span className="text-red-400 font-bold">HIGH LEVEL OF RISK</span> and
-              may not be suitable for all investors. You could lose some or all of your invested capital.
+              {t.warning.description}
             </p>
           </div>
 
           {/* Risk Categories */}
           <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-              <TrendingDown className="h-8 w-8 text-red-400 mb-3" />
-              <h3 className="font-bold text-white mb-2">Market Volatility</h3>
-              <p className="text-xs text-gray-400">
-                Cryptocurrency markets are extremely volatile. Prices can fluctuate dramatically in short periods.
-              </p>
-            </div>
-
-            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-              <DollarSign className="h-8 w-8 text-orange-400 mb-3" />
-              <h3 className="font-bold text-white mb-2">Capital at Risk</h3>
-              <p className="text-xs text-gray-400">
-                Never invest money you cannot afford to lose. Past performance does not guarantee future results.
-              </p>
-            </div>
-
-            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-              <Shield className="h-8 w-8 text-yellow-400 mb-3" />
-              <h3 className="font-bold text-white mb-2">No Guarantees</h3>
-              <p className="text-xs text-gray-400">
-                While we strive for high performance, no investment returns are guaranteed.
-              </p>
-            </div>
+            {t.categories.map((category, index) => {
+              const Icon = riskIcons[index];
+              return (
+                <div key={index} className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <Icon className="h-8 w-8 text-red-400 mb-3" />
+                  <h3 className="font-bold text-white mb-2">{category.title}</h3>
+                  <p className="text-xs text-gray-400">{category.description}</p>
+                </div>
+              );
+            })}
           </div>
 
           {/* Detailed Risks */}
           <div className="space-y-3 text-sm text-gray-300">
-            <h3 className="font-bold text-white text-base">Key Risk Factors:</h3>
+            <h3 className="font-bold text-white text-base">{t.keyRisks.title}</h3>
             <ul className="space-y-2 ml-4">
-              <li className="flex items-start gap-2">
-                <span className="text-red-400 mt-1">•</span>
-                <span><strong>Market Risk:</strong> Cryptocurrency prices can increase or decrease rapidly</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-400 mt-1">•</span>
-                <span><strong>Liquidity Risk:</strong> You may not be able to withdraw funds immediately</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-400 mt-1">•</span>
-                <span><strong>Regulatory Risk:</strong> Changes in laws may affect cryptocurrency operations</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-400 mt-1">•</span>
-                <span><strong>Technology Risk:</strong> Blockchain and cryptocurrency technology risks</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-red-400 mt-1">•</span>
-                <span><strong>Operational Risk:</strong> Platform or exchange operational failures</span>
-              </li>
+              {t.keyRisks.risks.map((risk, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="text-red-400 mt-1">•</span>
+                  <span><strong>{risk.label}</strong> {risk.description}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Performance Disclaimer */}
           <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
             <p className="text-sm text-gray-300">
-              <span className="text-yellow-500 font-semibold">Performance Claims:</span> The 99.6% win rate
-              and profit projections shown are based on historical data and simulations. They are not guarantees
-              of future performance. Individual results may vary significantly.
+              <span className="text-yellow-500 font-semibold">{t.performance.title}</span> {t.performance.description}
             </p>
           </div>
 
           {/* Recommendations */}
           <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
-            <h4 className="font-semibold text-blue-400 mb-2">We Strongly Recommend:</h4>
+            <h4 className="font-semibold text-blue-400 mb-2">{t.recommendations.title}</h4>
             <ul className="text-sm text-gray-300 space-y-1 ml-4">
-              <li>• Only invest funds you can afford to lose</li>
-              <li>• Diversify your investment portfolio</li>
-              <li>• Seek independent financial advice if unsure</li>
-              <li>• Understand the investment before committing</li>
-              <li>• Start with small amounts to test the platform</li>
+              {t.recommendations.items.map((item, index) => (
+                <li key={index}>• {item}</li>
+              ))}
             </ul>
           </div>
 
@@ -149,11 +123,10 @@ export function RiskDisclaimerModal() {
               onClick={handleAcknowledge}
               className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-bold py-6 text-base"
             >
-              I Understand the Risks and Wish to Continue
+              {t.acknowledge}
             </Button>
             <p className="text-xs text-center text-gray-500 mt-3">
-              By clicking above, you acknowledge that you have read, understood, and accept all risks
-              associated with cryptocurrency investment.
+              {t.acknowledgementText}
             </p>
           </div>
         </div>

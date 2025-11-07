@@ -5,8 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { X, Cookie } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/language-context";
+import { componentTranslations } from "@/lib/component-translations";
 
 export function CookieConsent() {
+  const { language } = useLanguage();
+  const t = componentTranslations[language].cookieConsent;
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
@@ -59,13 +63,11 @@ export function CookieConsent() {
 
               {/* Content */}
               <div className="flex-1 space-y-2">
-                <h3 className="text-lg font-bold text-white">Cookie Notice</h3>
+                <h3 className="text-lg font-bold text-white">{t.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  We use cookies and similar technologies to enhance your experience, analyze site traffic,
-                  and provide personalized content. By clicking "Accept All", you consent to our use of cookies.
-                  You can manage your preferences or learn more in our{" "}
+                  {t.description}{" "}
                   <Link href="/privacy" className="text-yellow-500 hover:underline">
-                    Privacy Policy
+                    {t.privacyPolicy}
                   </Link>.
                 </p>
               </div>
@@ -77,13 +79,13 @@ export function CookieConsent() {
                   variant="outline"
                   className="border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10 hover:border-yellow-500/50 transition-all"
                 >
-                  Decline
+                  {t.decline}
                 </Button>
                 <Button
                   onClick={acceptCookies}
                   className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-white font-medium transition-all"
                 >
-                  Accept All
+                  {t.acceptAll}
                 </Button>
               </div>
             </div>
@@ -91,8 +93,7 @@ export function CookieConsent() {
             {/* Additional Info */}
             <div className="mt-4 pt-4 border-t border-yellow-500/20">
               <p className="text-xs text-gray-400">
-                Essential cookies are required for the website to function and cannot be disabled.
-                Optional cookies help us improve your experience and can be managed in your browser settings.
+                {t.additionalInfo}
               </p>
             </div>
           </CardContent>

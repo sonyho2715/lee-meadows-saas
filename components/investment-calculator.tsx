@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Calculator, TrendingUp, DollarSign, Clock, Target } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
+import { componentTranslations } from "@/lib/component-translations";
 
 // Investment stages from the wealth planning chart
 const investmentStages = [
@@ -13,6 +15,8 @@ const investmentStages = [
 ];
 
 export function InvestmentCalculator() {
+  const { language } = useLanguage();
+  const t = componentTranslations[language].calculator;
   const [selectedStage, setSelectedStage] = useState(investmentStages[0]);
   const [customAmount, setCustomAmount] = useState(500);
   const [duration, setDuration] = useState(30);
@@ -58,14 +62,14 @@ export function InvestmentCalculator() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-4">
             <Calculator className="h-4 w-4 text-yellow-500" />
             <span className="text-sm font-medium text-yellow-500">
-              Investment Calculator
+              {t.badge}
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Calculate Your <span className="text-yellow-500">Returns</span>
+            {t.title} <span className="text-yellow-500">{t.titleHighlight}</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            See how your investment can grow with TradePulse AI AI Trading. Choose a preset stage or calculate custom amounts.
+            {t.subtitle}
           </p>
         </div>
 
@@ -74,7 +78,7 @@ export function InvestmentCalculator() {
           <div className="bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] rounded-2xl p-6 md:p-8 border border-yellow-500/20">
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
               <DollarSign className="h-5 w-5 text-yellow-500" />
-              Investment Details
+              {t.investmentDetails}
             </h3>
 
             {/* Toggle: Preset vs Custom */}
@@ -87,7 +91,7 @@ export function InvestmentCalculator() {
                     : "bg-white/5 text-gray-400 hover:bg-white/10"
                 }`}
               >
-                Preset Stages
+                {t.presetStages}
               </button>
               <button
                 onClick={() => setIsCustom(true)}
@@ -97,7 +101,7 @@ export function InvestmentCalculator() {
                     : "bg-white/5 text-gray-400 hover:bg-white/10"
                 }`}
               >
-                Custom Amount
+                {t.customAmount}
               </button>
             </div>
 
@@ -105,7 +109,7 @@ export function InvestmentCalculator() {
             {!isCustom && (
               <div className="space-y-4 mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Select Investment Stage
+                  {t.selectStage}
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                   {investmentStages.map((stage) => (
@@ -118,7 +122,7 @@ export function InvestmentCalculator() {
                           : "bg-white/5 border-white/10 text-gray-400 hover:border-yellow-500/50"
                       }`}
                     >
-                      <div className="text-xs opacity-70 mb-1">Stage {stage.stage}</div>
+                      <div className="text-xs opacity-70 mb-1">{t.stage} {stage.stage}</div>
                       <div className="font-bold">${stage.amount}</div>
                     </button>
                   ))}
@@ -130,7 +134,7 @@ export function InvestmentCalculator() {
             {isCustom && (
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Investment Amount (USDT)
+                  {t.investmentAmount}
                 </label>
                 <div className="relative">
                   <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -143,7 +147,7 @@ export function InvestmentCalculator() {
                     className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-yellow-500 text-white"
                   />
                 </div>
-                <p className="text-xs text-gray-500 mt-2">Minimum: $100 USDT</p>
+                <p className="text-xs text-gray-500 mt-2">{t.minimum}</p>
               </div>
             )}
 
@@ -151,7 +155,7 @@ export function InvestmentCalculator() {
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                Investment Duration: {duration} days
+                {t.duration}: {duration} {t.days}
               </label>
               <input
                 type="range"
@@ -163,15 +167,15 @@ export function InvestmentCalculator() {
                 className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer slider"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-2">
-                <span>7 days</span>
-                <span>6 months</span>
-                <span>1 year</span>
+                <span>7 {t.days}</span>
+                <span>6 {t.months}</span>
+                <span>1 {t.year}</span>
               </div>
             </div>
 
             {/* Current Investment Display */}
             <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-              <div className="text-sm text-gray-400 mb-1">Your Investment</div>
+              <div className="text-sm text-gray-400 mb-1">{t.yourInvestment}</div>
               <div className="text-3xl font-bold text-yellow-500">
                 ${isCustom ? customAmount.toLocaleString() : selectedStage.amount.toLocaleString()}
               </div>
@@ -183,36 +187,36 @@ export function InvestmentCalculator() {
             <div className="bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-2xl p-6 md:p-8 border border-yellow-500/30">
               <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-yellow-500" />
-                Projected Returns
+                {t.projectedReturns}
               </h3>
 
               <div className="space-y-6">
                 {/* Daily Profit */}
                 <div className="bg-black/30 rounded-lg p-4">
-                  <div className="text-sm text-gray-400 mb-1">Daily Profit</div>
+                  <div className="text-sm text-gray-400 mb-1">{t.dailyProfit}</div>
                   <div className="text-2xl font-bold text-green-400">
                     +${results.dailyProfit}
                   </div>
-                  <div className="text-xs text-gray-500 mt-1">Per day</div>
+                  <div className="text-xs text-gray-500 mt-1">{t.perDay}</div>
                 </div>
 
                 {/* Total Profit */}
                 <div className="bg-black/30 rounded-lg p-4">
-                  <div className="text-sm text-gray-400 mb-1">Total Profit</div>
+                  <div className="text-sm text-gray-400 mb-1">{t.totalProfit}</div>
                   <div className="text-2xl font-bold text-green-400">
                     +${results.totalProfit}
                   </div>
-                  <div className="text-xs text-gray-500 mt-1">After {duration} days</div>
+                  <div className="text-xs text-gray-500 mt-1">{t.after} {duration} {t.days}</div>
                 </div>
 
                 {/* Total Return */}
                 <div className="bg-black/30 rounded-lg p-4">
-                  <div className="text-sm text-gray-400 mb-1">Total Return</div>
+                  <div className="text-sm text-gray-400 mb-1">{t.totalReturn}</div>
                   <div className="text-3xl font-bold text-yellow-500">
                     ${results.totalReturn}
                   </div>
                   <div className="text-xs text-gray-500 mt-1">
-                    Investment + Profit
+                    {t.investmentPlusProfit}
                   </div>
                 </div>
 
@@ -220,7 +224,7 @@ export function InvestmentCalculator() {
                 <div className="bg-gradient-to-r from-yellow-500/10 to-green-500/10 rounded-lg p-4 border border-yellow-500/30">
                   <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                     <Target className="h-4 w-4" />
-                    Return on Investment (ROI)
+                    {t.roi}
                   </div>
                   <div className="text-4xl font-bold text-yellow-500">
                     {results.roi}%
@@ -232,13 +236,13 @@ export function InvestmentCalculator() {
             {/* CTA */}
             <div className="bg-gradient-to-r from-yellow-500 to-amber-600 rounded-2xl p-6 md:p-8 text-center">
               <h4 className="text-xl font-bold text-black mb-2">
-                Ready to Start Investing?
+                {t.readyToStart}
               </h4>
               <p className="text-black/70 text-sm mb-4">
-                Join TradePulse AI AI Trading and start earning daily returns
+                {t.joinDescription}
               </p>
               <button className="w-full bg-black text-yellow-500 py-3 px-6 rounded-lg font-bold hover:bg-black/80 transition-colors">
-                Get Started Now
+                {t.getStarted}
               </button>
             </div>
           </div>
@@ -247,9 +251,7 @@ export function InvestmentCalculator() {
         {/* Disclaimer */}
         <div className="mt-8 text-center">
           <p className="text-xs text-gray-500 max-w-3xl mx-auto">
-            * Calculations are estimates based on historical performance. Actual returns may vary.
-            Cryptocurrency investments carry risk. Past performance does not guarantee future results.
-            Please read our terms and conditions before investing.
+            {t.disclaimer}
           </p>
         </div>
       </div>

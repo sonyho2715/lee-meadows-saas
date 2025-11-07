@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -36,8 +38,12 @@ import {
   FooterCopyright
 } from "@/components/home-content";
 import Image from "next/image";
+import { useLanguage } from "@/contexts/language-context";
+import { translations } from "@/lib/translations";
 
 export default function Home() {
+  const { language } = useLanguage();
+  const t = translations[language];
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0a0e27] via-[#1a1f3a] to-[#0a0e27] relative">
       {/* Animated Background */}
@@ -87,7 +93,7 @@ export default function Home() {
                 <CardTitle className="text-4xl font-bold text-yellow-500">
                   <AnimatedCounter end={1000000} suffix="+" />
                 </CardTitle>
-                <CardDescription className="text-base text-gray-300">People Helped</CardDescription>
+                <CardDescription className="text-base text-gray-300">{t.stats.peopleHelped}</CardDescription>
               </CardHeader>
             </Card>
             <Card className="text-center border-2 border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
@@ -95,7 +101,7 @@ export default function Home() {
                 <CardTitle className="text-4xl font-bold text-yellow-500">
                   <AnimatedCounter end={99.6} decimals={1} suffix="%" />
                 </CardTitle>
-                <CardDescription className="text-base text-gray-300">Trading Win Rate</CardDescription>
+                <CardDescription className="text-base text-gray-300">{t.stats.tradingWinRate}</CardDescription>
               </CardHeader>
             </Card>
             <Card className="text-center border-2 border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
@@ -103,13 +109,13 @@ export default function Home() {
                 <CardTitle className="text-4xl font-bold text-yellow-500">
                   <AnimatedCounter end={30} suffix="+" />
                 </CardTitle>
-                <CardDescription className="text-base text-gray-300">Country Licenses</CardDescription>
+                <CardDescription className="text-base text-gray-300">{t.stats.countryLicenses}</CardDescription>
               </CardHeader>
             </Card>
             <Card className="text-center border-2 border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
               <CardHeader>
                 <CardTitle className="text-4xl font-bold text-yellow-500">24/7</CardTitle>
-                <CardDescription className="text-base text-gray-300">Trading Signals</CardDescription>
+                <CardDescription className="text-base text-gray-300">{t.stats.tradingSignals}</CardDescription>
               </CardHeader>
             </Card>
           </div>
@@ -158,20 +164,20 @@ export default function Home() {
       <section id="plans" className="container mx-auto px-4 py-20 bg-[#0a0e27]/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">Investment Plans</Badge>
+            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">{t.investmentPlans.badge}</Badge>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              Wealth Management Plans
+              {t.investmentPlans.title}
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Five-stage wealth planning for maximum returns
+              {t.investmentPlans.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="relative border-yellow-500/30 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Stage 1</CardTitle>
-                <CardDescription className="text-gray-300">Account Balance 1%</CardDescription>
+                <CardTitle className="text-2xl text-white">{t.investmentPlans.stage} 1</CardTitle>
+                <CardDescription className="text-gray-300">{t.investmentPlans.accountBalance} 1%</CardDescription>
                 <div className="mt-4">
                   <span className="text-4xl font-bold text-yellow-500">$500</span>
                   <span className="text-gray-300"> USDT</span>
@@ -179,18 +185,18 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
-                  <div className="text-sm text-gray-400">Monthly Profit</div>
+                  <div className="text-sm text-gray-400">{t.investmentPlans.monthlyProfit}</div>
                   <div className="text-2xl font-bold text-yellow-500">$3.25</div>
                 </div>
-                <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">Start Stage 1</Button>
+                <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">{t.investmentPlans.startStage} 1</Button>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-gray-300">
                     <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">8 USDT profit in total</span>
+                    <span className="text-sm">{t.investmentPlans.benefits.stage1.profit}</span>
                   </li>
                   <li className="flex items-start gap-2 text-gray-300">
                     <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">Daily trading signals</span>
+                    <span className="text-sm">{t.investmentPlans.benefits.stage1.signals}</span>
                   </li>
                 </ul>
               </CardContent>
@@ -198,11 +204,11 @@ export default function Home() {
 
             <Card className="relative border-yellow-500 border-2 shadow-lg shadow-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <Badge className="px-4 py-1 bg-gradient-to-r from-yellow-500 to-amber-600">Most Popular</Badge>
+                <Badge className="px-4 py-1 bg-gradient-to-r from-yellow-500 to-amber-600">{t.investmentPlans.mostPopular}</Badge>
               </div>
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Stage 3</CardTitle>
-                <CardDescription className="text-gray-300">Account Balance 9%</CardDescription>
+                <CardTitle className="text-2xl text-white">{t.investmentPlans.stage} 3</CardTitle>
+                <CardDescription className="text-gray-300">{t.investmentPlans.accountBalance} 9%</CardDescription>
                 <div className="mt-4">
                   <span className="text-4xl font-bold text-yellow-500">$1,000</span>
                   <span className="text-gray-300"> USDT</span>
@@ -210,22 +216,22 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
-                  <div className="text-sm text-gray-400">Monthly Profit</div>
+                  <div className="text-sm text-gray-400">{t.investmentPlans.monthlyProfit}</div>
                   <div className="text-2xl font-bold text-yellow-500">$29.25</div>
                 </div>
-                <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">Start Stage 3</Button>
+                <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">{t.investmentPlans.startStage} 3</Button>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-gray-300">
                     <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">72 USDT profit in total</span>
+                    <span className="text-sm">{t.investmentPlans.benefits.stage3.profit}</span>
                   </li>
                   <li className="flex items-start gap-2 text-gray-300">
                     <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">Advanced trading strategies</span>
+                    <span className="text-sm">{t.investmentPlans.benefits.stage3.strategies}</span>
                   </li>
                   <li className="flex items-start gap-2 text-gray-300">
                     <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">Team bonus eligible</span>
+                    <span className="text-sm">{t.investmentPlans.benefits.stage3.bonus}</span>
                   </li>
                 </ul>
               </CardContent>
@@ -233,8 +239,8 @@ export default function Home() {
 
             <Card className="relative border-yellow-500/30 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Stage 5</CardTitle>
-                <CardDescription className="text-gray-300">Account Balance - All In</CardDescription>
+                <CardTitle className="text-2xl text-white">{t.investmentPlans.stage} 5</CardTitle>
+                <CardDescription className="text-gray-300">{t.investmentPlans.accountBalance} - {t.investmentPlans.allIn}</CardDescription>
                 <div className="mt-4">
                   <span className="text-4xl font-bold text-yellow-500">$5,000</span>
                   <span className="text-gray-300"> USDT</span>
@@ -242,26 +248,26 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
-                  <div className="text-sm text-gray-400">Monthly Profit</div>
+                  <div className="text-sm text-gray-400">{t.investmentPlans.monthlyProfit}</div>
                   <div className="text-2xl font-bold text-yellow-500">$195</div>
                 </div>
-                <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">Start Stage 5</Button>
+                <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">{t.investmentPlans.startStage} 5</Button>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-gray-300">
                     <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">Maximum returns - All in</span>
+                    <span className="text-sm">{t.investmentPlans.benefits.stage5.returns}</span>
                   </li>
                   <li className="flex items-start gap-2 text-gray-300">
                     <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">1950 USDT total profit potential</span>
+                    <span className="text-sm">{t.investmentPlans.benefits.stage5.potential}</span>
                   </li>
                   <li className="flex items-start gap-2 text-gray-300">
                     <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">VIP signals & support</span>
+                    <span className="text-sm">{t.investmentPlans.benefits.stage5.vip}</span>
                   </li>
                   <li className="flex items-start gap-2 text-gray-300">
                     <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">Manager bonus eligibility</span>
+                    <span className="text-sm">{t.investmentPlans.benefits.stage5.manager}</span>
                   </li>
                 </ul>
               </CardContent>
@@ -270,8 +276,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-gray-400 text-sm max-w-3xl mx-auto">
-              Monthly fund return rate is at least 60%, forming a zero-cost, zero-risk investment environment.
-              You can double your principal within 40 days.
+              {t.investmentPlans.disclaimer}
             </p>
           </div>
         </div>
@@ -281,50 +286,50 @@ export default function Home() {
       <section id="rewards" className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">Rewards</Badge>
+            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">{t.referral.badge}</Badge>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              Referral Rewards Program
+              {t.referral.title}
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Earn additional income by sharing the project
+              {t.referral.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Referral Bonuses</CardTitle>
+                <CardTitle className="text-2xl text-white">{t.referral.bonusesTitle}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$300 deposit</span>
+                    <span className="text-gray-300">$300 {t.referral.deposit}</span>
                     <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$15 referrer + $15 new user</div>
+                      <div className="text-yellow-500 font-bold">$15 {t.referral.referrer} + $15 {t.referral.newUser}</div>
                     </div>
                   </div>
                   <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$500 deposit</span>
+                    <span className="text-gray-300">$500 {t.referral.deposit}</span>
                     <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$25 referrer + $25 new user</div>
+                      <div className="text-yellow-500 font-bold">$25 {t.referral.referrer} + $25 {t.referral.newUser}</div>
                     </div>
                   </div>
                   <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$1000 deposit</span>
+                    <span className="text-gray-300">$1000 {t.referral.deposit}</span>
                     <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$100 referrer + $50 new user</div>
+                      <div className="text-yellow-500 font-bold">$100 {t.referral.referrer} + $50 {t.referral.newUser}</div>
                     </div>
                   </div>
                   <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$3000 deposit</span>
+                    <span className="text-gray-300">$3000 {t.referral.deposit}</span>
                     <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$300 referrer + $150 new user</div>
+                      <div className="text-yellow-500 font-bold">$300 {t.referral.referrer} + $150 {t.referral.newUser}</div>
                     </div>
                   </div>
                   <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$5000 deposit</span>
+                    <span className="text-gray-300">$5000 {t.referral.deposit}</span>
                     <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$500 referrer + $250 new user</div>
+                      <div className="text-yellow-500 font-bold">$500 {t.referral.referrer} + $250 {t.referral.newUser}</div>
                     </div>
                   </div>
                 </div>
@@ -333,38 +338,38 @@ export default function Home() {
 
             <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Dynamic Trading Signals</CardTitle>
+                <CardTitle className="text-2xl text-white">{t.referral.signalsTitle}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-gray-300">
                     <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
                     <span className="text-sm">
-                      Referrers earn 10% of new user's deposit as reward
+                      {t.referral.benefits.earn10Percent}
                     </span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-300">
                     <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
                     <span className="text-sm">
-                      New users receive 5% bonus on first deposit
+                      {t.referral.benefits.bonus5Percent}
                     </span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-300">
                     <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
                     <span className="text-sm">
-                      Additional 6 dynamic trading signals for referrals over $500
+                      {t.referral.benefits.extraSignals}
                     </span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-300">
                     <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
                     <span className="text-sm">
-                      After 5 successful referrals: promoted to Team Agent with permanent benefits
+                      {t.referral.benefits.teamAgent}
                     </span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-300">
                     <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
                     <span className="text-sm">
-                      Receive 3 static trading signals every day
+                      {t.referral.benefits.staticSignals}
                     </span>
                   </li>
                 </ul>
@@ -378,40 +383,21 @@ export default function Home() {
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">Success Stories</Badge>
+            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">{t.testimonials.badge}</Badge>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              Trusted by Investors Worldwide
+              {t.testimonials.title}
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join over 1 million people who have transformed their financial future
+              {t.testimonials.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "David Zhang",
-                role: "Early Investor, Singapore",
-                content: "Started with $1000 USDT and within 3 months, I've seen consistent returns. The AI trading signals are incredibly accurate. Best investment decision I've made.",
-                rating: 5
-              },
-              {
-                name: "Maria Santos",
-                role: "Team Agent, Philippines",
-                content: "The referral program changed my life. I built a team of 20 members and now earn passive income from both trading and team bonuses. Highly recommended!",
-                rating: 5
-              },
-              {
-                name: "James Wilson",
-                role: "Professional Trader, USA",
-                content: "As someone with trading experience, I'm impressed by TradePulse AI's system accuracy. The signals are incredibly precise and the automated trading makes it effortless.",
-                rating: 5
-              }
-            ].map((testimonial) => (
-              <Card key={testimonial.name} className="hover:shadow-lg hover:shadow-yellow-500/20 transition-shadow border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
+            {t.testimonials.people.map((testimonial, index) => (
+              <Card key={index} className="hover:shadow-lg hover:shadow-yellow-500/20 transition-shadow border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
                 <CardHeader>
                   <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
                     ))}
                   </div>
