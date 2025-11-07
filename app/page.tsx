@@ -73,56 +73,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative container mx-auto px-4 py-20 md:py-32 overflow-hidden">
-        {/* Modern Space Gradient Background - No Images */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-[#0a0e27] to-blue-900/30" />
-          <div className="absolute inset-0 bg-gradient-to-tr from-yellow-500/10 via-transparent to-cyan-500/10" />
-          <div className="absolute top-20 left-20 w-64 h-64 bg-purple-500/20 rounded-full blur-[100px]" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-500/10 rounded-full blur-[150px]" />
-        </div>
-        <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8">
-          <Badge variant="secondary" className="mb-4 bg-yellow-500/20 text-yellow-500 border-yellow-500/30">
-            <Zap className="h-3 w-3 mr-1" />
-            Advanced AI Trading Signal System
-          </Badge>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
-            Transform Your Wealth Through
-            <br />
-            <span className="bg-gradient-to-r from-yellow-500 via-amber-500 to-yellow-600 bg-clip-text text-transparent">
-              Cryptocurrency Trading
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover the AI trading strategy that works while you live your life.
-            Just minutes a day to follow precision signals and watch your wealth grow.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-            <Button size="lg" className="text-lg px-8 py-6 group bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">
-              Start Investing Today
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10">
-              View Investment Plans
-            </Button>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 pt-8 text-sm text-gray-400">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-yellow-500" />
-              <span className="whitespace-nowrap">Minimum $300 USDT</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-yellow-500" />
-              <span className="whitespace-nowrap">99.6% Win Rate</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-yellow-500" />
-              <span className="whitespace-nowrap">SEC Licensed</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Crypto Ticker */}
       <CryptoTicker />
@@ -198,140 +149,10 @@ export default function Home() {
       <ProfitTimeline />
 
       {/* About Section */}
-      <section id="about" className="container mx-auto px-4 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">About</Badge>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              TradePulse AI Trading Platform
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Advanced algorithmic trading signals operating in 40+ countries with 10,000+ active traders
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-yellow-500">Our Mission</CardTitle>
-                <CardDescription className="text-gray-300 text-base">
-                  TradePulse AI delivers cutting-edge algorithmic trading signals to traders worldwide.
-                  Using advanced machine learning and real-time data analysis, our proprietary AI system achieves 99.6%
-                  accuracy in signal predictions. We empower individuals to profit from cryptocurrency markets through
-                  automated trading signals and sophisticated predictive analytics.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-yellow-500">AI-Powered Technology</CardTitle>
-                <CardDescription className="text-gray-300 text-base">
-                  TradePulse AI partners with industry-leading algorithm developers to deliver cutting-edge trading
-                  signals. The technology operates on SEC-licensed exchanges with full regulatory compliance across
-                  major markets including US, Australia, Singapore, and Dubai. Advanced machine learning processes
-                  millions of data points per second to identify profitable opportunities.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <AboutSection />
 
       {/* Features Section */}
-      <section id="features" className="container mx-auto px-4 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">Features</Badge>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              Five Major Advantages
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Why Choose TradePulse AI Trading Signals
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg hover:shadow-yellow-500/20 transition-shadow border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-4">
-                  <TrendingUp className="h-6 w-6 text-yellow-500" />
-                </div>
-                <CardTitle className="text-white">Long-term Stable Income</CardTitle>
-                <CardDescription className="text-gray-300">
-                  AI trading data combined with signal win rate calculation as high as 99.6% or above.
-                  Professional technical department ensures consistent returns.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:shadow-yellow-500/20 transition-shadow border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-4">
-                  <Shield className="h-6 w-6 text-yellow-500" />
-                </div>
-                <CardTitle className="text-white">Legal & Compliant</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Operates on SEC-licensed exchanges with full regulatory compliance across 30+ countries
-                  including US, Australia (ASIC), Singapore (MAS), Dubai (DFSA), and Bahamas.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:shadow-yellow-500/20 transition-shadow border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-4">
-                  <Lock className="h-6 w-6 text-yellow-500" />
-                </div>
-                <CardTitle className="text-white">Secure Trading Environment</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Advanced encryption and secure API integration with licensed exchanges to ensure
-                  safety of all member funds and trading activities.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:shadow-yellow-500/20 transition-shadow border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-yellow-500" />
-                </div>
-                <CardTitle className="text-white">Proven Track Record</CardTitle>
-                <CardDescription className="text-gray-300">
-                  TradePulse AI's trading algorithms have consistently delivered results, with a proven
-                  99.6% signal accuracy rate and $100M+ in daily trading volume.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:shadow-yellow-500/20 transition-shadow border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-4">
-                  <BarChart3 className="h-6 w-6 text-yellow-500" />
-                </div>
-                <CardTitle className="text-white">Diversified Income</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Multiple profit streams including signal trading, team bonuses, and transaction
-                  volume rewards for additional income opportunities.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="hover:shadow-lg hover:shadow-yellow-500/20 transition-shadow border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-4">
-                  <Wallet className="h-6 w-6 text-yellow-500" />
-                </div>
-                <CardTitle className="text-white">Low Entry Barrier</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Minimum investment of just $300 USDT with flexible withdrawal options.
-                  Simple smartphone operation without affecting work and life.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <FeaturesSection />
 
       {/* Investment Plans Section */}
       <section id="plans" className="container mx-auto px-4 py-20 bg-[#0a0e27]/50">
@@ -620,32 +441,7 @@ export default function Home() {
       <KnowledgeHub />
 
       {/* CTA Section */}
-      <section id="contact" className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <Card className="border-2 border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] via-[#0a0e27] to-[#1a1f3a]">
-            <CardHeader className="text-center space-y-6 py-12">
-              <CardTitle className="text-3xl md:text-5xl font-bold text-white">
-                Ready to Start Your Investment Journey?
-              </CardTitle>
-              <CardDescription className="text-lg text-gray-300">
-                Join TradePulse AI today and start receiving automated trading signals. Minimum investment $300 USDT.
-              </CardDescription>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">
-                  Get Started Now
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10">
-                  View Complete Guide
-                </Button>
-              </div>
-              <div className="pt-6 space-y-2">
-                <p className="text-gray-400 text-sm">Email: support@tradepulse-ai.com</p>
-                <p className="text-gray-400 text-sm">Licensed & Regulated by SEC, ASIC, MAS, DFSA</p>
-              </div>
-            </CardHeader>
-          </Card>
-        </div>
-      </section>
+      <CTASection />
 
       {/* Risk Warning */}
       <RiskWarning />
@@ -654,53 +450,10 @@ export default function Home() {
       <footer className="border-t border-yellow-500/20 bg-[#0a0e27]/80">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-yellow-500 to-amber-600 flex items-center justify-center text-white font-bold">
-                  TP
-                </div>
-                <span className="text-lg font-bold text-white">TradePulse AI</span>
-              </div>
-              <p className="text-sm text-gray-400">
-                AI-Powered Trading Intelligence. Helping individuals achieve financial freedom through advanced algorithmic trading and automated signals.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4 text-white">Investment</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#about" className="hover:text-yellow-500 transition-colors">About AI Trading</a></li>
-                <li><a href="#plans" className="hover:text-yellow-500 transition-colors">Investment Plans</a></li>
-                <li><a href="#calculator" className="hover:text-yellow-500 transition-colors">ROI Calculator</a></li>
-                <li><a href="#" className="hover:text-yellow-500 transition-colors">Trading Signals</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4 text-white">Resources</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-yellow-500 transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-yellow-500 transition-colors">How It Works</a></li>
-                <li><a href="#" className="hover:text-yellow-500 transition-colors">Referral Program</a></li>
-                <li><a href="#" className="hover:text-yellow-500 transition-colors">Contact Support</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-4 text-white">Legal</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="/terms" className="hover:text-yellow-500 transition-colors">Terms of Service</a></li>
-                <li><a href="/privacy" className="hover:text-yellow-500 transition-colors">Privacy Policy</a></li>
-                <li><a href="/disclaimer" className="hover:text-yellow-500 transition-colors">Disclaimer</a></li>
-                <li><a href="/disclaimer#risk-warning" className="hover:text-yellow-500 transition-colors">Risk Disclosure</a></li>
-              </ul>
-            </div>
+            <FooterContent />
           </div>
 
-          <div className="border-t border-yellow-500/20 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 TradePulse AI - AI-Powered Trading Intelligence Platform. All rights reserved.</p>
-            <p className="mt-2 text-xs">Advanced Algorithmic Trading | Licensed by SEC, ASIC, MAS, DFSA</p>
-          </div>
+          <FooterCopyright />
         </div>
       </footer>
     </div>
