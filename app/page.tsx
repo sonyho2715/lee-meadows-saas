@@ -25,6 +25,16 @@ import { LiveDashboard } from "@/components/live-dashboard";
 import { ProfitTimeline } from "@/components/profit-timeline";
 import { KnowledgeHub } from "@/components/knowledge-hub";
 import { LanguageToggle } from "@/components/language-toggle";
+import {
+  HeroSection,
+  NavigationLinks,
+  NavigationButtons,
+  AboutSection,
+  FeaturesSection,
+  CTASection,
+  FooterContent,
+  FooterCopyright
+} from "@/components/home-content";
 import Image from "next/image";
 
 export default function Home() {
@@ -53,16 +63,11 @@ export default function Home() {
             </div>
           </div>
           <div className="hidden lg:flex items-center gap-6">
-            <a href="#about" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">About</a>
-            <a href="#calculator" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Calculator</a>
-            <a href="#features" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Features</a>
-            <a href="#plans" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Plans</a>
-            <a href="#contact" className="text-sm font-medium text-gray-300 hover:text-yellow-500 transition-colors">Contact</a>
+            <NavigationLinks />
           </div>
           <div className="hidden lg:flex items-center gap-3">
             <LanguageToggle />
-            <Button variant="ghost" size="sm" className="text-gray-300 hover:text-yellow-500">Sign In</Button>
-            <Button size="sm" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">Get Started</Button>
+            <NavigationButtons />
           </div>
         </div>
       </nav>
