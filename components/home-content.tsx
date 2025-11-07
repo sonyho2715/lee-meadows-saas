@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle2, Zap, Shield, TrendingUp, Users, Star, Wallet,
 import { useTranslation } from "@/hooks/use-translation";
 
 export function HeroSection() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   return (
     <section className="relative container mx-auto px-4 py-20 md:py-32 overflow-hidden">
@@ -42,6 +42,20 @@ export function HeroSection() {
           <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10">
             {t.hero.ctaSecondary}
           </Button>
+        </div>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 pt-8 text-sm text-gray-400">
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="h-4 w-4 text-yellow-500" />
+            <span className="whitespace-nowrap">{language === "vi" ? "Tối thiểu $300 USDT" : "Minimum $300 USDT"}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="h-4 w-4 text-yellow-500" />
+            <span className="whitespace-nowrap">{language === "vi" ? "Tỷ lệ thắng 99.6%" : "99.6% Win Rate"}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="h-4 w-4 text-yellow-500" />
+            <span className="whitespace-nowrap">{language === "vi" ? "Được Cấp Phép & Bảo Mật" : "Licensed & Secure"}</span>
+          </div>
         </div>
       </div>
     </section>
