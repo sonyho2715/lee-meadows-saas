@@ -21,11 +21,11 @@ const CRYPTO_IDS = [
 export function CryptoTicker() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cryptoData, setCryptoData] = useState<CryptoData[]>([
-    { symbol: "BTC", name: "Bitcoin", price: 67234.50, change: 2.34 },
-    { symbol: "ETH", name: "Ethereum", price: 3456.78, change: -1.23 },
-    { symbol: "ADA", name: "Cardano", price: 0.58, change: 5.67 },
-    { symbol: "DOGE", name: "Dogecoin", price: 0.12, change: 3.45 },
-    { symbol: "USDT", name: "Tether", price: 1.00, change: 0.01 },
+    { symbol: "BTC", name: "Bitcoin", price: 101445, change: -1.72 },
+    { symbol: "ETH", name: "Ethereum", price: 3316.73, change: -2.59 },
+    { symbol: "ADA", name: "Cardano", price: 0.53, change: -1.41 },
+    { symbol: "DOGE", name: "Dogecoin", price: 0.16, change: -2.10 },
+    { symbol: "USDT", name: "Tether", price: 1.00, change: -0.03 },
   ]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -36,7 +36,12 @@ export function CryptoTicker() {
       const ids = CRYPTO_IDS.map(c => c.id).join(',');
       const response = await fetch(
         `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true`,
-        { next: { revalidate: 60 } } // Cache for 60 seconds
+        {
+          cache: 'no-cache',
+          headers: {
+            'Accept': 'application/json',
+          }
+        }
       );
 
       if (!response.ok) {
@@ -99,7 +104,12 @@ export function CryptoTicker() {
                   <span className="text-xs text-gray-400">{crypto.name}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-white font-semibold">${crypto.price.toLocaleString()}</span>
+                  <span className="text-white font-semibold">
+                    ${crypto.price >= 1
+                      ? crypto.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+                      : crypto.price.toFixed(crypto.price < 0.01 ? 6 : 4)
+                    }
+                  </span>
                   <span
                     className={`text-xs flex items-center gap-1 ${
                       crypto.change >= 0 ? "text-green-500" : "text-red-500"
@@ -110,7 +120,7 @@ export function CryptoTicker() {
                     ) : (
                       <TrendingDown className="h-3 w-3" />
                     )}
-                    {Math.abs(crypto.change)}%
+                    {Math.abs(crypto.change).toFixed(2)}%
                   </span>
                 </div>
               </div>
