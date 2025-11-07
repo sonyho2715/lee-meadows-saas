@@ -931,52 +931,52 @@ export const componentTranslations = {
       },
       features: [
         {
-          feature: "Win Rate Accuracy",
+          feature: "Tỷ Lệ Thắng",
           traditional: "60-70%",
           aiTrading: "99.6%"
         },
         {
-          feature: "Time Investment Required",
+          feature: "Thời Gian Bỏ Ra",
           traditional: "4-8 giờ mỗi ngày",
           aiTrading: "Chỉ vài phút mỗi ngày"
         },
         {
-          feature: "Technical Knowledge Needed",
+          feature: "Kiến Thức Kỹ Thuật",
           traditional: "Cần kinh nghiệm dày dặn",
           aiTrading: "Không cần kinh nghiệm"
         },
         {
-          feature: "Emotional Decision Making",
+          feature: "Quyết Định Cảm Tính",
           traditional: "Dễ thua vì giao dịch bốc đồng",
           aiTrading: "100% data-driven, zero cảm xúc"
         },
         {
-          feature: "Market Analysis Speed",
+          feature: "Tốc Độ Phân Tích",
           traditional: "Phân tích thủ công, chậm chạp",
           aiTrading: "AI xử lý real-time"
         },
         {
-          feature: "Signal Timing",
+          feature: "Timing Tín Hiệu",
           traditional: "Hay lỡ mất cơ hội",
           aiTrading: "Tín hiệu vào/ra chuẩn chỉnh"
         },
         {
-          feature: "Risk Management",
+          feature: "Quản Lý Rủi Ro",
           traditional: "Không ổn định, dễ sai sót",
           aiTrading: "Tự động kiểm soát rủi ro"
         },
         {
-          feature: "Daily Profit Potential",
+          feature: "Lợi Nhuận Mỗi Ngày",
           traditional: "Không dự đoán được, thất thường",
           aiTrading: "Lợi nhuận đều đặn mỗi ngày"
         },
         {
-          feature: "Stress Level",
+          feature: "Mức Độ Stress",
           traditional: "Căng não, phải theo dõi liên tục",
           aiTrading: "Chill, để AI lo"
         },
         {
-          feature: "Learning Curve",
+          feature: "Thời Gian Học",
           traditional: "Mất hàng tháng đến cả năm",
           aiTrading: "Kiếm lời ngay từ ngày đầu"
         }
