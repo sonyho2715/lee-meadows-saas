@@ -645,169 +645,169 @@ export const componentTranslations = {
   vi: {
     // FAQ Section
     faq: {
-      badge: "Câu Hỏi Thường Gặp",
-      title: "Các Câu Hỏi Thường Gặp",
-      subtitle: "Mọi thông tin bạn cần biết về đầu tư với TradePulse AI AI Trading",
+      badge: "FAQ",
+      title: "Câu Hỏi Thường Gặp",
+      subtitle: "Mọi thứ bạn cần biết về đầu tư với TradePulse AI",
       questions: [
         {
-          question: "Làm thế nào để bắt đầu đầu tư với TradePulse AI AI Trading?",
-          answer: "Bắt đầu rất đơn giản: (1) Liên hệ TradePulse AI để tạo tài khoản giao dịch, (2) Gửi tiền tối thiểu $300 USDT, (3) Bắt đầu nhận tín hiệu giao dịch AI hàng ngày, và (4) Làm theo tín hiệu để tăng trưởng khoản đầu tư của bạn."
+          question: "Làm sao để bắt đầu với TradePulse AI?",
+          answer: "Easy thôi: (1) Liên hệ TradePulse AI tạo account, (2) Nạp tối thiểu $300 USDT, (3) Nhận AI signals hàng ngày, (4) Follow signals và xem tiền lên. Đơn giản vậy!"
         },
         {
-          question: "Số tiền đầu tư tối thiểu là bao nhiêu?",
-          answer: "Số tiền đầu tư tối thiểu là $300 USDT. Khoản đầu tư cấp độ nhập môn này cho phép bạn truy cập nền tảng TradePulse AI AI Trading và bắt đầu nhận tín hiệu giao dịch. Bạn có thể nâng cấp lên các giai đoạn cao hơn ($500, $1000, $3000, $5000) để tăng lợi nhuận."
+          question: "Đầu tư tối thiểu bao nhiêu?",
+          answer: "Tối thiểu $300 USDT để bắt đầu. Entry level này cho bạn access vào platform và nhận trading signals. Muốn profit nhiều hơn thì lên các stage cao hơn ($500, $1000, $3000, $5000)."
         },
         {
-          question: "Tỷ lệ thắng 99.6% hoạt động như thế nào?",
-          answer: "Hệ thống giao dịch AI của chúng tôi phân tích dữ liệu thị trường theo thời gian thực và cung cấp tín hiệu với độ chính xác lịch sử 99.6%. Hệ thống sử dụng các thuật toán máy học tiên tiến, dự đoán dữ liệu lớn và trí tuệ thị trường để giảm thiểu rủi ro và tối đa hóa lợi nhuận."
+          question: "Win rate 99.6% là sao?",
+          answer: "AI system của mình analyze market data real-time và cho ra signals với độ chính xác 99.6% (dựa trên historical data). Xài advanced machine learning + big data prediction để minimize risk và max profit."
         },
         {
-          question: "Làm thế nào để rút tiền của tôi?",
-          answer: "Sau khi hoàn thành chuyển khối lượng giao dịch 1x vào tài khoản tương lai của bạn, bạn có thể rút tiền mặt tự do trong vòng 15-30 phút vào ví tiền điện tử của bạn. TradePulse AI AI Trading đảm bảo số vốn gốc có thể được rút bất cứ lúc nào bất kể khối lượng giao dịch."
+          question: "Rút tiền thế nào?",
+          answer: "Sau khi complete 1x trading volume, bạn rút tự do trong 15-30 phút về crypto wallet. TradePulse AI guarantee vốn gốc có thể rút bất cứ lúc nào regardless of trading volume."
         },
         {
-          question: "Nền tảng tuân thủ quy định nào?",
-          answer: "Nền tảng của chúng tôi được cấp phép đầy đủ và được quản lý tại hơn 30 quốc gia bao gồm: Mỹ (SEC), Úc (ASIC), Singapore (MAS), Dubai (DFSA), và Ngân hàng Trung ương Bahamas. Điều này đảm bảo quỹ của bạn được bảo vệ theo các quy định tài chính quốc tế."
+          question: "Platform có licensed không?",
+          answer: "Full licensed ở 30+ quốc gia including: Mỹ (SEC), Úc (ASIC), Singapore (MAS), Dubai (DFSA), và Bahamas Central Bank. Tiền của bạn được protect theo international financial regulations."
         },
         {
-          question: "Phần thưởng giới thiệu hoạt động như thế nào?",
-          answer: "Bạn nhận phần thưởng bằng cách giới thiệu thành viên mới: 10% tiền gửi của họ làm phần thưởng người giới thiệu, cộng với người dùng mới nhận được 5% tiền thưởng. Ví dụ, giới thiệu người gửi $1000 bạn nhận $100 và họ nhận $50. Sau 5 lần giới thiệu thành công với số tiền gửi trên $500, bạn được thăng cấp lên Đại Lý Nhóm với các quyền lợi vĩnh viễn."
+          question: "Referral rewards thế nào?",
+          answer: "Bạn kiếm 10% từ deposit của người bạn giới thiệu, người đó được bonus 5%. Ví dụ: giới thiệu ai nạp $1000, bạn ăn $100 và họ nhận $50. Sau 5 referrals thành công (trên $500), lên Team Agent với benefits vĩnh viễn."
         },
         {
-          question: "Tín hiệu giao dịch là gì và tôi nhận chúng như thế nào?",
-          answer: "Tín hiệu giao dịch là các khuyến nghị được hỗ trợ bởi AI về thời điểm mua/bán tiền điện tử. Bạn sẽ nhận 2 tín hiệu cố định hàng ngày (1:00 chiều và 7:00 tối EST) cho tất cả thành viên, cộng với các tín hiệu bổ sung (2:00 chiều, 2:30 chiều, 8:00 tối, 8:30 tối, 9:00 tối EST) cho các thành viên đủ điều kiện. Tín hiệu được gửi qua nền tảng và Bonchat."
+          question: "Trading signals là gì và nhận ở đâu?",
+          answer: "Signals là AI recommendations về khi nào buy/sell crypto. Bạn nhận 2 fixed signals mỗi ngày (1:00 PM và 7:00 PM EST) cho all members, plus thêm signals (2:00 PM, 2:30 PM, 8:00 PM, 8:30 PM, 9:00 PM EST) cho members đủ điều kiện. Nhận qua platform và Bonchat."
         },
         {
-          question: "Khoản đầu tư của tôi có được bảo vệ không?",
-          answer: "Có! TradePulse AI AI Trading hoạt động với bảo mật cấp độ tổ chức và tuân thủ quy định để đảm bảo an toàn cho quỹ của tất cả thành viên. Nền tảng của chúng tôi cung cấp sự ổn định và bảo vệ lâu dài thông qua các quan hệ đối tác đã được thiết lập với các sàn giao dịch được cấp phép."
+          question: "Đầu tư có an toàn không?",
+          answer: "Có! TradePulse AI chạy với institutional-grade security và full regulatory compliance. Platform stable lâu dài nhờ partnerships với licensed exchanges. Tiền của bạn được protect kỹ lắm."
         },
         {
-          question: "Tôi có thể giao dịch những loại tiền điện tử nào?",
-          answer: "Bạn có thể giao dịch các loại tiền điện tử chính bao gồm Bitcoin (BTC), Ethereum (ETH), Cardano (ADA), và nhiều loại khác thông qua các sàn giao dịch đối tác của chúng tôi. Nền tảng hỗ trợ giao dịch spot, futures, hợp đồng vĩnh viễn và giao dịch quyền chọn."
+          question: "Trade được coin gì?",
+          answer: "Trade được major cryptos như Bitcoin (BTC), Ethereum (ETH), Cardano (ADA), và nhiều loại khác through partner exchanges. Platform support spot trading, futures, perpetual contracts, và options trading."
         },
         {
-          question: "Tôi có cần kinh nghiệm giao dịch không?",
-          answer: "Không cần kinh nghiệm giao dịch! Hệ thống AI của TradePulse AI cung cấp tất cả tín hiệu giao dịch với thời gian, hướng và số lượng cụ thể. Chỉ cần làm theo các tín hiệu được cung cấp. Một chiếc điện thoại thông minh là đủ để vận hành, và chỉ mất vài phút mỗi ngày - nó sẽ không ảnh hưởng đến công việc hoặc cuộc sống hàng ngày của bạn."
+          question: "Cần có kinh nghiệm trading không?",
+          answer: "Không cần! AI system cho hết signals với timing, direction, và amounts cụ thể. Chỉ cần follow signals. Có smartphone là đủ, chỉ mất vài phút/ngày - không ảnh hưởng work hay cuộc sống."
         }
       ]
     },
 
     // How It Works Section
     howItWorks: {
-      badge: "Cách Hoạt Động",
-      title: "Bắt Đầu Đầu Tư Trong 4 Bước Đơn Giản",
-      subtitle: "Bắt đầu với TradePulse AI AI Trading trong vài phút và bắt đầu hành trình tự do tài chính của bạn",
+      badge: "How It Works",
+      title: "4 Bước Đơn Giản Để Bắt Đầu",
+      subtitle: "Chỉ vài phút là xong, bắt đầu journey lên đời tài chính",
       steps: [
         {
-          title: "Tạo Tài Khoản",
-          description: "Liên hệ TradePulse AI để thiết lập tài khoản giao dịch của bạn. Quy trình xác minh nhanh chóng với các tiêu chuẩn tuân thủ quốc tế."
+          title: "Tạo Account",
+          description: "Liên hệ TradePulse AI set up account. Verify nhanh với international compliance standards."
         },
         {
-          title: "Nạp Tiền Vào Tài Khoản",
-          description: "Gửi tối thiểu $300 USDT vào tài khoản giao dịch của bạn. Chọn giai đoạn đầu tư dựa trên mục tiêu và ngân sách của bạn."
+          title: "Fund Account",
+          description: "Nạp tối thiểu $300 USDT. Chọn investment stage theo goals và budget của bạn."
         },
         {
-          title: "Nhận Tín Hiệu Giao Dịch",
-          description: "Nhận tín hiệu hàng ngày được hỗ trợ bởi AI với độ chính xác 99.6%. Làm theo thời gian, hướng và số lượng được chỉ định cho mỗi giao dịch."
+          title: "Nhận Trading Signals",
+          description: "Nhận daily AI-powered signals với 99.6% accuracy. Follow timing, direction và amount cho mỗi trade."
         },
         {
-          title: "Kiếm & Rút Tiền",
-          description: "Xem lợi nhuận của bạn tăng trưởng với lợi nhuận ổn định. Rút tiền bất cứ lúc nào sau khi hoàn thành khối lượng giao dịch 1x."
+          title: "Kiếm Lời & Rút Tiền",
+          description: "Xem profit lên đều. Rút tiền bất cứ lúc nào sau khi complete 1x trading volume."
         }
       ],
       cta: {
-        ready: "Sẵn sàng bắt đầu?",
-        contactNow: "Liên Hệ TradePulse AI Ngay",
-        viewPlans: "Xem Gói Đầu Tư"
+        ready: "Sẵn sàng kiếm lời?",
+        contactNow: "Contact TradePulse AI Ngay",
+        viewPlans: "Xem Investment Plans"
       }
     },
 
     // Investment Calculator
     calculator: {
-      badge: "Máy Tính Đầu Tư",
-      title: "Tính Toán",
+      badge: "Investment Calculator",
+      title: "Tính",
       titleHighlight: "Lợi Nhuận",
-      subtitle: "Xem khoản đầu tư của bạn có thể tăng trưởng như thế nào với TradePulse AI AI Trading. Chọn giai đoạn đặt trước hoặc tính toán số tiền tùy chỉnh.",
-      investmentDetails: "Chi Tiết Đầu Tư",
-      presetStages: "Giai Đoạn Đặt Trước",
-      customAmount: "Số Tiền Tùy Chỉnh",
-      selectStage: "Chọn Giai Đoạn Đầu Tư",
-      stage: "Giai Đoạn",
-      investmentAmount: "Số Tiền Đầu Tư (USDT)",
+      subtitle: "Xem tiền của bạn sẽ lên như thế nào với TradePulse AI. Chọn preset stage hoặc tính custom.",
+      investmentDetails: "Chi Tiết Investment",
+      presetStages: "Preset Stages",
+      customAmount: "Custom Amount",
+      selectStage: "Chọn Investment Stage",
+      stage: "Stage",
+      investmentAmount: "Investment Amount (USDT)",
       minimum: "Tối thiểu: $100 USDT",
-      duration: "Thời Gian Đầu Tư",
+      duration: "Thời Gian",
       days: "ngày",
       months: "tháng",
       year: "năm",
-      yourInvestment: "Khoản Đầu Tư Của Bạn",
-      projectedReturns: "Lợi Nhuận Dự Kiến",
-      dailyProfit: "Lợi Nhuận Hàng Ngày",
+      yourInvestment: "Investment Của Bạn",
+      projectedReturns: "Projected Returns",
+      dailyProfit: "Daily Profit",
       perDay: "Mỗi ngày",
-      totalProfit: "Tổng Lợi Nhuận",
+      totalProfit: "Total Profit",
       after: "Sau",
-      totalReturn: "Tổng Số Tiền Nhận Lại",
-      investmentPlusProfit: "Đầu Tư + Lợi Nhuận",
-      roi: "Lợi Tức Đầu Tư (ROI)",
-      readyToStart: "Sẵn Sàng Bắt Đầu Đầu Tư?",
-      joinDescription: "Tham gia TradePulse AI AI Trading và bắt đầu kiếm lợi nhuận hàng ngày",
+      totalReturn: "Total Return",
+      investmentPlusProfit: "Investment + Profit",
+      roi: "ROI",
+      readyToStart: "Sẵn Sàng Kiếm Lời?",
+      joinDescription: "Join TradePulse AI và bắt đầu kiếm daily returns",
       getStarted: "Bắt Đầu Ngay",
-      disclaimer: "* Các phép tính là ước tính dựa trên hiệu suất lịch sử. Lợi nhuận thực tế có thể thay đổi. Đầu tư tiền điện tử có rủi ro. Hiệu suất trong quá khứ không đảm bảo kết quả trong tương lai. Vui lòng đọc các điều khoản và điều kiện của chúng tôi trước khi đầu tư."
+      disclaimer: "* Tính toán dựa trên historical performance. Actual returns có thể khác. Crypto investment có risk. Past performance không guarantee future results. Đọc terms trước khi invest nhé."
     },
 
     // Trading System Details
     tradingSystem: {
-      badge: "Hệ Thống Giao Dịch",
-      title: "Cơ Sở Hạ Tầng Giao Dịch",
-      titleHighlight: "Được Hỗ Trợ Bởi AI Tiên Tiến",
-      subtitle: "Các thuật toán AI tự động trên các sàn giao dịch được cấp phép với độ chính xác dự đoán 99.6%",
+      badge: "Trading System",
+      title: "AI-Powered",
+      titleHighlight: "Trading Infrastructure Đỉnh",
+      subtitle: "Automated AI algorithms trên licensed exchanges với 99.6% prediction accuracy",
       features: [
         {
-          title: "Giao Dịch Tự Động",
-          description: "AI rút chính xác 1% quỹ tài khoản của bạn cho mỗi giao dịch",
-          details: "Định cỡ vị thế được kiểm soát chính xác để quản lý rủi ro tối ưu"
+          title: "Automated Trading",
+          description: "AI tự động pull 1% account funds mỗi trade",
+          details: "Precision position sizing để optimize risk management"
         },
         {
-          title: "Thực Thi Trong 60 Giây",
-          description: "Giao dịch hoàn thành trong vòng 60 giây",
-          details: "Thực thi lệnh cực nhanh với phân phối lợi nhuận tự động"
+          title: "60-Second Execution",
+          description: "Trades complete trong 60 giây",
+          details: "Lightning-fast order execution với auto profit distribution"
         },
         {
-          title: "Đảm Bảo ROI 60%",
-          description: "Lợi nhuận tối thiểu 60% trên tín hiệu giao dịch",
-          details: "Lợi nhuận hàng đầu trong ngành được hỗ trợ bởi độ chính xác dự đoán 99.6%"
+          title: "Guaranteed 60% ROI",
+          description: "Tối thiểu 60% return trên signals",
+          details: "Industry-leading returns backed by 99.6% prediction accuracy"
         },
         {
-          title: "Mã Giao Dịch Hàng Ngày",
-          description: "Hai mã cố định mỗi ngày, có hiệu lực trong 10 phút mỗi mã",
-          details: "Phát hành theo lịch trình qua nhiều múi giờ để truy cập toàn cầu"
+          title: "Daily Trading Codes",
+          description: "Hai fixed codes/ngày, valid 10 phút mỗi cái",
+          details: "Scheduled releases across time zones cho global access"
         }
       ],
       capitalGrowth: {
-        title: "Dòng Thời Gian Tăng Trưởng Vốn",
-        subtitle: "Tham gia nhất quán với tín hiệu giao dịch hàng ngày",
-        starting: "Vốn Ban Đầu",
+        title: "Capital Growth Timeline",
+        subtitle: "Tham gia consistent với daily trading signals",
+        starting: "Starting Capital",
         after60Days: "Sau 60 Ngày",
-        growth: "Tăng Trưởng 100%",
-        description: "Gần như nhân đôi trong hai tháng"
+        growth: "100% Growth",
+        description: "Gần như x2 trong 2 tháng"
       },
       incomeStreams: {
-        title: "Nhiều Nguồn Thu Nhập",
+        title: "Multiple Income Streams",
         streams: [
           {
-            title: "Lợi Nhuận Giao Dịch",
-            description: "ROI tối thiểu 60% cho mỗi giao dịch thành công"
+            title: "Trading Profits",
+            description: "60% minimum ROI mỗi successful trade"
           },
           {
-            title: "Hoa Hồng Giới Thiệu",
-            description: "Thu nhập từ các thành viên bạn giới thiệu đến nền tảng"
+            title: "Referral Commissions",
+            description: "Earnings từ members bạn refer"
           },
           {
-            title: "Tiền Thưởng Nhóm",
-            description: "Khuyến khích cho việc xây dựng và quản lý nhóm của bạn"
+            title: "Team Bonuses",
+            description: "Incentives cho việc build và manage team"
           },
           {
-            title: "Cổ Tức",
-            description: "Phân phối thu nhập thụ động từ sự tăng trưởng của nền tảng"
+            title: "Dividends",
+            description: "Passive income từ platform growth"
           }
         ]
       },
@@ -876,116 +876,116 @@ export const componentTranslations = {
 
     // Team Section
     team: {
-      badge: "Đội Ngũ Lãnh Đạo",
-      title: "Được Hỗ Trợ Bởi",
+      badge: "Leadership Team",
+      title: "Powered by",
       titleHighlight: "TradePulse AI",
-      subtitle: "Nền tảng giao dịch AI cách mạng cung cấp các tín hiệu chính xác. Nghỉ ngơi ngắn mỗi ngày để kiếm nhiều tiền hơn.",
+      subtitle: "Revolutionary AI trading platform deliver precision signals. Chill vài phút mỗi ngày, kiếm lời nhiều hơn.",
       stats: [
-        { number: "40+", label: "Quốc Gia" },
-        { number: "300+", label: "Đội Đầu Tư" },
-        { number: "200", label: "Nhà Phân Tích Thị Trường" },
-        { number: "99.6%", label: "Độ Chính Xác Dự Đoán" }
+        { number: "40+", label: "Countries" },
+        { number: "300+", label: "Investment Teams" },
+        { number: "200", label: "Market Analysts" },
+        { number: "99.6%", label: "Prediction Accuracy" }
       ],
       profile: {
         name: "TradePulse AI",
-        role: "Nền Tảng Trí Tuệ Giao Dịch Được Hỗ Trợ Bởi AI",
-        focus: "Trao Quyền Cho Các Nhà Giao Dịch Thông Qua Các Thuật Toán AI Tiên Tiến",
+        role: "AI-Powered Trading Intelligence Platform",
+        focus: "Empowering Traders Through Advanced AI Algorithms",
         education: [
-          "Được Xây Dựng Trên Công Nghệ Máy Học Tiên Tiến",
-          "Được Phát Triển Bởi Các Chuyên Gia AI & Giao Dịch Hàng Đầu"
+          "Built trên Advanced Machine Learning Technology",
+          "Developed bởi Leading AI & Trading Experts"
         ],
         experience: [
-          "Được hỗ trợ bởi các thuật toán giao dịch AI hiện đại",
-          "Công nghệ tạo tín hiệu AI cách mạng",
-          "Hợp tác với các công ty giao dịch định lượng hàng đầu",
-          "Cam kết dân chủ hóa trí tuệ giao dịch tiên tiến"
+          "Powered by state-of-the-art AI trading algorithms",
+          "Revolutionary AI signal generation technology",
+          "Partnership với top quantitative trading firms",
+          "Dedicated to democratizing advanced trading intelligence"
         ],
         achievements: [
-          "Tỷ lệ chính xác tín hiệu AI 99.6%",
-          "Phục vụ hơn 10.000 nhà giao dịch đang hoạt động trên toàn cầu",
-          "Xử lý hàng triệu điểm dữ liệu mỗi giây",
-          "Đơn giản hóa việc tạo ra tài sản - chỉ vài phút mỗi ngày"
+          "99.6% AI signal accuracy rate",
+          "Serving 10,000+ active traders globally",
+          "Processing millions of data points per second",
+          "Simplifying wealth creation - vài phút/ngày thôi"
         ]
       },
       advantage: {
-        title: "Lợi Thế TradePulse AI",
-        description: "TradePulse AI đại diện cho công nghệ giao dịch thuật toán tiên tiến nhất. Hệ thống AI tiên tiến của chúng tôi giám sát các thị trường tiền điện tử toàn cầu 24/7, xử lý hàng triệu điểm dữ liệu mỗi giây để cung cấp tín hiệu giao dịch chính xác 99.6%. Tất cả những gì bạn cần là vài phút mỗi ngày để làm theo các tín hiệu và xem tài sản của bạn tăng trưởng. TradePulse AI chứng minh rằng với chiến lược được hỗ trợ bởi AI phù hợp, bất kỳ ai cũng có thể biến đổi tương lai tài chính của họ thông qua giao dịch tự động thông minh."
+        title: "The TradePulse AI Advantage",
+        description: "TradePulse AI là cutting edge của algorithmic trading technology. Advanced AI system monitor global crypto markets 24/7, process millions data points/giây để deliver 99.6% accurate trading signals. All bạn cần là vài phút mỗi ngày follow signals và xem wealth grow. TradePulse AI proves rằng với right AI-powered strategy, anyone có thể transform financial future through intelligent automated trading."
       }
     },
 
     // Comparison Table
     comparison: {
-      badge: "AI vs Truyền Thống",
+      badge: "AI vs Traditional",
       title: "Tại Sao",
       titleHighlight: "AI Trading",
-      titleEnd: "Vượt Trội Hơn Cách Cũ",
-      subtitle: "Nhìn ngay sự khác biệt của hệ thống AI-powered trading của TradePulse AI so với giao dịch thủ công kiểu cũ",
+      titleEnd: "Ngon Hơn Nhiều",
+      subtitle: "Thấy rõ sự khác biệt giữa TradePulse AI's AI-powered system vs manual trading kiểu cũ",
       recommended: "RECOMMENDED",
       traditional: {
         title: "Traditional Trading",
-        subtitle: "Thủ công, mất thời gian"
+        subtitle: "Manual, tốn thời gian"
       },
       aiTrading: {
         title: "TradePulse AI AI Trading",
-        subtitle: "Tự động hóa, AI-Powered"
+        subtitle: "Automated, AI-Powered"
       },
       features: [
         {
-          feature: "Tỷ Lệ Thắng",
+          feature: "Win Rate",
           traditional: "60-70%",
           aiTrading: "99.6%"
         },
         {
           feature: "Thời Gian Bỏ Ra",
-          traditional: "4-8 giờ mỗi ngày",
-          aiTrading: "Chỉ vài phút mỗi ngày"
+          traditional: "4-8 giờ/ngày",
+          aiTrading: "Vài phút/ngày thôi"
         },
         {
-          feature: "Kiến Thức Kỹ Thuật",
-          traditional: "Cần kinh nghiệm dày dặn",
-          aiTrading: "Không cần kinh nghiệm"
+          feature: "Technical Knowledge",
+          traditional: "Cần exp nhiều",
+          aiTrading: "Zero exp cũng được"
         },
         {
-          feature: "Quyết Định Cảm Tính",
-          traditional: "Dễ thua vì giao dịch bốc đồng",
+          feature: "Cảm Xúc",
+          traditional: "Dễ FOMO, panic sell",
           aiTrading: "100% data-driven, zero cảm xúc"
         },
         {
-          feature: "Tốc Độ Phân Tích",
-          traditional: "Phân tích thủ công, chậm chạp",
-          aiTrading: "AI xử lý real-time"
+          feature: "Tốc Độ Analyze",
+          traditional: "Manual, chậm",
+          aiTrading: "AI process real-time"
         },
         {
-          feature: "Timing Tín Hiệu",
-          traditional: "Hay lỡ mất cơ hội",
-          aiTrading: "Tín hiệu vào/ra chuẩn chỉnh"
+          feature: "Signal Timing",
+          traditional: "Hay lỡ opportunities",
+          aiTrading: "Entry/exit signals chuẩn"
         },
         {
-          feature: "Quản Lý Rủi Ro",
-          traditional: "Không ổn định, dễ sai sót",
-          aiTrading: "Tự động kiểm soát rủi ro"
+          feature: "Risk Management",
+          traditional: "Không stable, dễ sai",
+          aiTrading: "Auto risk controls"
         },
         {
-          feature: "Lợi Nhuận Mỗi Ngày",
-          traditional: "Không dự đoán được, thất thường",
-          aiTrading: "Lợi nhuận đều đặn mỗi ngày"
+          feature: "Daily Profit",
+          traditional: "Không đoán được",
+          aiTrading: "Consistent daily returns"
         },
         {
-          feature: "Mức Độ Stress",
-          traditional: "Căng não, phải theo dõi liên tục",
-          aiTrading: "Chill, để AI lo"
+          feature: "Stress Level",
+          traditional: "Căng não, monitor 24/7",
+          aiTrading: "Chill, AI lo hết"
         },
         {
-          feature: "Thời Gian Học",
-          traditional: "Mất hàng tháng đến cả năm",
-          aiTrading: "Kiếm lời ngay từ ngày đầu"
+          feature: "Learning Curve",
+          traditional: "Mất tháng/năm",
+          aiTrading: "Profit ngay từ ngày 1"
         }
       ],
       cta: {
-        title: "Sẵn Sàng Chuyển Sang AI Trading?",
-        description: "Tham gia cùng hàng nghìn trader đã lên đời lên hệ thống AI-powered của TradePulse AI và đang kiếm lời ổn định mỗi ngày.",
-        startTrading: "Bắt Đầu AI Trading Ngay",
-        calculateReturns: "Tính Lợi Nhuận"
+        title: "Sẵn Sàng Switch Sang AI Trading?",
+        description: "Join hàng nghìn traders đã lên đời sang TradePulse AI's AI-powered system và đang kiếm consistent profit mỗi ngày.",
+        startTrading: "Start AI Trading Ngay",
+        calculateReturns: "Calculate Returns"
       }
     },
 
@@ -1124,44 +1124,44 @@ export const componentTranslations = {
 
     // Live Dashboard
     liveDashboard: {
-      badge: "ĐANG TRỰC TIẾP",
-      title: "Hiệu Suất Giao Dịch",
-      titleHighlight: "Thời Gian Thực",
-      subtitle: "Xem hệ thống giao dịch AI của chúng tôi đang hoạt động - được cập nhật mỗi giây với kết quả thành viên thực",
+      badge: "LIVE NOW",
+      title: "Trading Performance",
+      titleHighlight: "Real-Time",
+      subtitle: "Xem AI trading system đang chạy live - update mỗi giây với kết quả thực từ members",
       stats: {
-        winRate: "Tỷ Lệ Thắng Hôm Nay",
-        activeTraders: "Nhà Giao Dịch Đang Hoạt Động",
-        todayProfit: "Lợi Nhuận Hôm Nay",
-        activeSignals: "Tín Hiệu Đang Hoạt Động",
-        fromAvg: "+0.2% so với trung bình",
-        today: "+127 hôm nay",
-        allMembers: "Tất cả thành viên",
-        liveNow: "Đang trực tiếp"
+        winRate: "Win Rate Hôm Nay",
+        activeTraders: "Active Traders",
+        todayProfit: "Today's Profit",
+        activeSignals: "Active Signals",
+        fromAvg: "+0.2% from avg",
+        today: "+127 today",
+        allMembers: "All members",
+        liveNow: "Live now"
       },
       recentTrades: {
-        title: "Các Giao Dịch Thắng Gần Đây",
-        live: "TRỰC TIẾP",
-        position: "Vị Thế",
-        ago: "trước",
-        disclaimer: "Giao dịch được cập nhật theo thời gian thực. Hiệu suất trong quá khứ không đảm bảo kết quả trong tương lai."
+        title: "Recent Winning Trades",
+        live: "LIVE",
+        position: "Position",
+        ago: "ago",
+        disclaimer: "Trades update real-time. Past performance không guarantee future results."
       },
       cta: {
-        title: "Tham Gia Các Nhà Giao Dịch Thắng Lợi Này Ngay Hôm Nay",
-        description: "Bắt đầu nhận các tín hiệu AI tương tự đã tạo ra những lợi nhuận này. Tối thiểu $300 USDT để bắt đầu.",
-        startTrading: "Bắt Đầu Giao Dịch Ngay",
-        calculateProfits: "Tính Toán Lợi Nhuận Của Bạn"
+        title: "Join Những Winning Traders Này Ngay",
+        description: "Nhận same AI signals đã tạo ra những profits này. Chỉ $300 USDT để start.",
+        startTrading: "Start Trading Ngay",
+        calculateProfits: "Calculate Profits"
       }
     },
 
     // Profit Timeline
     profitTimeline: {
-      badge: "Công Cụ Trực Quan Hóa Lợi Nhuận Tương Tác",
-      title: "Trực Quan Hóa",
-      titleHighlight: "Hành Trình Tài Sản",
-      subtitle: "Xem chính xác khoản đầu tư của bạn tăng trưởng như thế nào theo thời gian với tín hiệu giao dịch AI",
-      selectAmount: "Chọn Số Tiền Đầu Tư",
-      selectPeriod: "Chọn Khoảng Thời Gian",
-      customAmountLabel: "Số Tiền Tùy Chỉnh (USDT)",
+      badge: "Interactive Profit Visualizer",
+      title: "Visualize Your",
+      titleHighlight: "Wealth Journey",
+      subtitle: "Xem chính xác investment của bạn grow theo thời gian với AI trading signals",
+      selectAmount: "Chọn Investment Amount",
+      selectPeriod: "Chọn Time Period",
+      customAmountLabel: "Custom Amount (USDT)",
       durations: [
         { label: "1 Tháng" },
         { label: "3 Tháng" },
@@ -1169,20 +1169,20 @@ export const componentTranslations = {
         { label: "1 Năm" }
       ],
       results: {
-        yourInvestment: "Khoản Đầu Tư Của Bạn",
-        growsTo: "Tăng Lên",
+        yourInvestment: "Your Investment",
+        growsTo: "Grows To",
         in: "trong",
         days: "ngày"
       },
       milestones: {
-        title: "Các Mốc Tăng Trưởng",
-        timeline25: "25% Dòng Thời Gian",
-        timeline50: "50% Dòng Thời Gian",
-        timeline75: "75% Dòng Thời Gian",
-        targetReached: "Đạt Mục Tiêu",
-        day: "Ngày"
+        title: "Growth Milestones",
+        timeline25: "25% Timeline",
+        timeline50: "50% Timeline",
+        timeline75: "75% Timeline",
+        targetReached: "Target Reached",
+        day: "Day"
       },
-      disclaimer: "Dự báo dựa trên lợi nhuận trung bình hàng ngày 2.5% với lãi suất kép. Hiệu suất trong quá khứ không đảm bảo kết quả trong tương lai. Giao dịch tiền điện tử có rủi ro mất mát đáng kể."
+      disclaimer: "Projections dựa trên 2.5% average daily return với compound interest. Past performance không guarantee future results. Crypto trading có substantial risk."
     },
 
     // Cookie Consent
