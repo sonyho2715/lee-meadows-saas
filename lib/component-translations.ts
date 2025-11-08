@@ -247,16 +247,19 @@ export const componentTranslations = {
         name: "TradePulse AI",
         role: "AI-Powered Trading Intelligence Platform",
         focus: "Empowering Traders Through Advanced AI Algorithms",
+        educationTitle: "Education",
         education: [
           "Built on Advanced Machine Learning Technology",
           "Developed by Leading AI & Trading Experts"
         ],
+        experienceTitle: "Experience & Expertise",
         experience: [
           "Powered by state-of-the-art AI trading algorithms",
           "Revolutionary AI signal generation technology",
           "Partnership with top quantitative trading firms",
           "Dedicated to democratizing advanced trading intelligence"
         ],
+        achievementsTitle: "Key Achievements",
         achievements: [
           "99.6% AI signal accuracy rate",
           "Serving 10,000+ active traders globally",
@@ -890,16 +893,19 @@ export const componentTranslations = {
         name: "TradePulse AI",
         role: "AI-Powered Trading Intelligence Platform",
         focus: "Empowering Traders Through Advanced AI Algorithms",
+        educationTitle: "Background",
         education: [
           "Built trên Advanced Machine Learning Technology",
           "Developed bởi Leading AI & Trading Experts"
         ],
+        experienceTitle: "Experience & Chuyên Môn",
         experience: [
           "Powered by state-of-the-art AI trading algorithms",
           "Revolutionary AI signal generation technology",
           "Partnership với top quantitative trading firms",
           "Dedicated to democratizing advanced trading intelligence"
         ],
+        achievementsTitle: "Thành Tích Nổi Bật",
         achievements: [
           "99.6% AI signal accuracy rate",
           "Serving 10,000+ active traders globally",

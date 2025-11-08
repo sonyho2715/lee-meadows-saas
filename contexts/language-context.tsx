@@ -20,6 +20,17 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const saved = localStorage.getItem("language") as Language;
     if (saved) {
       setLanguage(saved);
+      return;
+    }
+
+    // Auto-detect browser language if no saved preference
+    const browserLang = navigator.language.toLowerCase();
+    if (browserLang.startsWith("vi")) {
+      setLanguage("vi");
+      localStorage.setItem("language", "vi");
+    } else {
+      // Default to English
+      localStorage.setItem("language", "en");
     }
   }, []);
 

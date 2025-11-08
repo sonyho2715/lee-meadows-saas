@@ -66,7 +66,7 @@ export function TeamSection() {
             <div className="mb-6">
               <h4 className="text-sm font-semibold text-gray-300 mb-2 flex items-center gap-2">
                 <Award className="h-4 w-4 text-yellow-500" />
-                Education
+                {t.profile.educationTitle}
               </h4>
               <ul className="space-y-1">
                 {t.profile.education.map((edu, i) => (
@@ -78,7 +78,7 @@ export function TeamSection() {
             <div className="mb-4">
               <h4 className="text-sm font-semibold text-gray-300 mb-2 flex items-center gap-2">
                 <TrendingUp className="h-4 w-4 text-yellow-500" />
-                Experience & Expertise
+                {t.profile.experienceTitle}
               </h4>
               <ul className="space-y-1">
                 {t.profile.experience.map((exp, i) => (
@@ -88,7 +88,7 @@ export function TeamSection() {
             </div>
 
             <div>
-              <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Achievements</h4>
+              <h4 className="text-sm font-semibold text-gray-300 mb-2">{t.profile.achievementsTitle}</h4>
               <ul className="space-y-1">
                 {t.profile.achievements.map((achievement, i) => (
                   <li key={i} className="text-gray-400 text-sm pl-6">• {achievement}</li>
