@@ -1,14 +1,28 @@
 "use client";
 
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Video, FileText, Lightbulb, TrendingUp, Shield, Clock, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { BookOpen, Video, FileText, Lightbulb, TrendingUp, Shield, Clock, ArrowRight, ArrowLeft, User, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import { componentTranslations } from "@/lib/component-translations";
+import { knowledgeContent } from "@/lib/knowledge-content";
+
+// Define article type
+type Article = {
+  title: string;
+  content: string;
+  readTime: string;
+  author: string;
+  publishedDate: string;
+  category: string;
+};
 
 export function KnowledgeHub() {
   const { language } = useLanguage();
   const t = componentTranslations[language].knowledgeHub;
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
 
   const categoryIconMap: Record<number, any> = {
     0: BookOpen,
@@ -30,6 +44,99 @@ export function KnowledgeHub() {
     2: "from-purple-500 to-pink-600",
     3: "from-green-500 to-emerald-600"
   };
+
+  // Map article titles to article IDs in knowledge-content.ts
+  const articleIdMap: Record<string, string> = {
+    // Getting Started
+    "Complete Beginner's Guide to AI Trading": "beginner-guide",
+    "How to Set Up Your Trading Account": "account-setup",
+    "Understanding Trading Signals": "understanding-signals",
+    // Trading Strategies
+    "Maximizing Returns with AI Signals": "maximizing-returns",
+    "Risk Management Fundamentals": "risk-management",
+    "Compound Growth Strategies": "compound-growth",
+    // Market Insights
+    "Cryptocurrency Market Analysis 2025": "crypto-market-2025",
+    "Why AI Outperforms Manual Trading": "why-ai-outperforms",
+    "Understanding Market Volatility": "market-volatility",
+    // Security & Compliance
+    "Platform Security Measures": "platform-security",
+    "Regulatory Compliance Guide": "regulatory-compliance",
+    "Withdrawal Process & Best Practices": "withdrawal-guide"
+  };
+
+  const articles = knowledgeContent.en.articles;
+  const currentArticle: Article | null = selectedArticle ? articles[selectedArticle as keyof typeof articles] : null;
+
+  // If an article is selected, show the article view
+  if (selectedArticle && currentArticle) {
+    return (
+      <section className="container mx-auto px-4 py-20 bg-[#0a0e27]/50">
+        <div className="max-w-4xl mx-auto">
+          {/* Back Button */}
+          <Button
+            onClick={() => setSelectedArticle(null)}
+            variant="outline"
+            className="mb-8 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            {language === "vi" ? "Quay lại Knowledge Hub" : "Back to Knowledge Hub"}
+          </Button>
+
+          {/* Article Header */}
+          <div className="mb-8">
+            <Badge className="mb-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white border-0">
+              {currentArticle.category}
+            </Badge>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              {currentArticle.title}
+            </h1>
+            <div className="flex items-center gap-6 text-gray-400 text-sm">
+              <div className="flex items-center gap-2">
+                <User className="h-4 w-4" />
+                {currentArticle.author}
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                {currentArticle.publishedDate}
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                {currentArticle.readTime}
+              </div>
+            </div>
+          </div>
+
+          {/* Article Content */}
+          <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
+            <CardContent className="p-8">
+              <div className="prose prose-invert prose-yellow max-w-none">
+                <div
+                  className="text-gray-300 whitespace-pre-wrap leading-relaxed"
+                  style={{
+                    lineHeight: "1.8",
+                    fontSize: "16px"
+                  }}
+                >
+                  {currentArticle.content}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Back Button at Bottom */}
+          <Button
+            onClick={() => setSelectedArticle(null)}
+            variant="outline"
+            className="mt-8 border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            {language === "vi" ? "Quay lại Knowledge Hub" : "Back to Knowledge Hub"}
+          </Button>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="container mx-auto px-4 py-20 bg-[#0a0e27]/50">
@@ -100,36 +207,40 @@ export function KnowledgeHub() {
                   {category.category}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {category.articles.map((article, articleIndex) => (
-                    <Card
-                      key={articleIndex}
-                      className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] hover:border-yellow-500/40 transition-all cursor-pointer group"
-                    >
-                      <CardHeader>
-                        <div className="flex items-start justify-between mb-2">
-                          <Badge className={`bg-gradient-to-r ${categoryGradientMap[categoryIndex]} text-white border-0`}>
-                            {article.tag}
-                          </Badge>
-                          <div className="flex items-center gap-1 text-xs text-gray-400">
-                            <Clock className="h-3 w-3" />
-                            {article.readTime}
+                  {category.articles.map((article, articleIndex) => {
+                    const articleId = articleIdMap[article.title];
+                    return (
+                      <Card
+                        key={articleIndex}
+                        onClick={() => articleId && setSelectedArticle(articleId)}
+                        className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] hover:border-yellow-500/40 transition-all cursor-pointer group"
+                      >
+                        <CardHeader>
+                          <div className="flex items-start justify-between mb-2">
+                            <Badge className={`bg-gradient-to-r ${categoryGradientMap[categoryIndex]} text-white border-0`}>
+                              {article.tag}
+                            </Badge>
+                            <div className="flex items-center gap-1 text-xs text-gray-400">
+                              <Clock className="h-3 w-3" />
+                              {article.readTime}
+                            </div>
                           </div>
-                        </div>
-                        <CardTitle className="text-base text-white group-hover:text-yellow-500 transition-colors">
-                          {article.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-sm text-gray-400 mb-4">
-                          {article.description}
-                        </p>
-                        <div className="flex items-center gap-2 text-yellow-500 text-sm font-medium group-hover:gap-3 transition-all">
-                          {t.readArticle}
-                          <ArrowRight className="h-4 w-4" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
+                          <CardTitle className="text-base text-white group-hover:text-yellow-500 transition-colors">
+                            {article.title}
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-sm text-gray-400 mb-4">
+                            {article.description}
+                          </p>
+                          <div className="flex items-center gap-2 text-yellow-500 text-sm font-medium group-hover:gap-3 transition-all">
+                            {t.readArticle}
+                            <ArrowRight className="h-4 w-4" />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
                 </div>
               </div>
             );
