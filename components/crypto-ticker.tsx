@@ -11,11 +11,11 @@ interface CryptoData {
 }
 
 const CRYPTO_SYMBOLS = [
-  { symbol: "BTCUSDT", display: "BTC", name: "Bitcoin" },
-  { symbol: "ETHUSDT", display: "ETH", name: "Ethereum" },
-  { symbol: "ADAUSDT", display: "ADA", name: "Cardano" },
-  { symbol: "DOGEUSDT", display: "DOGE", name: "Dogecoin" },
-  { symbol: "USDCUSDT", display: "USDT", name: "Tether" },
+  { id: "bitcoin", symbol: "BTC", name: "Bitcoin" },
+  { id: "ethereum", symbol: "ETH", name: "Ethereum" },
+  { id: "cardano", symbol: "ADA", name: "Cardano" },
+  { id: "dogecoin", symbol: "DOGE", name: "Dogecoin" },
+  { id: "tether", symbol: "USDT", name: "Tether" },
 ];
 
 export function CryptoTicker() {
@@ -30,15 +30,15 @@ export function CryptoTicker() {
   const [isLoading, setIsLoading] = useState(false);
   const [isLive, setIsLive] = useState(false);
 
-  // Fetch live crypto prices from Binance API
+  // Fetch live crypto prices from CoinCap API
   const fetchCryptoPrices = async () => {
     try {
       setIsLoading(true);
 
-      // Fetch all symbols at once from Binance
-      const symbols = CRYPTO_SYMBOLS.map(c => c.symbol).join('","');
+      // Fetch all cryptocurrencies at once from CoinCap
+      const ids = CRYPTO_SYMBOLS.map(c => c.id).join(',');
       const response = await fetch(
-        `https://api.binance.com/api/v3/ticker/24hr?symbols=["${symbols}"]`,
+        `https://api.coincap.io/v2/assets?ids=${ids}`,
         {
           cache: 'no-cache',
           headers: {
@@ -48,25 +48,26 @@ export function CryptoTicker() {
       );
 
       if (!response.ok) {
-        throw new Error(`Binance API error: ${response.status}`);
+        throw new Error(`CoinCap API error: ${response.status}`);
       }
 
-      const data = await response.json();
+      const result = await response.json();
+      const data = result.data;
 
       const updatedData: CryptoData[] = CRYPTO_SYMBOLS.map(crypto => {
-        const ticker = data.find((t: any) => t.symbol === crypto.symbol);
+        const ticker = data.find((t: any) => t.id === crypto.id);
         return {
-          symbol: crypto.display,
+          symbol: crypto.symbol,
           name: crypto.name,
-          price: ticker ? parseFloat(ticker.lastPrice) : 0,
-          change: ticker ? parseFloat(ticker.priceChangePercent) : 0,
+          price: ticker ? parseFloat(ticker.priceUsd) : 0,
+          change: ticker ? parseFloat(ticker.changePercent24Hr) : 0,
         };
       });
 
       setCryptoData(updatedData);
       setIsLive(true); // Mark as live data
     } catch (error) {
-      console.error('Error fetching crypto prices from Binance:', error);
+      console.error('Error fetching crypto prices from CoinCap:', error);
       setIsLive(false); // Fallback to static data
     } finally {
       setIsLoading(false);
