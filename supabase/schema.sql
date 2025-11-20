@@ -1,4 +1,4 @@
--- Lee Meadows SaaS - Supabase Database Schema
+-- TradePulse AI - Supabase Database Schema
 -- This schema defines the database structure for the investment platform
 
 -- Enable UUID extension

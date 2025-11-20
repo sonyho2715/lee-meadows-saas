@@ -1,7 +1,7 @@
 # Legal Compliance & Improvements
 
 ## Overview
-This document outlines all legal pages, compliance features, and improvements added to the Lee Meadows - BG Wealth Sharing SaaS website.
+This document outlines all legal pages, compliance features, and improvements added to the TradePulse AI platform.
 
 **Date Added**: October 30, 2025
 **Status**: ✅ Complete
@@ -302,7 +302,7 @@ Cookie Consent Banner (Bottom overlay) ⚠️ NEW
 All legal pages include proper metadata:
 ```typescript
 export const metadata = {
-  title: "Page Title | Lee Meadows - BG Wealth Sharing",
+  title: "Page Title | TradePulse AI",
   description: "Comprehensive description for SEO",
 };
 ```
@@ -390,10 +390,10 @@ export const metadata = {
 
 ## 📞 Contact Information
 
-**General Inquiries**: support@bgwealthsharing.com
-**Privacy Matters**: privacy@bgwealthsharing.com
-**Data Protection Officer**: dpo@bgwealthsharing.com
-**Representative**: Lee Meadows
+**General Inquiries**: Contact support team through the platform
+**Privacy Matters**: Contact support team through the platform
+**Data Protection Officer**: Contact support team through the platform
+**Representative**: Customer Support Team
 
 ---
 

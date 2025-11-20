@@ -407,7 +407,7 @@ export const legalTranslations = {
             },
             {
               type: "paragraph",
-              text: "IN NO EVENT SHALL BG WEALTH SHARING, DSJ EXCHANGE, LEE MEADOWS, OR THEIR AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION:",
+              text: "IN NO EVENT SHALL AI TRADING OR ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION:",
             },
             {
               type: "list",
@@ -459,7 +459,7 @@ export const legalTranslations = {
             },
             {
               type: "paragraph",
-              text: "Before filing a formal claim, you agree to first contact us at support@bgwealthsharing.com to attempt to resolve the dispute informally. We will attempt to resolve the dispute within 30 days.",
+              text: "Before filing a formal claim, you agree to first contact us to attempt to resolve the dispute informally. We will attempt to resolve the dispute within 30 days.",
             },
             {
               type: "subtitle",
@@ -572,9 +572,9 @@ export const legalTranslations = {
             },
             {
               type: "contact",
-              company: "TradePulse AI AI Trading Investment Group",
-              email: "support@bgwealthsharing.com",
-              representative: "TradePulse AI",
+              company: "AI Trading",
+              email: "",
+              representative: "Customer Support Team",
             },
           ],
         },
@@ -827,7 +827,7 @@ export const legalTranslations = {
               ],
             },
           ],
-          contact: "To exercise these rights, please contact us at support@bgwealthsharing.com. We will respond to your request within 30 days.",
+          contact: "To exercise these rights, please contact us. We will respond to your request within 30 days.",
         },
         {
           title: "7. Cookies and Tracking Technologies",
@@ -876,7 +876,7 @@ export const legalTranslations = {
           content: [
             "Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18.",
             "If we discover that we have collected personal information from a child under 18, we will take steps to delete such information as soon as possible.",
-            "If you believe we have collected information from a child under 18, please contact us immediately at support@bgwealthsharing.com.",
+            "If you believe we have collected information from a child under 18, please contact us immediately.",
           ],
         },
         {
@@ -900,7 +900,7 @@ export const legalTranslations = {
               ],
             },
           ],
-          contact: "To exercise these rights, contact us at support@bgwealthsharing.com with \"California Privacy Rights\" in the subject line.",
+          contact: "To exercise these rights, contact us with \"California Privacy Rights\" in the subject line.",
         },
         {
           title: "12. European Privacy Rights (GDPR)",
@@ -918,7 +918,7 @@ export const legalTranslations = {
             },
             {
               subtitle: "Data Protection Officer",
-              text: "You can contact our Data Protection Officer at: dpo@bgwealthsharing.com",
+              text: "You can contact our Data Protection Officer through our support channels.",
             },
             {
               subtitle: "Supervisory Authority",
@@ -942,13 +942,13 @@ export const legalTranslations = {
           title: "14. Contact Us",
           text: "If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:",
           contact: {
-            company: "TradePulse AI AI Trading Investment Group",
+            company: "AI Trading",
             emails: {
-              general: "support@bgwealthsharing.com",
-              privacy: "privacy@bgwealthsharing.com",
-              dpo: "dpo@bgwealthsharing.com",
+              general: "",
+              privacy: "",
+              dpo: "",
             },
-            representative: "TradePulse AI",
+            representative: "Customer Support Team",
             responseTime: "We aim to respond to all privacy inquiries within 30 days.",
           },
         },
@@ -1369,7 +1369,7 @@ export const legalTranslations = {
             },
             {
               type: "paragraph",
-              text: "TRONG BẤT KỲ TRƯỜNG HỢP NÀO, BG WEALTH SHARING, DSJ EXCHANGE, LEE MEADOWS, HOẶC CÁC CHI NHÁNH, CÁN BỘ, GIÁM ĐỐC, NHÂN VIÊN, HOẶC ĐẠI DIỆN CỦA HỌ SẼ KHÔNG CHỊU TRÁCH NHIỆM ĐỐI VỚI BẤT KỲ THIỆT HẠI GIÁN TIẾP, NGẪU NHIÊN, ĐẶC BIỆT, HẬU QUẢ HOẶC TRỪ PHẠT NÀO, BAO GỒM NHƯNG KHÔNG GIỚI HẠN:",
+              text: "TRONG BẤT KỲ TRƯỜNG HỢP NÀO, AI TRADING HOẶC CÁC CHI NHÁNH, CÁN BỘ, GIÁM ĐỐC, NHÂN VIÊN, HOẶC ĐẠI DIỆN CỦA HỌ SẼ KHÔNG CHỊU TRÁCH NHIỆM ĐỐI VỚI BẤT KỲ THIỆT HẠI GIÁN TIẾP, NGẪU NHIÊN, ĐẶC BIỆT, HẬU QUẢ HOẶC TRỪ PHẠT NÀO, BAO GỒM NHƯNG KHÔNG GIỚI HẠN:",
             },
             {
               type: "list",
@@ -1421,7 +1421,7 @@ export const legalTranslations = {
             },
             {
               type: "paragraph",
-              text: "Trước khi nộp khiếu nại chính thức, quý khách đồng ý trước tiên liên hệ với chúng tôi tại support@bgwealthsharing.com để cố gắng giải quyết tranh chấp một cách không chính thức. Chúng tôi sẽ cố gắng giải quyết tranh chấp trong vòng 30 ngày.",
+              text: "Trước khi nộp khiếu nại chính thức, quý khách đồng ý trước tiên liên hệ với chúng tôi để cố gắng giải quyết tranh chấp một cách không chính thức. Chúng tôi sẽ cố gắng giải quyết tranh chấp trong vòng 30 ngày.",
             },
             {
               type: "subtitle",
@@ -1534,9 +1534,9 @@ export const legalTranslations = {
             },
             {
               type: "contact",
-              company: "TradePulse AI AI Trading Investment Group",
-              email: "support@bgwealthsharing.com",
-              representative: "TradePulse AI",
+              company: "AI Trading",
+              email: "",
+              representative: "Customer Support Team",
             },
           ],
         },
@@ -1789,7 +1789,7 @@ export const legalTranslations = {
               ],
             },
           ],
-          contact: "Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi tại support@bgwealthsharing.com. Chúng tôi sẽ trả lời yêu cầu của quý khách trong vòng 30 ngày.",
+          contact: "Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi. Chúng tôi sẽ trả lời yêu cầu của quý khách trong vòng 30 ngày.",
         },
         {
           title: "7. Cookie và Công Nghệ Theo Dõi",
@@ -1838,7 +1838,7 @@ export const legalTranslations = {
           content: [
             "Dịch vụ của chúng tôi không dành cho các cá nhân dưới 18 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em dưới 18 tuổi.",
             "Nếu chúng tôi phát hiện rằng chúng tôi đã thu thập thông tin cá nhân từ một đứa trẻ dưới 18 tuổi, chúng tôi sẽ thực hiện các bước để xóa thông tin đó càng sớm càng tốt.",
-            "Nếu quý khách tin rằng chúng tôi đã thu thập thông tin từ một đứa trẻ dưới 18 tuổi, vui lòng liên hệ với chúng tôi ngay lập tức tại support@bgwealthsharing.com.",
+            "Nếu quý khách tin rằng chúng tôi đã thu thập thông tin từ một đứa trẻ dưới 18 tuổi, vui lòng liên hệ với chúng tôi ngay lập tức.",
           ],
         },
         {
@@ -1862,7 +1862,7 @@ export const legalTranslations = {
               ],
             },
           ],
-          contact: "Để thực hiện các quyền này, hãy liên hệ với chúng tôi tại support@bgwealthsharing.com với \"California Privacy Rights\" trong dòng chủ đề.",
+          contact: "Để thực hiện các quyền này, hãy liên hệ với chúng tôi với \"California Privacy Rights\" trong dòng chủ đề.",
         },
         {
           title: "12. Quyền Riêng Tư Châu Âu (GDPR)",
@@ -1880,7 +1880,7 @@ export const legalTranslations = {
             },
             {
               subtitle: "Cán Bộ Bảo Vệ Dữ Liệu",
-              text: "Quý khách có thể liên hệ với Cán Bộ Bảo Vệ Dữ Liệu của chúng tôi tại: dpo@bgwealthsharing.com",
+              text: "Quý khách có thể liên hệ với Cán Bộ Bảo Vệ Dữ Liệu của chúng tôi thông qua các kênh hỗ trợ.",
             },
             {
               subtitle: "Cơ Quan Giám Sát",
@@ -1904,13 +1904,13 @@ export const legalTranslations = {
           title: "14. Liên Hệ Với Chúng Tôi",
           text: "Nếu quý khách có bất kỳ câu hỏi, mối quan tâm hoặc yêu cầu nào liên quan đến Chính Sách Bảo Mật này hoặc các thực tiễn dữ liệu của chúng tôi, vui lòng liên hệ với chúng tôi:",
           contact: {
-            company: "TradePulse AI AI Trading Investment Group",
+            company: "AI Trading",
             emails: {
-              general: "support@bgwealthsharing.com",
-              privacy: "privacy@bgwealthsharing.com",
-              dpo: "dpo@bgwealthsharing.com",
+              general: "",
+              privacy: "",
+              dpo: "",
             },
-            representative: "TradePulse AI",
+            representative: "Đội Hỗ Trợ Khách Hàng",
             responseTime: "Chúng tôi mong muốn trả lời tất cả các yêu cầu về quyền riêng tư trong vòng 30 ngày.",
           },
         },

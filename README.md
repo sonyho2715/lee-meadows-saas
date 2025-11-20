@@ -9,7 +9,7 @@ TradePulse AI is an advanced algorithmic trading platform that leverages state-o
 ## Key Features
 
 ### Core Features
-- **Dark Theme Design** with gold/yellow accents matching BG branding
+- **Dark Theme Design** with gold/yellow accents
 - **Investment Plans**: Five-stage wealth management system ($500-$5000 USDT)
 - **Referral System** with comprehensive rewards and team bonuses
 - **Trading Signals**: AI-powered with 99.6% win rate
@@ -109,12 +109,12 @@ Or connect your GitHub repository to Vercel for automatic deployments.
 For future API integration:
 ```env
 NEXT_PUBLIC_API_URL=your_api_url
-NEXT_PUBLIC_DSJ_EXCHANGE_URL=your_exchange_url
+NEXT_PUBLIC_EXCHANGE_URL=your_exchange_url
 ```
 
 ## Adding Images from PDF
 
-The website is designed to display official BG Wealth Sharing images. See [IMAGE_INTEGRATION_GUIDE.md](IMAGE_INTEGRATION_GUIDE.md) for detailed instructions.
+The website is designed to display trading platform images. See [IMAGE_INTEGRATION_GUIDE.md](IMAGE_INTEGRATION_GUIDE.md) for detailed instructions.
 
 ### Quick Start with Images
 
@@ -128,14 +128,14 @@ mkdir -p public/images/{charts,certificates,hero,locations,logos}
    - `public/images/certificates/` - License certificates
    - `public/images/hero/` - Hero section backgrounds
    - `public/images/locations/` - Dubai, Times Square
-   - `public/images/logos/` - BG & DSJ logos
+   - `public/images/logos/` - Platform logos
 
 3. **Priority images to add**:
-   - BG Team Wealth Planning Chart
+   - Wealth Planning Chart
    - Trading Signals Schedule
    - Referral Rewards Table
-   - SEC & ASIC Certificates
-   - DSJ Exchange Authorization
+   - Regulatory Certificates
+   - Exchange Authorization
 
 4. **Images will automatically integrate** into:
    - Investment Plans section
@@ -145,9 +145,9 @@ mkdir -p public/images/{charts,certificates,hero,locations,logos}
 
 See the complete guide for component examples and optimization tips.
 
-## Integration with BG Trader Project
+## Integration Options
 
-This website is designed to link with the BG Trader project. To integrate:
+This website can integrate with external trading platforms. To integrate:
 
 1. Add environment variables for API endpoints
 2. Connect to the trading dashboard

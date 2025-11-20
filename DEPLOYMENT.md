@@ -1,6 +1,6 @@
 # Deployment Guide
 
-Complete guide for deploying the Lee Meadows SaaS platform to Vercel and Railway.
+Complete guide for deploying the TradePulse AI platform to Vercel and Railway.
 
 ## 🚀 Quick Links
 

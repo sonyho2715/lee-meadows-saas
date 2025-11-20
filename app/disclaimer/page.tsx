@@ -235,10 +235,7 @@ export default function DisclaimerPage() {
           <CardContent className="p-6 text-center">
             <h3 className="text-xl font-bold text-white mb-3">Questions About This Disclaimer?</h3>
             <p className="text-gray-300 mb-4">
-              If you have any questions about this disclaimer, please contact us:
-            </p>
-            <p className="text-yellow-500 font-semibold">
-              support@bgwealthsharing.com
+              If you have any questions about this disclaimer, please contact our support team through the platform.
             </p>
           </CardContent>
         </Card>

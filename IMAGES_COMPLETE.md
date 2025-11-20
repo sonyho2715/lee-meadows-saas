@@ -41,14 +41,14 @@ Status: **LIVE IN PRODUCTION**
 - ✅ team-collaboration-2.jpg - Team with tablet
 
 ### Certificates & Legal (8 images)
-- ✅ dsjex-authorization.png - DSJ Exchange authorization letter
+- ✅ exchange-authorization.png - Exchange authorization letter
 - ✅ investment-commitment-letter.png - Partnership commitment
 - ✅ five-advantages.jpg - Five advantages infographic
 - ✅ colorado-certificate.jpg - Colorado state filing
-- ✅ stock-certificate.jpg - BG Wealth Sharing stock
+- ✅ stock-certificate.jpg - Trading platform stock certificate
 - ✅ asic-registration.jpg - Australian ASIC certificate
-- ✅ sec-license-bg.jpg - U.S. SEC license (BG)
-- ✅ sec-license-dsj.jpg - U.S. SEC license (DSJ)
+- ✅ sec-license.jpg - U.S. SEC license
+- ✅ sec-license-2.jpg - U.S. SEC license (additional)
 
 ### General Purpose (2 images)
 - ✅ faqs-icon.jpg - FAQ question mark
@@ -72,8 +72,8 @@ Status: **LIVE IN PRODUCTION**
 **Displays**:
 - SEC License (U.S. Securities & Exchange Commission)
 - ASIC Registration (Australian Securities)
-- DSJ Authorization (Exchange partnership)
-- Stock Certificate (Stephen Beard)
+- Exchange Authorization
+- Stock Certificate
 - Five Advantages infographic
 - Investment Commitment Letter
 - Colorado State Certificate
@@ -94,7 +94,7 @@ Status: **LIVE IN PRODUCTION**
 - ✅ Removed "Image Assets Available" placeholder text
 
 **Displays**:
-- BG Wealth Planning Chart
+- Wealth Planning Chart
 - Trading Signals Guidelines
 - Referral Rewards 2025
 - SEC Regulatory License
@@ -142,14 +142,14 @@ Status: **LIVE IN PRODUCTION**
 │   ├── team-collaboration-1.png
 │   └── team-collaboration-2.jpg
 ├── certificates/            (8 files)
-│   ├── dsjex-authorization.png
+│   ├── exchange-authorization.png
 │   ├── investment-commitment-letter.png
 │   ├── five-advantages.jpg
 │   ├── colorado-certificate.jpg
 │   ├── stock-certificate.jpg
 │   ├── asic-registration.jpg
-│   ├── sec-license-bg.jpg
-│   └── sec-license-dsj.jpg
+│   ├── sec-license.jpg
+│   └── sec-license-2.jpg
 └── general/                 (2 files)
     ├── faqs-icon.jpg
     └── dubai-architecture.jpg
@@ -369,7 +369,7 @@ Total: 31 organized images (34 including duplicates removed)
 - [ ] Add watermarks to sensitive documents
 
 ### Additional Images to Consider
-- [ ] Team photos (Lee Meadows, Stephen Beard)
+- [ ] Team photos (leadership)
 - [ ] Office locations
 - [ ] Customer testimonials with photos
 - [ ] Success stories with charts

@@ -175,7 +175,7 @@ export const componentTranslations = {
             type: "Standard Withdrawal",
             fee: "12%",
             condition: "After 60 days",
-            description: "DSJEX mandated platform fee"
+            description: "Standard platform fee"
           },
           {
             type: "Early Withdrawal",
@@ -190,7 +190,7 @@ export const componentTranslations = {
             description: "Funds accessible 24/7 without lock-up"
           }
         ],
-        disclaimer: "* Fees are standardized by DSJEX exchange. Early withdrawal fee encourages long-term growth strategy."
+        disclaimer: "* Fees are standardized by the platform. Early withdrawal fee encourages long-term growth strategy."
       }
     },
 
@@ -821,7 +821,7 @@ export const componentTranslations = {
             type: "Rút Tiền Tiêu Chuẩn",
             fee: "12%",
             condition: "Sau 60 ngày",
-            description: "Phí nền tảng bắt buộc của DSJEX"
+            description: "Phí nền tảng tiêu chuẩn"
           },
           {
             type: "Rút Tiền Sớm",
@@ -836,7 +836,7 @@ export const componentTranslations = {
             description: "Quỹ có thể truy cập 24/7 mà không bị khóa"
           }
         ],
-        disclaimer: "* Phí được chuẩn hóa bởi sàn giao dịch DSJEX. Phí rút tiền sớm khuyến khích chiến lược tăng trưởng dài hạn."
+        disclaimer: "* Phí được chuẩn hóa bởi nền tảng. Phí rút tiền sớm khuyến khích chiến lược tăng trưởng dài hạn."
       }
     },
 

@@ -1,7 +1,7 @@
 # Image Integration Guide
 
 ## Overview
-This guide explains how to add the BG Wealth Sharing images from the PDF to the website.
+This guide explains how to add the trading platform images to the website.
 
 ## Available Images from PDF
 
@@ -19,7 +19,7 @@ Based on the provided images, here are the key visual assets:
 - 🤝 Business partnership handshakes
 
 ### 3. **Charts & Tables** (Priority for Integration)
-- **BG Team Wealth Planning Chart** - 5-stage profit breakdown
+- **Wealth Planning Chart** - 5-stage profit breakdown
 - **Static vs Dynamic Income Comparison** - Multiple profit scenarios
 - **Trading Signals Schedule** - Daily signal times (EST)
 - **Referral Rewards Table** - Deposit amounts and bonuses
@@ -27,17 +27,16 @@ Based on the provided images, here are the key visual assets:
 - **Sponsorship Fund Reimbursement** - Deposit bonuses
 
 ### 4. **Official Documents**
-- SEC License Certificate (BG Wealth Sharing Ltd)
-- SEC License Certificate (DSJ Exchange)
+- SEC License Certificate
+- Additional Regulatory Certificates
 - ASIC Registration Certificate
 - Colorado Corporation Certificate
-- BG Wealth Sharing Stock Certificate
-- DSJ Exchange Authorization Letter
+- Trading Platform Stock Certificate
+- Exchange Authorization Letter
 - Investment Partnership Commitment Letter
 
 ### 5. **Branding & Visual Elements**
-- BG Wealth Sharing logo
-- DSJ Exchange logo
+- Platform branding and logos
 - Five Advantages infographic
 - FAQ visual
 
@@ -73,12 +72,12 @@ mkdir -p public/images/logos
 │   ├── team-level-bonuses.jpg
 │   └── sponsorship-reimbursement.jpg
 ├── certificates/
-│   ├── sec-license-bg.jpg
-│   ├── sec-license-dsj.jpg
+│   ├── sec-license.jpg
+│   ├── sec-license-2.jpg
 │   ├── asic-certificate.jpg
 │   ├── colorado-registration.jpg
 │   ├── stock-certificate.jpg
-│   ├── dsj-authorization.jpg
+│   ├── exchange-authorization.jpg
 │   └── partnership-commitment.jpg
 ├── hero/
 │   ├── global-investment.jpg
@@ -90,8 +89,7 @@ mkdir -p public/images/logos
 │   ├── times-square.jpg
 │   └── business-handshake.jpg
 └── logos/
-    ├── bg-wealth-sharing-logo.png
-    └── dsj-exchange-logo.png
+    └── platform-logo.png
 ```
 
 ### Step 3: Update Components
@@ -104,7 +102,7 @@ Replace the current plans section with the actual wealth planning chart:
 <div className="relative w-full max-w-5xl mx-auto">
   <Image
     src="/images/charts/wealth-planning-chart.jpg"
-    alt="BG Team Wealth Planning Chart - 5 Investment Stages"
+    alt="Wealth Planning Chart - 5 Investment Stages"
     width={1200}
     height={600}
     className="rounded-lg shadow-2xl border-2 border-yellow-500/30"
@@ -124,7 +122,7 @@ After the "How It Works" section:
     </h3>
     <Image
       src="/images/charts/trading-signals-schedule.jpg"
-      alt="BG Wealth Sharing Daily Trading Signals Schedule (EST)"
+      alt="Daily Trading Signals Schedule (EST)"
       width={1000}
       height={600}
       className="rounded-lg shadow-xl"
@@ -141,8 +139,8 @@ Update the TrustBadges component to show actual certificates:
 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
   <div className="relative group cursor-pointer">
     <Image
-      src="/images/certificates/sec-license-bg.jpg"
-      alt="SEC License - BG Wealth Sharing"
+      src="/images/certificates/sec-license.jpg"
+      alt="SEC License Certificate"
       width={300}
       height={400}
       className="rounded-lg shadow-lg hover:scale-105 transition-transform"
@@ -162,7 +160,7 @@ Show the actual referral rewards table image:
 // In Rewards Section
 <Image
   src="/images/charts/referral-rewards-table.jpg"
-  alt="BG Wealth Sharing 2025 Referral Rewards"
+  alt="2025 Referral Rewards Program"
   width={800}
   height={600}
   className="rounded-lg shadow-lg mx-auto"
@@ -193,7 +191,7 @@ export function CertificateGallery() {
   const [photoIndex, setPhotoIndex] = useState(0);
 
   const images = [
-    { src: "/images/certificates/sec-license-bg.jpg", title: "SEC License" },
+    { src: "/images/certificates/sec-license.jpg", title: "SEC License" },
     { src: "/images/certificates/asic-certificate.jpg", title: "ASIC Certificate" },
     // ... more images
   ];
@@ -251,7 +249,7 @@ Before adding to production:
 ## Priority Images to Add First
 
 1. **High Priority**:
-   - ✅ BG Team Wealth Planning Chart
+   - ✅ Wealth Planning Chart
    - ✅ Trading Signals Schedule
    - ✅ Referral Rewards Table
    - ✅ SEC License Certificate
@@ -259,7 +257,7 @@ Before adding to production:
 
 2. **Medium Priority**:
    - Team Level Bonuses Structure
-   - DSJ Exchange Authorization
+   - Exchange Authorization Letter
    - Static vs Dynamic Income comparison
    - Dubai skyline photo
 
@@ -308,7 +306,7 @@ Always include descriptive alt text:
 // ✅ Good
 <Image
   src="/images/charts/wealth-planning-chart.jpg"
-  alt="BG Wealth Sharing 5-Stage Wealth Management Planning Chart showing profit projections from $500 to $5000 USDT investments"
+  alt="5-Stage Wealth Management Planning Chart showing profit projections from $500 to $5000 USDT investments"
 />
 ```
 
@@ -350,7 +348,7 @@ export function WealthPlanningChart() {
             Investment Strategy
           </Badge>
           <h2 className="text-4xl font-bold text-white mb-4">
-            BG Team Wealth Planning Chart
+            Wealth Planning Chart
           </h2>
           <p className="text-gray-300 text-lg">
             Strictly managed account funds in accordance with five stages
@@ -361,7 +359,7 @@ export function WealthPlanningChart() {
           <CardContent className="p-6">
             <Image
               src="/images/charts/wealth-planning-chart.jpg"
-              alt="BG Team Wealth Planning Chart - Complete 5-stage investment strategy from $500 to $5000 USDT with detailed profit calculations"
+              alt="Wealth Planning Chart - Complete 5-stage investment strategy from $500 to $5000 USDT with detailed profit calculations"
               width={1200}
               height={700}
               className="rounded-lg shadow-2xl w-full h-auto"
@@ -372,8 +370,8 @@ export function WealthPlanningChart() {
 
         <div className="mt-8 text-center">
           <p className="text-gray-400 text-sm">
-            In the BG team, we strictly manage account funds in accordance with five stages
-            and lead you to achieve your wealth goals
+            We strictly manage account funds in accordance with five stages
+            and guide you to achieve your wealth goals
           </p>
         </div>
       </div>

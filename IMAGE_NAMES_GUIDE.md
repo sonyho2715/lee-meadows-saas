@@ -14,13 +14,13 @@ hero-partnership.jpg               - Image 3: Three professional hands joining t
 
 ### /public/images/investment/ (Investment Plans & Charts)
 ```
-wealth-planning-chart.jpg          - Image 5: BG Team Wealth Planning Chart (5 stages table)
+wealth-planning-chart.jpg          - Image 5: Wealth Planning Chart (5 stages table)
 comparison-tables-small.jpg        - Image 4: Comparison tables ($500, $1000, $1500, $3000 capital)
 comparison-tables-large.jpg        - Image 4: Comparison tables ($5250, $10500 capital)
-trading-signals-guidelines.jpg     - Image 6: BG Wealth Sharing Daily Trading Signals Usage Guidelines
+trading-signals-guidelines.jpg     - Image 6: Daily Trading Signals Usage Guidelines
 sponsorship-reimbursement.jpg      - Image 7: Successful Promotion Sponsorship Fund Reimbursement
 referral-rewards-mechanism.jpg     - Image 8: Both referrers and new members rewards from dynamic trading signals
-referral-rewards-2025.jpg          - Image 9: BG Wealth Sharing 2025 Referral Rewards table
+referral-rewards-2025.jpg          - Image 9: 2025 Referral Rewards table
 team-bonus-structure.jpg           - Image 10: Team bonus structure LV1-LV7 with manager positions
 ```
 
@@ -48,14 +48,14 @@ team-collaboration-2.jpg          - Image 19: Two professionals looking at table
 
 ### /public/images/certificates/ (Legal Documents & Licenses)
 ```
-dsjex-authorization.jpg           - Image 20: DSJEX Exchange Letter of Authorization (August 1, 2022)
-investment-commitment-letter.jpg  - Image 21: BG Wealth Sharing Investment Partnership Commitment Letter
+exchange-authorization.jpg        - Image 20: Exchange Letter of Authorization
+investment-commitment-letter.jpg  - Image 21: Investment Partnership Commitment Letter
 five-advantages.jpg               - Image 22: Inversión compartida - Five advantages infographic
 colorado-certificate.jpg          - Image 23: Colorado Secretary of State Certificate of Document Filed
-stock-certificate.jpg             - Image 24: BG Wealth Sharing LTD Stock Certificate (Stephen Beard)
-asic-registration.jpg             - Image 25: ASIC Certificate of Registration (DSJ Exchange PTY Limited)
-sec-license-bg.jpg                - Image 26: U.S. SEC License - BG Wealth Sharing LTD
-sec-license-dsj.jpg               - Image 27: U.S. SEC License - DSJ Exchange PTY Ltd
+stock-certificate.jpg             - Image 24: Trading Platform Stock Certificate
+asic-registration.jpg             - Image 25: ASIC Certificate of Registration
+sec-license.jpg                   - Image 26: U.S. SEC License Certificate
+sec-license-2.jpg                 - Image 27: U.S. SEC License Certificate (Additional)
 ```
 
 ### /public/images/general/ (General Purpose Images)
@@ -88,14 +88,14 @@ faqs-icon.jpg                     - Image 28: FAQ's with question mark in hand
 | 17 | Analytics dashboard | `analytics-dashboard.jpg` |
 | 18 | Financial calculation | `financial-calculation.jpg` |
 | 19 | Team photos | `team-collaboration-1.jpg` & `team-collaboration-2.jpg` |
-| 20 | DSJEX authorization | `dsjex-authorization.jpg` |
+| 20 | Exchange authorization | `exchange-authorization.jpg` |
 | 21 | Commitment letter | `investment-commitment-letter.jpg` |
 | 22 | Five advantages | `five-advantages.jpg` |
 | 23 | Colorado certificate | `colorado-certificate.jpg` |
 | 24 | Stock certificate | `stock-certificate.jpg` |
 | 25 | ASIC registration | `asic-registration.jpg` |
-| 26 | SEC BG license | `sec-license-bg.jpg` |
-| 27 | SEC DSJ license | `sec-license-dsj.jpg` |
+| 26 | SEC license | `sec-license.jpg` |
+| 27 | SEC license (additional) | `sec-license-2.jpg` |
 | 28 | FAQ icon | `faqs-icon.jpg` |
 
 ---
@@ -144,14 +144,14 @@ public/images/
 │   ├── team-collaboration-1.jpg
 │   └── team-collaboration-2.jpg
 ├── certificates/
-│   ├── dsjex-authorization.jpg
+│   ├── exchange-authorization.jpg
 │   ├── investment-commitment-letter.jpg
 │   ├── five-advantages.jpg
 │   ├── colorado-certificate.jpg
 │   ├── stock-certificate.jpg
 │   ├── asic-registration.jpg
-│   ├── sec-license-bg.jpg
-│   └── sec-license-dsj.jpg
+│   ├── sec-license.jpg
+│   └── sec-license-2.jpg
 └── general/
     └── faqs-icon.jpg
 ```
@@ -207,14 +207,14 @@ Once you've saved all images with these names, let me know and I will:
 - [ ] Saved Image 17: analytics-dashboard.jpg
 - [ ] Saved Image 18: financial-calculation.jpg
 - [ ] Saved Image 19: team-collaboration-1.jpg & 2.jpg
-- [ ] Saved Image 20: dsjex-authorization.jpg
+- [ ] Saved Image 20: exchange-authorization.jpg
 - [ ] Saved Image 21: investment-commitment-letter.jpg
 - [ ] Saved Image 22: five-advantages.jpg
 - [ ] Saved Image 23: colorado-certificate.jpg
 - [ ] Saved Image 24: stock-certificate.jpg
 - [ ] Saved Image 25: asic-registration.jpg
-- [ ] Saved Image 26: sec-license-bg.jpg
-- [ ] Saved Image 27: sec-license-dsj.jpg
+- [ ] Saved Image 26: sec-license.jpg
+- [ ] Saved Image 27: sec-license-2.jpg
 - [ ] Saved Image 28: faqs-icon.jpg
 
 ---

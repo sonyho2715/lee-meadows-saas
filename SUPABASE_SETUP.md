@@ -1,6 +1,6 @@
 # Supabase Setup Guide
 
-This guide walks you through setting up Supabase for the Lee Meadows SaaS platform.
+This guide walks you through setting up Supabase for the TradePulse AI platform.
 
 ## 🚀 Quick Start
 

@@ -1,7 +1,6 @@
-# Lee Meadows SaaS - Project Summary
+# TradePulse AI - Project Summary
 
-**Complete professional cryptocurrency investment platform for Lee Meadows**
-**Partnership with BG Wealth Sharing Investment Group**
+**Professional AI-powered cryptocurrency trading signals platform**
 
 ---
 
@@ -10,9 +9,8 @@
 A modern, fully-functional cryptocurrency investment SaaS platform featuring live crypto prices, comprehensive legal compliance, database integration, and deployed to production.
 
 ### Key Information
-- **Client**: Lee Meadows (BG Wealth Sharing Partner)
-- **Company**: BG Wealth Sharing Investment Group (Founded 2018 by Stephen Beard)
-- **Platform**: DSJ Exchange Partnership
+- **Platform**: TradePulse AI
+- **Company**: AI Trading
 - **Technology**: Next.js 15, TypeScript, Tailwind CSS, Supabase
 - **Status**: ✅ LIVE IN PRODUCTION
 
@@ -266,11 +264,11 @@ lee-meadows-saas/
 5. **Statistics** - Animated counters (1M+ users, $30M fund, etc.)
 6. **Trust Badges** - Regulatory licenses display
 7. **How It Works** - 4-step investment process
-8. **About Section** - Company information and partnership
+8. **About Section** - Company information
 9. **Features Grid** - Platform capabilities
 10. **Investment Plans** - 5-stage pricing cards
 11. **Rewards Program** - Referral system details
-12. **Testimonials** - Social proof (placeholder)
+12. **Testimonials** - Social proof
 13. **FAQ Section** - 10 comprehensive questions
 14. **Visual Showcase** - Image integration framework
 15. **Footer** - Company info, links, legal pages
@@ -423,8 +421,8 @@ All comprehensive guides included:
 
 1. **README.md** - Project overview and quick start
 2. **DEPLOYMENT.md** - Complete deployment guide (Vercel + Railway)
-3. **FEATURES.md** - Detailed feature documentation (96KB)
-4. **IMAGE_INTEGRATION_GUIDE.md** - How to add images from PDF
+3. **FEATURES.md** - Detailed feature documentation
+4. **IMAGE_INTEGRATION_GUIDE.md** - How to add images
 5. **LEGAL_COMPLIANCE.md** - Legal pages documentation
 6. **SUPABASE_SETUP.md** - Database setup guide
 7. **PROJECT_SUMMARY.md** - This comprehensive summary
@@ -544,19 +542,12 @@ All comprehensive guides included:
 
 ## 📞 Contact & Support
 
-### Project Owner
-- **Name**: Lee Meadows
-- **Role**: BG Wealth Sharing Partner
-- **Email**: support@bgwealthsharing.com
-
-### Company Information
-- **Company**: BG Wealth Sharing Investment Group
-- **Founded**: 2018 by Stephen Beard
-- **Partnership**: DSJ Exchange (founded April 2022)
+### Project Information
+- **Platform**: TradePulse AI
+- **Company**: AI Trading
 - **Licenses**: SEC, ASIC, MAS, DFSA
 
 ### Developer
-- **Platform**: Claude Code (Anthropic)
 - **GitHub**: sonyho2715
 - **Date**: October 30, 2025
 
@@ -642,7 +633,7 @@ All comprehensive guides included:
 ## 💡 Key Takeaways
 
 ### What Works Well
-✅ Modern, professional design matching BG branding
+✅ Modern, professional design with consistent branding
 ✅ Comprehensive legal compliance (investor protection)
 ✅ Live data integration (real crypto prices)
 ✅ Scalable database architecture (ready for users)
@@ -662,7 +653,7 @@ All comprehensive guides included:
 
 ## 📄 License & Copyright
 
-**Copyright © 2025 Lee Meadows - BG Wealth Sharing Investment Group**
+**Copyright © 2025 AI Trading**
 All rights reserved.
 
 This project is proprietary software. Unauthorized copying, modification, distribution, or use of this software, via any medium, is strictly prohibited.
@@ -671,9 +662,6 @@ This project is proprietary software. Unauthorized copying, modification, distri
 
 ## 🙏 Acknowledgments
 
-- **BG Wealth Sharing Investment Group** - Business model and requirements
-- **Stephen Beard** - Founder of BG Wealth Sharing
-- **DSJ Exchange** - Trading platform partnership
 - **CoinGecko** - Cryptocurrency price data API
 - **Supabase** - Database and authentication platform
 - **Vercel** - Hosting and deployment platform
