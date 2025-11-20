@@ -10,12 +10,12 @@ interface CryptoData {
   change: number;
 }
 
-const CRYPTO_IDS = [
-  { id: "bitcoin", symbol: "BTC", name: "Bitcoin" },
-  { id: "ethereum", symbol: "ETH", name: "Ethereum" },
-  { id: "cardano", symbol: "ADA", name: "Cardano" },
-  { id: "dogecoin", symbol: "DOGE", name: "Dogecoin" },
-  { id: "tether", symbol: "USDT", name: "Tether" },
+const CRYPTO_SYMBOLS = [
+  { symbol: "BTCUSDT", display: "BTC", name: "Bitcoin" },
+  { symbol: "ETHUSDT", display: "ETH", name: "Ethereum" },
+  { symbol: "ADAUSDT", display: "ADA", name: "Cardano" },
+  { symbol: "DOGEUSDT", display: "DOGE", name: "Dogecoin" },
+  { symbol: "USDCUSDT", display: "USDT", name: "Tether" },
 ];
 
 export function CryptoTicker() {
@@ -28,14 +28,17 @@ export function CryptoTicker() {
     { symbol: "USDT", name: "Tether", price: 1.00, change: -0.03 },
   ]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isLive, setIsLive] = useState(false);
 
-  // Fetch live crypto prices from CoinGecko API
+  // Fetch live crypto prices from Binance API
   const fetchCryptoPrices = async () => {
     try {
       setIsLoading(true);
-      const ids = CRYPTO_IDS.map(c => c.id).join(',');
+
+      // Fetch all symbols at once from Binance
+      const symbols = CRYPTO_SYMBOLS.map(c => c.symbol).join('","');
       const response = await fetch(
-        `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true`,
+        `https://api.binance.com/api/v3/ticker/24hr?symbols=["${symbols}"]`,
         {
           cache: 'no-cache',
           headers: {
@@ -45,25 +48,26 @@ export function CryptoTicker() {
       );
 
       if (!response.ok) {
-        throw new Error('Failed to fetch crypto prices');
+        throw new Error(`Binance API error: ${response.status}`);
       }
 
       const data = await response.json();
 
-      const updatedData: CryptoData[] = CRYPTO_IDS.map(crypto => {
-        const coinData = data[crypto.id];
+      const updatedData: CryptoData[] = CRYPTO_SYMBOLS.map(crypto => {
+        const ticker = data.find((t: any) => t.symbol === crypto.symbol);
         return {
-          symbol: crypto.symbol,
+          symbol: crypto.display,
           name: crypto.name,
-          price: coinData?.usd || 0,
-          change: coinData?.usd_24h_change || 0,
+          price: ticker ? parseFloat(ticker.lastPrice) : 0,
+          change: ticker ? parseFloat(ticker.priceChangePercent) : 0,
         };
       });
 
       setCryptoData(updatedData);
+      setIsLive(true); // Mark as live data
     } catch (error) {
-      console.error('Error fetching crypto prices:', error);
-      // Keep using fallback data on error
+      console.error('Error fetching crypto prices from Binance:', error);
+      setIsLive(false); // Fallback to static data
     } finally {
       setIsLoading(false);
     }
@@ -78,7 +82,7 @@ export function CryptoTicker() {
 
     // Rotate display every 3 seconds
     const rotateInterval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % CRYPTO_IDS.length);
+      setCurrentIndex((prev) => (prev + 1) % CRYPTO_SYMBOLS.length);
     }, 3000);
 
     return () => {
@@ -91,6 +95,12 @@ export function CryptoTicker() {
     <div className="border-y border-yellow-500/20 bg-[#0a0e27]/80 py-4 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-8 overflow-x-auto">
+          {isLive && (
+            <div className="flex items-center gap-1 px-2 py-1 rounded bg-green-500/20 border border-green-500/50">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="text-xs text-green-400 font-medium">LIVE</span>
+            </div>
+          )}
           {cryptoData.map((crypto, index) => (
             <div
               key={crypto.symbol}
