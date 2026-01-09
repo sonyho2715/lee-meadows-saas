@@ -1,63 +1,45 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, CheckCircle2, Zap, Shield, TrendingUp, Users, Star, Wallet, BarChart3, Globe, Lock } from "lucide-react";
+import {
+  ArrowRight,
+  Shield,
+  Award,
+  Globe,
+  Play,
+  Clock
+} from "lucide-react";
 import { CryptoTicker } from "@/components/crypto-ticker";
-import { FAQSection } from "@/components/faq-section";
-import { TrustBadges } from "@/components/trust-badges";
 import { AnimatedCounter } from "@/components/animated-counter";
-import { HowItWorks } from "@/components/how-it-works";
 import { BackToTop } from "@/components/back-to-top";
-import { VisualShowcase } from "@/components/visual-showcase";
 import { RiskWarning } from "@/components/risk-warning";
 import { CookieConsent } from "@/components/cookie-consent";
-import { CertificatesGallery } from "@/components/certificates-gallery";
-import { InvestmentCalculator } from "@/components/investment-calculator";
-import { MobileNav } from "@/components/mobile-nav";
 import { AgeVerification } from "@/components/age-verification";
 import { RiskDisclaimerModal } from "@/components/risk-disclaimer-modal";
-import { AnimatedBackground } from "@/components/animated-background";
-import { TeamSection } from "@/components/team-section";
-import { TradingSystemDetails } from "@/components/trading-system-details";
-import { ComparisonTable } from "@/components/comparison-table";
-import { AnimatedStats } from "@/components/animated-stats";
-import { LiveDashboard } from "@/components/live-dashboard";
-import { ProfitTimeline } from "@/components/profit-timeline";
-import { KnowledgeHub } from "@/components/knowledge-hub";
-import { LanguageToggle } from "@/components/language-toggle";
-import {
-  HeroSection,
-  NavigationLinks,
-  NavigationButtons,
-  AboutSection,
-  FeaturesSection,
-  CTASection,
-  FooterContent,
-  FooterCopyright
-} from "@/components/home-content";
-import Image from "next/image";
-import { useLanguage } from "@/contexts/language-context";
-import { translations } from "@/lib/translations";
+import { BookingSection, InlineBookingCTA } from "@/components/booking-section";
+import { PainPointsSection, SolutionSection } from "@/components/pain-points-section";
+import { UrgencySection, FloatingCTA } from "@/components/urgency-section";
+import { FunnelHowItWorks } from "@/components/funnel-how-it-works";
+import { FunnelSocialProof } from "@/components/funnel-social-proof";
+import { FunnelFAQ } from "@/components/funnel-faq";
 
 export default function Home() {
-  const { language } = useLanguage();
-  const t = translations[language];
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0a0e27] via-[#1a1f3a] to-[#0a0e27] relative">
-      {/* Animated Background */}
-      <AnimatedBackground />
+  const scrollToBooking = () => {
+    document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
+  return (
+    <div className="min-h-screen bg-[#0a0e27] relative">
       {/* Compliance Modals */}
       <AgeVerification />
       <RiskDisclaimerModal />
-
       <BackToTop />
       <CookieConsent />
-      <MobileNav />
-      {/* Navigation */}
-      <nav className="border-b border-primary/20 bg-[#0a0e27]/95 backdrop-blur supports-[backdrop-filter]:bg-[#0a0e27]/60 sticky top-0 z-50">
+      <FloatingCTA />
+
+      {/* ========== SIMPLIFIED NAVIGATION ========== */}
+      <nav className="border-b border-white/10 bg-[#0a0e27]/95 backdrop-blur sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-yellow-500 to-amber-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">
@@ -65,381 +47,183 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-white">TradePulse AI</span>
-              <span className="text-xs text-yellow-500">AI-Powered Trading Intelligence</span>
+              <span className="text-xs text-yellow-500/80">AI-Powered Trading</span>
             </div>
           </div>
-          <div className="hidden lg:flex items-center gap-6">
-            <NavigationLinks />
-          </div>
-          <div className="hidden lg:flex items-center gap-3">
-            <LanguageToggle />
-            <NavigationButtons />
-          </div>
+          <Button
+            onClick={scrollToBooking}
+            className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold"
+          >
+            Book Free Call
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <HeroSection />
+      {/* ========== SECTION 1: HERO (HOOK) ========== */}
+      <section className="relative container mx-auto px-4 py-16 md:py-24 overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-yellow-500/5 rounded-full blur-[120px]" />
+        </div>
 
-      {/* Crypto Ticker */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+          {/* Attention-grabbing badge */}
+          <Badge variant="secondary" className="bg-green-500/10 text-green-400 border-green-500/20 animate-pulse">
+            <span className="relative flex h-2 w-2 mr-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+            </span>
+            AI Trading Signals Live Now
+          </Badge>
+
+          {/* Hook headline - addresses desire and curiosity */}
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+            Discover How Everyday People Are
+            <span className="block bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text text-transparent">
+              Earning $500+ Daily
+            </span>
+            <span className="block text-2xl md:text-3xl font-normal text-gray-400 mt-3">
+              With AI That Trades Crypto For Them
+            </span>
+          </h1>
+
+          {/* Subheadline - addresses objections */}
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            No experience needed. No staring at charts. Just 10 minutes a day following AI-generated signals with a <span className="text-yellow-500 font-semibold">99.6% accuracy rate</span>.
+          </p>
+
+          {/* Primary CTA */}
+          <div className="pt-4">
+            <InlineBookingCTA />
+          </div>
+
+          {/* Trust indicators */}
+          <div className="flex flex-wrap items-center justify-center gap-6 pt-6 text-sm text-gray-500">
+            <div className="flex items-center gap-2">
+              <Shield className="h-4 w-4 text-yellow-500/70" />
+              <span>SEC Regulated</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Award className="h-4 w-4 text-yellow-500/70" />
+              <span>10,000+ Traders</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Globe className="h-4 w-4 text-yellow-500/70" />
+              <span>30+ Countries</span>
+            </div>
+          </div>
+
+          {/* Video placeholder / Social proof teaser */}
+          <div className="mt-8 mx-auto max-w-2xl">
+            <div
+              onClick={scrollToBooking}
+              className="relative aspect-video rounded-xl overflow-hidden border border-white/10 bg-gradient-to-br from-yellow-500/5 to-transparent cursor-pointer group"
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="h-16 w-16 rounded-full bg-yellow-500/20 flex items-center justify-center group-hover:bg-yellow-500/30 transition-colors">
+                  <Play className="h-8 w-8 text-yellow-500 ml-1" />
+                </div>
+              </div>
+              <div className="absolute bottom-4 left-4 right-4 text-left">
+                <p className="text-white font-medium">See How Our AI Generated $47,000 Last Month</p>
+                <p className="text-gray-500 text-sm">Watch the 2-minute demo →</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== CRYPTO TICKER (Social Proof) ========== */}
       <CryptoTicker />
 
-      {/* Stats Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <Card className="text-center border-2 border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-4xl font-bold text-yellow-500">
-                  <AnimatedCounter end={1000000} suffix="+" />
-                </CardTitle>
-                <CardDescription className="text-base text-gray-300">{t.stats.peopleHelped}</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="text-center border-2 border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-4xl font-bold text-yellow-500">
-                  <AnimatedCounter end={99.6} decimals={1} suffix="%" />
-                </CardTitle>
-                <CardDescription className="text-base text-gray-300">{t.stats.tradingWinRate}</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="text-center border-2 border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-4xl font-bold text-yellow-500">
-                  <AnimatedCounter end={30} suffix="+" />
-                </CardTitle>
-                <CardDescription className="text-base text-gray-300">{t.stats.countryLicenses}</CardDescription>
-              </CardHeader>
-            </Card>
-            <Card className="text-center border-2 border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-4xl font-bold text-yellow-500">24/7</CardTitle>
-                <CardDescription className="text-base text-gray-300">{t.stats.tradingSignals}</CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Badges */}
-      <TrustBadges />
-
-      {/* Certificates Gallery */}
-      <CertificatesGallery />
-
-      {/* Investment Calculator */}
-      <div id="calculator">
-        <InvestmentCalculator />
-      </div>
-
-      {/* How It Works */}
-      <HowItWorks />
-
-      {/* Team Section */}
-      <TeamSection />
-
-      {/* Trading System Details */}
-      <TradingSystemDetails />
-
-      {/* Animated Stats Section */}
-      <AnimatedStats />
-
-      {/* Comparison Table */}
-      <ComparisonTable />
-
-      {/* Live Dashboard */}
-      <LiveDashboard />
-
-      {/* Profit Timeline Visualizer */}
-      <ProfitTimeline />
-
-      {/* About Section */}
-      <AboutSection />
-
-      {/* Features Section */}
-      <FeaturesSection />
-
-      {/* Investment Plans Section */}
-      <section id="plans" className="container mx-auto px-4 py-20 bg-[#0a0e27]/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">{t.investmentPlans.badge}</Badge>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              {t.investmentPlans.title}
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              {t.investmentPlans.subtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="relative border-yellow-500/30 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">{t.investmentPlans.stage} 1</CardTitle>
-                <CardDescription className="text-gray-300">{t.investmentPlans.accountBalance} 1%</CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-yellow-500">$500</span>
-                  <span className="text-gray-300"> USDT</span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
-                  <div className="text-sm text-gray-400">{t.investmentPlans.monthlyProfit}</div>
-                  <div className="text-2xl font-bold text-yellow-500">$3.25</div>
-                </div>
-                <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">{t.investmentPlans.startStage} 1</Button>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2 text-gray-300">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">{t.investmentPlans.benefits.stage1.profit}</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-300">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">{t.investmentPlans.benefits.stage1.signals}</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="relative border-yellow-500 border-2 shadow-lg shadow-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <Badge className="px-4 py-1 bg-gradient-to-r from-yellow-500 to-amber-600">{t.investmentPlans.mostPopular}</Badge>
+      {/* ========== SECTION 2: STATS BAR ========== */}
+      <section className="border-y border-white/5 bg-[#0d1229]">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">
+                <AnimatedCounter end={10847} suffix="+" />
               </div>
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">{t.investmentPlans.stage} 3</CardTitle>
-                <CardDescription className="text-gray-300">{t.investmentPlans.accountBalance} 9%</CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-yellow-500">$1,000</span>
-                  <span className="text-gray-300"> USDT</span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
-                  <div className="text-sm text-gray-400">{t.investmentPlans.monthlyProfit}</div>
-                  <div className="text-2xl font-bold text-yellow-500">$29.25</div>
-                </div>
-                <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">{t.investmentPlans.startStage} 3</Button>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2 text-gray-300">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">{t.investmentPlans.benefits.stage3.profit}</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-300">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">{t.investmentPlans.benefits.stage3.strategies}</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-300">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">{t.investmentPlans.benefits.stage3.bonus}</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="relative border-yellow-500/30 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">{t.investmentPlans.stage} 5</CardTitle>
-                <CardDescription className="text-gray-300">{t.investmentPlans.accountBalance} - {t.investmentPlans.allIn}</CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-yellow-500">$5,000</span>
-                  <span className="text-gray-300"> USDT</span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20">
-                  <div className="text-sm text-gray-400">{t.investmentPlans.monthlyProfit}</div>
-                  <div className="text-2xl font-bold text-yellow-500">$195</div>
-                </div>
-                <Button className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700">{t.investmentPlans.startStage} 5</Button>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2 text-gray-300">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">{t.investmentPlans.benefits.stage5.returns}</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-300">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">{t.investmentPlans.benefits.stage5.potential}</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-300">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">{t.investmentPlans.benefits.stage5.vip}</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-gray-300">
-                    <CheckCircle2 className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">{t.investmentPlans.benefits.stage5.manager}</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-gray-400 text-sm max-w-3xl mx-auto">
-              {t.investmentPlans.disclaimer}
-            </p>
+              <div className="text-sm text-gray-500">Active Traders</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-yellow-500 mb-1">
+                <AnimatedCounter end={99.6} decimals={1} suffix="%" />
+              </div>
+              <div className="text-sm text-gray-500">Signal Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">
+                $<AnimatedCounter end={47} suffix="M+" />
+              </div>
+              <div className="text-sm text-gray-500">Profits Generated</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-1">24/7</div>
+              <div className="text-sm text-gray-500">AI Analysis</div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Rewards Section */}
-      <section id="rewards" className="container mx-auto px-4 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">{t.referral.badge}</Badge>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              {t.referral.title}
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              {t.referral.subtitle}
-            </p>
-          </div>
+      {/* ========== SECTION 3: PAIN POINTS (Problem Agitation) ========== */}
+      <PainPointsSection />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">{t.referral.bonusesTitle}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$300 {t.referral.deposit}</span>
-                    <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$15 {t.referral.referrer} + $15 {t.referral.newUser}</div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$500 {t.referral.deposit}</span>
-                    <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$25 {t.referral.referrer} + $25 {t.referral.newUser}</div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$1000 {t.referral.deposit}</span>
-                    <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$100 {t.referral.referrer} + $50 {t.referral.newUser}</div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$3000 {t.referral.deposit}</span>
-                    <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$300 {t.referral.referrer} + $150 {t.referral.newUser}</div>
-                    </div>
-                  </div>
-                  <div className="flex justify-between items-center p-3 rounded-lg bg-yellow-500/10">
-                    <span className="text-gray-300">$5000 {t.referral.deposit}</span>
-                    <div className="text-right">
-                      <div className="text-yellow-500 font-bold">$500 {t.referral.referrer} + $250 {t.referral.newUser}</div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+      {/* ========== SECTION 4: SOLUTION (Bridge) ========== */}
+      <SolutionSection />
 
-            <Card className="border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">{t.referral.signalsTitle}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">
-                      {t.referral.benefits.earn10Percent}
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">
-                      {t.referral.benefits.bonus5Percent}
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">
-                      {t.referral.benefits.extraSignals}
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">
-                      {t.referral.benefits.teamAgent}
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-gray-300">
-                    <Star className="h-5 w-5 text-yellow-500 mt-0.5 shrink-0" />
-                    <span className="text-sm">
-                      {t.referral.benefits.staticSignals}
-                    </span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
+      {/* ========== SECTION 5: HOW IT WORKS ========== */}
+      <FunnelHowItWorks />
+
+      {/* ========== SECTION 6: SOCIAL PROOF ========== */}
+      <FunnelSocialProof />
+
+      {/* ========== SECTION 7: URGENCY ========== */}
+      <UrgencySection />
+
+      {/* ========== SECTION 8: FAQ (Objection Handling) ========== */}
+      <FunnelFAQ />
+
+      {/* ========== SECTION 9: BOOKING (Main Conversion) ========== */}
+      <section id="booking" className="py-16 md:py-24 bg-gradient-to-b from-[#0d1229] to-[#0a0e27]">
+        <div className="container mx-auto px-4">
+          <BookingSection />
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-4 mb-16">
-            <Badge variant="outline" className="mb-2 border-yellow-500/30 text-yellow-500">{t.testimonials.badge}</Badge>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              {t.testimonials.title}
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              {t.testimonials.subtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.testimonials.people.map((testimonial, index) => (
-              <Card key={index} className="hover:shadow-lg hover:shadow-yellow-500/20 transition-shadow border-yellow-500/20 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27]">
-                <CardHeader>
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
-                    ))}
-                  </div>
-                  <CardDescription className="text-base italic text-gray-300">
-                    "{testimonial.content}"
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <FAQSection />
-
-      {/* Visual Showcase */}
-      <VisualShowcase />
-
-      {/* Knowledge Hub */}
-      <KnowledgeHub />
-
-      {/* CTA Section */}
-      <CTASection />
-
-      {/* Risk Warning */}
+      {/* ========== RISK WARNING ========== */}
       <RiskWarning />
 
-      {/* Footer */}
-      <footer className="border-t border-yellow-500/20 bg-[#0a0e27]/80">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <FooterContent />
+      {/* ========== MINIMAL FOOTER ========== */}
+      <footer className="border-t border-white/5 bg-[#080b1a]">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-yellow-500 to-amber-600 flex items-center justify-center text-white font-bold text-sm">
+                TP
+              </div>
+              <span className="text-gray-500 text-sm">TradePulse AI</span>
+            </div>
+
+            <div className="flex items-center gap-6 text-sm text-gray-600">
+              <a href="/terms" className="hover:text-gray-400 transition-colors">Terms</a>
+              <a href="/privacy" className="hover:text-gray-400 transition-colors">Privacy</a>
+              <a href="/disclaimer" className="hover:text-gray-400 transition-colors">Disclaimer</a>
+            </div>
+
+            <p className="text-sm text-gray-600">
+              © {new Date().getFullYear()} TradePulse AI. All rights reserved.
+            </p>
           </div>
 
-          <FooterCopyright />
+          <div className="mt-6 pt-6 border-t border-white/5 text-center">
+            <p className="text-xs text-gray-700 max-w-3xl mx-auto">
+              Investment involves risk. Past performance does not guarantee future results.
+              Trading cryptocurrencies carries a high level of risk and may not be suitable for all investors.
+              Only invest what you can afford to lose.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
