@@ -23,9 +23,8 @@ import {
   XCircle,
   TrendingDown,
   Sparkles,
-  Play
+  Copy
 } from "lucide-react";
-import { CryptoTicker } from "@/components/crypto-ticker";
 import { AnimatedCounter } from "@/components/animated-counter";
 import { BackToTop } from "@/components/back-to-top";
 import { RiskWarning } from "@/components/risk-warning";
@@ -48,11 +47,11 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/20">
-              TP
+              AB
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-white">TradePulse AI</span>
-              <span className="text-xs text-blue-400/80">Intelligent Trading</span>
+              <span className="text-xl font-bold text-white">Abundant Blessing AI</span>
+              <span className="text-xs text-blue-400/80">Your Path to Financial Freedom</span>
             </div>
           </div>
           <Button
@@ -84,42 +83,31 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-[1.1]">
             Exposed: How Everyday People Are Making
             <span className="block bg-gradient-to-r from-green-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent mt-2">
-              $247 to $1,200+ Per Day
+              $300 to $10,000+ Per Month
             </span>
             <span className="block text-3xl md:text-4xl mt-4 text-gray-300">
-              With An AI That Trades <span className="underline decoration-blue-400 decoration-4">While They Sleep</span>
+              With A Simple <span className="underline decoration-blue-400 decoration-4">Copy & Paste System</span>
             </span>
           </h1>
 
           {/* Subheadline with specifics */}
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            In the next <span className="text-white font-semibold">3 minutes</span>, you'll discover the exact AI trading system that's helped <span className="text-blue-400 font-semibold">10,847 people</span> quit stressful jobs, fire toxic bosses, and build <span className="text-white font-semibold">life-changing wealth</span>...
+            In the next <span className="text-white font-semibold">3 minutes</span>, you'll discover the exact system that's helped <span className="text-blue-400 font-semibold">thousands of people</span> quit stressful jobs, fire toxic bosses, and build <span className="text-white font-semibold">life-changing wealth</span>...
           </p>
 
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            ...even if you've <span className="italic">never</span> traded before, have no time, and are starting with as little as $300.
+            ...even if you have <span className="italic">zero</span> tech skills, no experience, and only <span className="text-blue-400 font-semibold">10 minutes a day</span> to spare.
           </p>
 
           {/* Social proof strip */}
           <div className="flex flex-wrap items-center justify-center gap-6 py-6 border-y border-white/10">
-            <div className="flex items-center gap-2 text-sm">
-              <div className="flex -space-x-2">
-                {[1,2,3,4,5].map((i) => (
-                  <div key={i} className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500/30 to-cyan-500/30 border-2 border-[#0a0e1a] flex items-center justify-center text-xs text-blue-300 font-medium">
-                    {String.fromCharCode(64 + i)}
-                  </div>
-                ))}
-              </div>
-              <span className="text-gray-400"><span className="text-white font-semibold">2,847</span> people booked this week</span>
-            </div>
-            <div className="h-4 w-px bg-white/20 hidden sm:block" />
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <div className="flex gap-0.5">
                 {[1,2,3,4,5].map((i) => (
                   <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <span><span className="text-white font-semibold">4.9/5</span> from 3,200+ reviews</span>
+              <span><span className="text-white font-semibold">4.9/5</span> from 500+ reviews</span>
             </div>
           </div>
 
@@ -137,21 +125,6 @@ export default function Home() {
               <Shield className="h-4 w-4 text-green-500" />
               100% Free • No Credit Card • 30-Minute Private Consultation
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== CRYPTO TICKER ========== */}
-      <CryptoTicker />
-
-      {/* ========== CREDIBILITY BAR ========== */}
-      <section className="border-y border-white/5 bg-[#0c1020]">
-        <div className="container mx-auto px-4 py-10">
-          <p className="text-center text-sm text-gray-500 mb-6">AS FEATURED IN</p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60">
-            {["Forbes", "Bloomberg", "Reuters", "CNBC", "Yahoo Finance"].map((brand) => (
-              <span key={brand} className="text-xl md:text-2xl font-bold text-gray-600">{brand}</span>
-            ))}
           </div>
         </div>
       </section>
@@ -178,12 +151,12 @@ export default function Home() {
                 {
                   icon: TrendingDown,
                   title: "Watching Opportunities Pass You By",
-                  desc: "Hearing about Bitcoin, Ethereum, and crypto millionaires... but feeling like the \"boat has sailed\" and you missed your chance."
+                  desc: "Hearing about people making money online... but feeling like you missed your chance or don't have the skills."
                 },
                 {
                   icon: XCircle,
-                  title: "Failed Trading Attempts",
-                  desc: "Maybe you tried trading before. Lost money. Felt stupid. Told yourself \"this isn't for people like me.\" Sound familiar?"
+                  title: "Failed Side Hustles",
+                  desc: "Maybe you tried dropshipping, crypto, or other \"opportunities\" before. Lost money. Felt stupid. Told yourself \"this isn't for people like me.\""
                 },
                 {
                   icon: DollarSign,
@@ -211,10 +184,10 @@ export default function Home() {
                 Here's the <span className="text-white font-semibold">brutal truth</span>:
               </p>
               <p className="text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto">
-                The financial system is <span className="text-red-400 font-semibold">rigged against you</span>. Wall Street insiders use sophisticated AI and algorithms to extract money from everyday investors. They have teams of quants, PhDs, and millions in technology...
+                Most "make money online" programs are <span className="text-red-400 font-semibold">designed to fail you</span>. They're complicated, time-consuming, and require skills you don't have. The gurus make money selling courses, not using them...
               </p>
               <p className="text-2xl md:text-3xl font-bold text-white mt-6">
-                ...and until now, you didn't.
+                ...until now.
               </p>
             </div>
           </div>
@@ -232,10 +205,10 @@ export default function Home() {
                 INTRODUCING THE SOLUTION
               </Badge>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                What If You Could <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Level The Playing Field</span>?
+                What If Making Money Was As Simple As <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Copy & Paste</span>?
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                What if you had access to the <span className="text-white font-semibold">same AI technology</span> that hedge funds use to make millions... but simplified so anyone can use it in just <span className="text-blue-400 font-semibold">10 minutes a day</span>?
+                What if you had a <span className="text-white font-semibold">done-for-you system</span> that required just <span className="text-blue-400 font-semibold">10 minutes a day</span>... no tech skills, no experience, no complicated learning curve?
               </p>
             </div>
 
@@ -243,14 +216,14 @@ export default function Home() {
             <div className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-blue-500/10 border border-blue-500/20 mb-12">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center flex-shrink-0 shadow-2xl shadow-blue-500/30">
-                  <Brain className="h-12 w-12 text-white" />
+                  <Copy className="h-12 w-12 text-white" />
                 </div>
                 <div>
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    TradePulse AI: Your 24/7 Wealth-Building Partner
+                    Abundant Blessing AI: Your Simple Path to Extra Income
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Our proprietary AI analyzes <span className="text-blue-400 font-semibold">47 million data points per second</span> across global markets. It identifies high-probability trading opportunities with <span className="text-green-400 font-semibold">99.6% accuracy</span>... then sends you simple, easy-to-follow signals.
+                    Our proven system gives you <span className="text-blue-400 font-semibold">ready-to-use templates and strategies</span> that you simply copy and paste. No guesswork. No complicated software. Just follow the simple steps, spend <span className="text-green-400 font-semibold">10 minutes a day</span>, and watch your income grow.
                   </p>
                 </div>
               </div>
@@ -260,22 +233,22 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  icon: Target,
-                  stat: "99.6%",
-                  label: "Signal Accuracy",
-                  desc: "Our AI doesn't guess. It analyzes patterns humans can't see, delivering near-perfect trade signals."
+                  icon: Copy,
+                  stat: "Copy",
+                  label: "& Paste Simple",
+                  desc: "No tech skills needed. If you can copy text and click a button, you can do this."
                 },
                 {
                   icon: Clock,
                   stat: "10 Min",
-                  label: "Per Day Required",
-                  desc: "Check your signals at 1 PM and 7 PM EST. Execute in seconds. That's it. Go live your life."
+                  label: "Per Day Maximum",
+                  desc: "Check in once or twice a day. Execute in minutes. That's it. Go live your life."
                 },
                 {
                   icon: Shield,
-                  stat: "$30M+",
-                  label: "Member Funds Protected",
-                  desc: "Military-grade security. Your money stays in YOUR account on regulated exchanges. We never touch it."
+                  stat: "$300",
+                  label: "Start Small",
+                  desc: "You don't need thousands to start. Begin with what you're comfortable with and scale up."
                 }
               ].map((benefit, i) => (
                 <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 text-center">
@@ -314,9 +287,9 @@ export default function Home() {
                   age: "42",
                   location: "Austin, Texas",
                   before: "Working 60+ hour weeks as a software engineer. Never saw my kids.",
-                  after: "Quit my job after 6 months. Now I make more trading 30 minutes a day than I did working 60 hours.",
-                  result: "$4,200/month → $11,800/month",
-                  quote: "I was skeptical. Really skeptical. But the free strategy call showed me EXACTLY how the AI works. No fluff, just data. Within 3 weeks, I made back my entire first year's subscription. Within 6 months, I handed in my resignation.",
+                  after: "Now makes an extra $4,500/month working just 10 minutes a day.",
+                  result: "$0 side income → $4,500/month",
+                  quote: "I was skeptical. Really skeptical. But the free strategy call showed me EXACTLY how the system works. No fluff, just simple steps. Within 3 weeks, I was making extra money. Within 3 months, I had enough to start planning my exit from corporate life.",
                   image: "MT"
                 },
                 {
@@ -325,8 +298,8 @@ export default function Home() {
                   location: "Sydney, Australia",
                   before: "Single mom. Two jobs. Zero savings. Constant stress.",
                   after: "Paid off $23,000 in debt. Building college fund for my daughter.",
-                  result: "Started with $500 → Portfolio now $34,000+",
-                  quote: "I literally started with $500 – money I was terrified to lose. The signals were so clear, so simple. Green arrow = buy. Red arrow = sell. That's it. My daughter doesn't know yet, but her college is going to be paid for.",
+                  result: "Started with $500 → Now earning $2,800/month extra",
+                  quote: "I literally started with $500 of savings. The copy-paste system was so simple. My daughter doesn't know yet, but her college is going to be paid for. All from 10 minutes a day between my jobs.",
                   image: "SC"
                 },
                 {
@@ -335,8 +308,8 @@ export default function Home() {
                   location: "Miami, Florida",
                   before: "Retired. Fixed income. Watching savings dwindle.",
                   after: "Added $3,400/month passive income. Traveling with wife.",
-                  result: "89% winning trades in first 90 days",
-                  quote: "At my age, I thought I'd missed the crypto boat. Turns out, I was just waiting for the right vehicle. This AI is like having a brilliant financial advisor who works for free, 24/7. My wife and I just booked a 3-week cruise to Alaska. Paid in cash.",
+                  result: "From worried retiree to financial peace",
+                  quote: "At my age, I thought making money online was for young tech people. This system proved me wrong. Copy, paste, done. My wife and I just booked a 3-week cruise to Alaska. Paid in cash.",
                   image: "JR"
                 }
               ].map((story, i) => (
@@ -388,21 +361,21 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-2xl bg-gradient-to-r from-blue-500/10 via-cyan-500/5 to-blue-500/10 border border-blue-500/20">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-1">
-                  <AnimatedCounter end={10847} suffix="+" />
+                  <AnimatedCounter end={500} suffix="+" />
                 </div>
-                <div className="text-sm text-gray-400">Active Members</div>
+                <div className="text-sm text-gray-400">Happy Members</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-green-400 mb-1">
-                  $<AnimatedCounter end={47} suffix="M+" />
+                  $<AnimatedCounter end={10} suffix="K+" />
                 </div>
-                <div className="text-sm text-gray-400">Member Profits</div>
+                <div className="text-sm text-gray-400">Top Earners/Month</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-1">
-                  <AnimatedCounter end={99.6} decimals={1} suffix="%" />
+                  <AnimatedCounter end={10} suffix=" min" />
                 </div>
-                <div className="text-sm text-gray-400">Signal Accuracy</div>
+                <div className="text-sm text-gray-400">Per Day Required</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-1">
@@ -425,7 +398,7 @@ export default function Home() {
                 Here's Exactly How It Works
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Three simple steps to your first profitable trade
+                Three simple steps to start earning extra income
               </p>
             </div>
 
@@ -436,24 +409,24 @@ export default function Home() {
                   step: "STEP 1",
                   icon: Phone,
                   title: "Book Your Free Strategy Call (30 Minutes)",
-                  desc: "This isn't a sales pitch. It's a genuine consultation where we learn about YOUR situation, goals, and investment capacity. We'll show you exactly how our AI works with real data – no fluff, no hype. If it's not right for you, we'll tell you. No pressure, no obligation.",
+                  desc: "This isn't a sales pitch. It's a genuine consultation where we learn about YOUR situation, goals, and available time. We'll show you exactly how the system works with real examples. If it's not right for you, we'll tell you. No pressure, no obligation.",
                   highlight: "Only 7 spots left this week",
                   time: "2 min to book"
                 },
                 {
                   step: "STEP 2",
                   icon: Target,
-                  title: "Get Your Personalized Trading Blueprint",
-                  desc: "Based on your strategy call, we create a custom plan tailored to YOUR budget, time, and goals. Whether you're starting with $300 or $30,000, we'll show you exactly what to expect. You'll know your projected returns, risk levels, and exactly what to do each day.",
+                  title: "Get Your Personalized Action Plan",
+                  desc: "Based on your strategy call, we create a custom plan tailored to YOUR schedule, budget, and goals. Whether you're starting with $300 or $3,000, we'll show you exactly what to expect. You'll know your projected earnings and exactly what to do each day.",
                   highlight: "Usually ready within 24 hours",
                   time: "Custom plan created"
                 },
                 {
                   step: "STEP 3",
-                  icon: Zap,
-                  title: "Start Receiving AI Signals & Profit",
-                  desc: "Every day at 1 PM and 7 PM EST, you'll receive crystal-clear signals. Green arrow = buy. Red arrow = sell. The exact entry price, exit price, and position size. No guessing. No analysis. Just follow the signals. Most members spend less than 10 minutes per day.",
-                  highlight: "Average member profits within first week",
+                  icon: Copy,
+                  title: "Copy, Paste & Profit",
+                  desc: "Every day, you'll get simple templates and instructions. Copy them. Paste them. Done. No complicated software. No tech skills. No guesswork. Most members spend 10 minutes or less per day. It's literally that simple.",
+                  highlight: "Most members see results within first week",
                   time: "10 min/day"
                 }
               ].map((item, i) => (
@@ -495,24 +468,24 @@ export default function Home() {
             <div className="space-y-6">
               {[
                 {
-                  objection: "\"I've never traded before. This seems complicated.\"",
-                  answer: "Perfect – you're actually our IDEAL member. Why? Because you have no bad habits to unlearn. Our AI does ALL the heavy lifting. You literally just follow arrows. Green = buy. Red = sell. If you can read a traffic light, you can use TradePulse AI. We even have 78-year-old grandmothers making consistent profits."
+                  objection: "\"I'm not tech-savvy. This seems complicated.\"",
+                  answer: "Perfect – you're actually our IDEAL member. If you can copy text and click a button, you can do this. We've had 70-year-old grandmothers succeed with this system. It's literally copy, paste, done. No apps to learn. No software to master. Just simple steps anyone can follow."
                 },
                 {
                   objection: "\"I don't have a lot of money to start.\"",
-                  answer: "Neither did 73% of our members. You can start with as little as $300 USDT. We actually recommend starting small to build confidence. Sarah started with $500 – her account is now worth $34,000+. It's not about how much you start with. It's about starting."
+                  answer: "Neither did most of our members. You can start with as little as $300. We actually recommend starting small to build confidence. Sarah started with $500 – now she earns an extra $2,800 a month. It's not about how much you start with. It's about starting."
                 },
                 {
-                  objection: "\"What if I lose money?\"",
-                  answer: "Let's be real: ALL trading involves risk. But here's what makes us different – our AI has a 99.6% signal accuracy rate. That's not a typo. And we use strict risk management on every single trade. Your funds stay in YOUR exchange account – we never have access to withdraw your money. Ever."
+                  objection: "\"What if it doesn't work for me?\"",
+                  answer: "That's exactly why we offer a FREE strategy call first. We'll assess your situation honestly. If we don't think this is right for you, we'll tell you. We've turned people away before. But if you can follow simple instructions for 10 minutes a day, this will work."
                 },
                 {
                   objection: "\"I don't have time for this.\"",
-                  answer: "You don't need time. Our signals arrive at 1 PM and 7 PM EST. You check them during lunch or after dinner. Execute the trade in under 60 seconds. Done. Most members spend less than 10 minutes total per day. That's less time than you spend scrolling Instagram."
+                  answer: "You don't need much time. 10 minutes a day. That's less than your morning coffee break. Check in, follow the simple steps, done. Most members do it while watching TV or during lunch. If you have 10 minutes, you have enough time."
                 },
                 {
                   objection: "\"Sounds too good to be true.\"",
-                  answer: "Healthy skepticism is smart. That's exactly why we offer a FREE strategy call. We'll show you live trading data, real member results, and answer every question you have. No sales pressure. If it's not right for you, we'll tell you. We've turned away people who weren't a good fit. This isn't for everyone."
+                  answer: "Healthy skepticism is smart. That's exactly why we offer a FREE strategy call. We'll show you real examples, answer every question, and let you decide. No pressure. If you leave thinking \"this isn't for me,\" no hard feelings. But most people leave saying \"why didn't I find this sooner?\""
                 }
               ].map((item, i) => (
                 <div key={i} className="p-6 rounded-xl bg-white/[0.02] border border-white/5">
@@ -538,11 +511,11 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="p-6 rounded-xl bg-red-500/5 border border-red-500/10">
                 <h3 className="text-lg font-semibold text-red-400 mb-3">Option A: Do Nothing</h3>
-                <p className="text-gray-400 text-sm">Keep working 40+ hours/week. Watch others get rich. Wonder "what if" for the rest of your life.</p>
+                <p className="text-gray-400 text-sm">Keep working 40+ hours/week. Keep living paycheck to paycheck. Wonder "what if" for the rest of your life.</p>
               </div>
               <div className="p-6 rounded-xl bg-green-500/5 border border-green-500/20">
                 <h3 className="text-lg font-semibold text-green-400 mb-3">Option B: Take Action</h3>
-                <p className="text-gray-400 text-sm">Book your FREE call. See if this is right for you. Worst case, you learn something. Best case? Everything changes.</p>
+                <p className="text-gray-400 text-sm">Book your FREE call. Spend 30 minutes learning about the system. Worst case, you learn something. Best case? Everything changes.</p>
               </div>
             </div>
           </div>
@@ -565,9 +538,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white font-bold text-sm">
-                TP
+                AB
               </div>
-              <span className="text-gray-500 text-sm">TradePulse AI</span>
+              <span className="text-gray-500 text-sm">Abundant Blessing AI</span>
             </div>
 
             <div className="flex items-center gap-6 text-sm text-gray-600">
@@ -577,13 +550,13 @@ export default function Home() {
             </div>
 
             <p className="text-sm text-gray-600">
-              © {new Date().getFullYear()} TradePulse AI. All rights reserved.
+              © {new Date().getFullYear()} Abundant Blessing AI. All rights reserved.
             </p>
           </div>
 
           <div className="mt-6 pt-6 border-t border-white/5 text-center">
             <p className="text-xs text-gray-700 max-w-3xl mx-auto">
-              IMPORTANT DISCLAIMER: Trading cryptocurrencies carries a high level of risk and may not be suitable for all investors. Past performance does not guarantee future results. The testimonials shown are individual results and may not reflect typical outcomes. You should carefully consider your investment objectives, level of experience, and risk appetite before making any investment decisions. Never invest more than you can afford to lose.
+              IMPORTANT DISCLAIMER: Results shown are not typical and individual results may vary. The testimonials shown represent individual experiences and may not reflect typical outcomes. Success depends on many factors including your effort, time commitment, and market conditions. Never invest more than you can afford to lose. This is not financial advice.
             </p>
           </div>
         </div>
