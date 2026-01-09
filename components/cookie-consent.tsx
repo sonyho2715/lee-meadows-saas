@@ -43,7 +43,7 @@ export function CookieConsent() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 pointer-events-none">
       <div className="container mx-auto max-w-6xl pointer-events-auto">
-        <Card className="border-2 border-yellow-500/30 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] backdrop-blur-lg shadow-2xl">
+        <Card className="border-2 border-blue-500/30 bg-gradient-to-br from-[#1a1f3a] to-[#0a0e1a] backdrop-blur-lg shadow-2xl">
           <CardContent className="p-6">
             <button
               onClick={declineCookies}
@@ -56,8 +56,8 @@ export function CookieConsent() {
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
               {/* Icon */}
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center">
-                  <Cookie className="h-6 w-6 text-yellow-500" />
+                <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center">
+                  <Cookie className="h-6 w-6 text-blue-400" />
                 </div>
               </div>
 
@@ -66,7 +66,7 @@ export function CookieConsent() {
                 <h3 className="text-lg font-bold text-white">{t.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {t.description}{" "}
-                  <Link href="/privacy" className="text-yellow-500 hover:underline">
+                  <Link href="/privacy" className="text-blue-400 hover:underline">
                     {t.privacyPolicy}
                   </Link>.
                 </p>
@@ -77,13 +77,13 @@ export function CookieConsent() {
                 <Button
                   onClick={declineCookies}
                   variant="outline"
-                  className="border-yellow-500/30 text-yellow-500 hover:bg-yellow-500/10 hover:border-yellow-500/50 transition-all"
+                  className="border-blue-500/30 text-blue-400 hover:bg-blue-500/10 hover:border-blue-500/50 transition-all"
                 >
                   {t.decline}
                 </Button>
                 <Button
                   onClick={acceptCookies}
-                  className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-white font-medium transition-all"
+                  className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-medium transition-all"
                 >
                   {t.acceptAll}
                 </Button>
@@ -91,7 +91,7 @@ export function CookieConsent() {
             </div>
 
             {/* Additional Info */}
-            <div className="mt-4 pt-4 border-t border-yellow-500/20">
+            <div className="mt-4 pt-4 border-t border-blue-500/20">
               <p className="text-xs text-gray-400">
                 {t.additionalInfo}
               </p>

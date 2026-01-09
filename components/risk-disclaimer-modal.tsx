@@ -37,7 +37,7 @@ export function RiskDisclaimerModal() {
   return (
     <div className="fixed inset-0 z-[190] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-300">
       {/* Modal */}
-      <div className="relative max-w-2xl w-full bg-gradient-to-br from-[#1a1f3a] to-[#0a0e27] rounded-2xl border border-red-500/30 shadow-2xl shadow-red-500/20 overflow-hidden max-h-[90vh] overflow-y-auto">
+      <div className="relative max-w-2xl w-full bg-gradient-to-br from-[#1a1f3a] to-[#0a0e1a] rounded-2xl border border-red-500/30 shadow-2xl shadow-red-500/20 overflow-hidden max-h-[90vh] overflow-y-auto">
         {/* Close button */}
         <button
           onClick={handleAcknowledge}
@@ -101,9 +101,9 @@ export function RiskDisclaimerModal() {
           </div>
 
           {/* Performance Disclaimer */}
-          <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4">
+          <div className="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
             <p className="text-sm text-gray-300">
-              <span className="text-yellow-500 font-semibold">{t.performance.title}</span> {t.performance.description}
+              <span className="text-amber-500 font-semibold">{t.performance.title}</span> {t.performance.description}
             </p>
           </div>
 
@@ -121,7 +121,7 @@ export function RiskDisclaimerModal() {
           <div className="pt-4">
             <Button
               onClick={handleAcknowledge}
-              className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-bold py-6 text-base"
+              className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold py-6 text-base"
             >
               {t.acknowledge}
             </Button>

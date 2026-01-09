@@ -63,9 +63,9 @@ export function FunnelFAQ() {
               <AccordionItem
                 key={index}
                 value={`faq-${index}`}
-                className="border border-white/5 rounded-lg px-6 bg-white/[0.01] data-[state=open]:border-yellow-500/20"
+                className="border border-white/5 rounded-lg px-6 bg-white/[0.01] data-[state=open]:border-blue-500/20"
               >
-                <AccordionTrigger className="text-left text-white hover:text-yellow-500 hover:no-underline py-5">
+                <AccordionTrigger className="text-left text-white hover:text-blue-400 hover:no-underline py-5">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-400 pb-5">
@@ -82,7 +82,7 @@ export function FunnelFAQ() {
             </p>
             <button
               onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-yellow-500 hover:text-yellow-400 font-medium transition-colors"
+              className="text-blue-400 hover:text-blue-300 font-medium transition-colors"
             >
               Book Your Free Call →
             </button>

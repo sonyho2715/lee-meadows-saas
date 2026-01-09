@@ -27,14 +27,11 @@ export function CryptoTicker() {
     { symbol: "DOGE", name: "Dogecoin", price: 0.16, change: -2.10 },
     { symbol: "USDT", name: "Tether", price: 1.00, change: -0.03 },
   ]);
-  const [isLoading, setIsLoading] = useState(false);
   const [isLive, setIsLive] = useState(false);
 
   // Fetch live crypto prices from CoinCap API
   const fetchCryptoPrices = async () => {
     try {
-      setIsLoading(true);
-
       // Fetch all cryptocurrencies at once from CoinCap
       const ids = CRYPTO_SYMBOLS.map(c => c.id).join(',');
       const response = await fetch(
@@ -65,12 +62,10 @@ export function CryptoTicker() {
       });
 
       setCryptoData(updatedData);
-      setIsLive(true); // Mark as live data
+      setIsLive(true);
     } catch (error) {
       console.error('Error fetching crypto prices from CoinCap:', error);
-      setIsLive(false); // Fallback to static data
-    } finally {
-      setIsLoading(false);
+      setIsLive(false);
     }
   };
 
@@ -93,29 +88,29 @@ export function CryptoTicker() {
   }, []);
 
   return (
-    <div className="border-y border-yellow-500/20 bg-[#0a0e27]/80 py-4 overflow-hidden">
+    <div className="border-y border-blue-500/10 bg-[#0a0e1a]/80 py-3 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-8 overflow-x-auto">
           {isLive && (
-            <div className="flex items-center gap-1 px-2 py-1 rounded bg-green-500/20 border border-green-500/50">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-xs text-green-400 font-medium">LIVE</span>
+            <div className="flex items-center gap-1 px-2 py-1 rounded bg-blue-500/10 border border-blue-500/30">
+              <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+              <span className="text-xs text-blue-400 font-medium">LIVE</span>
             </div>
           )}
           {cryptoData.map((crypto, index) => (
             <div
               key={crypto.symbol}
               className={`flex items-center gap-3 min-w-fit transition-opacity duration-500 ${
-                index === currentIndex ? "opacity-100" : "opacity-50"
+                index === currentIndex ? "opacity-100" : "opacity-40"
               }`}
             >
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
-                  <span className="text-yellow-500 font-bold">{crypto.symbol}</span>
-                  <span className="text-xs text-gray-400">{crypto.name}</span>
+                  <span className="text-blue-400 font-bold text-sm">{crypto.symbol}</span>
+                  <span className="text-xs text-gray-500">{crypto.name}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-white font-semibold">
+                  <span className="text-white/80 font-medium text-sm">
                     ${crypto.price >= 1
                       ? crypto.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })
                       : crypto.price.toFixed(crypto.price < 0.01 ? 6 : 4)
