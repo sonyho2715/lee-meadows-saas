@@ -26,19 +26,56 @@ export function BookingSection({ variant = "full" }: BookingSectionProps) {
   const [phone, setPhone] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Simulate submission - replace with actual booking logic
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      // Get UTM params from URL
+      const urlParams = new URLSearchParams(window.location.search);
 
-    // TODO: Update with your actual Calendly/booking URL
-    window.open("https://calendly.com/abundantblessingai/strategy-call", "_blank");
+      // Submit lead to API
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          source: 'booking_form',
+          utm_source: urlParams.get('utm_source') || undefined,
+          utm_medium: urlParams.get('utm_medium') || undefined,
+          utm_campaign: urlParams.get('utm_campaign') || undefined,
+        }),
+      });
 
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+      const data = await response.json();
+
+      if (!response.ok) {
+        // Allow duplicate emails to still proceed to Calendly
+        if (response.status === 409) {
+          console.log('Lead already exists, proceeding to Calendly');
+        } else {
+          throw new Error(data.error || 'Failed to submit');
+        }
+      }
+
+      // Open Calendly with prefilled info
+      const calendlyUrl = new URL("https://calendly.com/abundantblessingai/strategy-call");
+      calendlyUrl.searchParams.set('name', name);
+      calendlyUrl.searchParams.set('email', email);
+      window.open(calendlyUrl.toString(), "_blank");
+
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error('Booking error:', err);
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const benefits = [
@@ -178,6 +215,12 @@ export function BookingSection({ variant = "full" }: BookingSectionProps) {
                 className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-gray-600 focus:border-blue-500/50 focus:outline-none focus:ring-1 focus:ring-blue-500/50 transition-colors"
               />
             </div>
+
+            {error && (
+              <div className="p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-sm">
+                {error}
+              </div>
+            )}
 
             <Button
               type="submit"
