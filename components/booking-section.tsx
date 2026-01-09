@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -11,7 +12,8 @@ import {
   Video,
   Shield,
   Gift,
-  Zap
+  Zap,
+  Lock
 } from "lucide-react";
 
 interface BookingSectionProps {
@@ -198,6 +200,22 @@ export function BookingSection({ variant = "full" }: BookingSectionProps) {
               )}
             </Button>
           </form>
+
+          {/* Trust badges */}
+          <div className="flex items-center justify-center gap-4 mt-6 pt-4 border-t border-white/5">
+            <div className="flex items-center gap-1.5 text-xs text-gray-500">
+              <Shield className="h-4 w-4 text-green-500" />
+              <span>100% Free</span>
+            </div>
+            <div className="flex items-center gap-1.5 text-xs text-gray-500">
+              <Lock className="h-4 w-4 text-blue-400" />
+              <span>Secure</span>
+            </div>
+            <div className="flex items-center gap-1.5 text-xs text-gray-500">
+              <CheckCircle2 className="h-4 w-4 text-cyan-400" />
+              <span>No Spam</span>
+            </div>
+          </div>
 
           <p className="text-center text-xs text-gray-600 mt-4">
             By booking, you agree to receive follow-up communications.

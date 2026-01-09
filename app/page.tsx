@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -290,7 +291,8 @@ export default function Home() {
                   after: "Now makes an extra $4,500/month working just 10 minutes a day.",
                   result: "$0 side income → $4,500/month",
                   quote: "I was skeptical. Really skeptical. But the free strategy call showed me EXACTLY how the system works. No fluff, just simple steps. Within 3 weeks, I was making extra money. Within 3 months, I had enough to start planning my exit from corporate life.",
-                  image: "MT"
+                  image: "/images/testimonials/michael.jpg",
+                  initials: "MT"
                 },
                 {
                   name: "Sarah Chen",
@@ -300,7 +302,8 @@ export default function Home() {
                   after: "Paid off $23,000 in debt. Building college fund for my daughter.",
                   result: "Started with $500 → Now earning $2,800/month extra",
                   quote: "I literally started with $500 of savings. The copy-paste system was so simple. My daughter doesn't know yet, but her college is going to be paid for. All from 10 minutes a day between my jobs.",
-                  image: "SC"
+                  image: "/images/testimonials/sarah.jpg",
+                  initials: "SC"
                 },
                 {
                   name: "James Rodriguez",
@@ -310,7 +313,8 @@ export default function Home() {
                   after: "Added $3,400/month passive income. Traveling with wife.",
                   result: "From worried retiree to financial peace",
                   quote: "At my age, I thought making money online was for young tech people. This system proved me wrong. Copy, paste, done. My wife and I just booked a 3-week cruise to Alaska. Paid in cash.",
-                  image: "JR"
+                  image: "/images/testimonials/james.jpg",
+                  initials: "JR"
                 }
               ].map((story, i) => (
                 <Card key={i} className="border-white/5 bg-white/[0.02] overflow-hidden">
@@ -325,8 +329,17 @@ export default function Home() {
                         </div>
                         <p className="text-lg text-gray-300 leading-relaxed mb-6 italic">"{story.quote}"</p>
                         <div className="flex items-center gap-4">
-                          <div className="h-14 w-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white font-bold text-lg">
-                            {story.image}
+                          <div className="h-14 w-14 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white font-bold text-lg overflow-hidden relative">
+                            <Image
+                              src={story.image}
+                              alt={story.name}
+                              fill
+                              className="object-cover"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                              }}
+                            />
+                            <span className="absolute inset-0 flex items-center justify-center">{story.initials}</span>
                           </div>
                           <div>
                             <p className="font-semibold text-white">{story.name}, {story.age}</p>
