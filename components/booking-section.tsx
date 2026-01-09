@@ -11,7 +11,6 @@ import {
   Video,
   Shield,
   Gift,
-  Users,
   Zap
 } from "lucide-react";
 
@@ -33,17 +32,17 @@ export function BookingSection({ variant = "full" }: BookingSectionProps) {
     // Simulate submission - replace with actual booking logic
     await new Promise(resolve => setTimeout(resolve, 1500));
 
-    // TODO: Integrate with Calendly, Cal.com, or your booking system
-    window.open("https://calendly.com/tradepulse-ai/strategy-call", "_blank");
+    // TODO: Update with your actual Calendly/booking URL
+    window.open("https://calendly.com/abundantblessingai/strategy-call", "_blank");
 
     setIsSubmitted(true);
     setIsSubmitting(false);
   };
 
   const benefits = [
-    "Personalized investment strategy",
-    "Live Q&A with trading expert",
-    "See real-time AI signals demo",
+    "See exactly how the system works",
+    "Get a personalized action plan",
+    "Ask any questions you have",
     "No commitment required"
   ];
 
@@ -56,10 +55,10 @@ export function BookingSection({ variant = "full" }: BookingSectionProps) {
           </div>
           <h3 className="text-2xl font-bold text-white mb-2">You're All Set!</h3>
           <p className="text-gray-400 mb-4">
-            Check your email for the calendar invite. We can't wait to show you how AI trading can transform your financial future.
+            Check your email for the calendar invite. We can't wait to show you how our simple system can help you build extra income.
           </p>
           <p className="text-sm text-blue-400">
-            Look for an email from TradePulse AI within 5 minutes
+            Look for an email from Abundant Blessing AI within 5 minutes
           </p>
         </CardContent>
       </Card>
@@ -79,12 +78,12 @@ export function BookingSection({ variant = "full" }: BookingSectionProps) {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Book Your Free
               <span className="block bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                AI Trading Strategy Call
+                Strategy Call Today
               </span>
             </h2>
             <p className="text-gray-400 text-lg">
-              In just 30 minutes, discover how our AI system can work for you.
-              Get a personalized roadmap to start generating passive income.
+              In just 30 minutes, discover how our simple copy-paste system can work for you.
+              Get a personalized roadmap to start building extra income.
             </p>
           </div>
 
@@ -131,7 +130,7 @@ export function BookingSection({ variant = "full" }: BookingSectionProps) {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
                 </span>
-                <span className="text-sm text-cyan-400 font-semibold">12 spots left</span>
+                <span className="text-sm text-cyan-400 font-semibold">7 spots left</span>
               </div>
             </div>
           </div>
@@ -204,16 +203,6 @@ export function BookingSection({ variant = "full" }: BookingSectionProps) {
             By booking, you agree to receive follow-up communications.
             We respect your privacy and will never spam you.
           </p>
-
-          {/* Social proof indicator */}
-          <div className="mt-6 pt-4 border-t border-white/5">
-            <div className="flex items-center justify-center gap-2 text-sm">
-              <Users className="h-4 w-4 text-blue-400/70" />
-              <span className="text-gray-400">
-                <span className="text-blue-400 font-medium">2,847 traders</span> booked this week
-              </span>
-            </div>
-          </div>
         </CardContent>
       </Card>
     </div>

@@ -498,6 +498,83 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ========== WHO THIS IS FOR ========== */}
+      <section className="py-20 md:py-28 bg-[#0c1020]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Is This Right For You?
+              </h2>
+              <p className="text-gray-400 text-lg">
+                This system works best for certain types of people. Let's see if you're a fit.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* This IS For You */}
+              <div className="p-8 rounded-2xl bg-green-500/5 border border-green-500/20">
+                <h3 className="text-xl font-bold text-green-400 mb-6 flex items-center gap-2">
+                  <CheckCircle2 className="h-6 w-6" />
+                  This IS For You If...
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "You want extra income but don't have hours to spare",
+                    "You're willing to follow simple instructions consistently",
+                    "You can start with at least $300",
+                    "You're coachable and open to learning something new",
+                    "You want a proven system, not another \"get rich quick\" scheme",
+                    "You're tired of trading your time for money"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-gray-300">
+                      <CheckCircle2 className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* This is NOT For You */}
+              <div className="p-8 rounded-2xl bg-red-500/5 border border-red-500/20">
+                <h3 className="text-xl font-bold text-red-400 mb-6 flex items-center gap-2">
+                  <XCircle className="h-6 w-6" />
+                  This is NOT For You If...
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    "You're looking for overnight riches with zero effort",
+                    "You can't commit to 10 minutes a day",
+                    "You're not willing to follow simple steps",
+                    "You expect guarantees (no legitimate system can promise that)",
+                    "You'd rather complain than take action",
+                    "You're happy with your current financial situation"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-gray-300">
+                      <XCircle className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-gray-400 mb-4">
+                If you see yourself in the left column, we should talk.
+              </p>
+              <Button
+                onClick={scrollToBooking}
+                className="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 text-white font-semibold px-8 py-6"
+              >
+                Book Your Free Strategy Call
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ========== FAQ ========== */}
       <FunnelFAQ />
 
